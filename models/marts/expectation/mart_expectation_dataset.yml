@@ -1,0 +1,22 @@
+version: 2
+
+models:
+
+  - name: mart_expectation_dataset
+
+    columns:
+
+      - name: date
+        tests:
+          - not_null
+
+      - name: ticker
+        tests:
+          - not_null
+
+    tests:
+
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - date
+            - ticker

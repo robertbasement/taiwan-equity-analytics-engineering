@@ -1,0 +1,79 @@
+version: 2
+
+models:
+
+  - name: mart_factor_research_daily
+    description: >
+      Canonical daily research dataset for the factor research platform.
+      One row per date and ticker.
+
+    columns:
+
+      - name: date
+        tests:
+          - not_null
+
+      - name: ticker
+        tests:
+          - not_null
+
+      - name: d_close
+        description: Adjusted closing price.
+
+      - name: yoy_growth
+        description: >
+          Revenue YoY growth. Unit must be standardized upstream.
+          Do not infer unit from magnitude.
+
+      - name: market_cap
+        description: >
+          d_close * shares_outstanding.
+          Shares-outstanding unit must be documented upstream.
+
+      - name: implied_growth
+        description: >
+          Canonical decimal implied growth from mart_expectation_dataset.
+
+      - name: implied_growth_pct
+        description: >
+          Canonical display percentage from mart_expectation_dataset.
+          Not equivalent to deprecated 3Y/5Y/10Y implied-growth fields.
+
+    tests:
+
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - date
+            - ticker
+
+
+  - name: mart_factor_research_monthly
+    description: >
+      Monthly point-in-time panel used directly by the Streamlit
+      factor research application.
+
+    columns:
+
+      - name: rebalance_date
+        tests:
+          - not_null
+
+      - name: ticker
+        tests:
+          - not_null
+
+      - name: forward_return
+        description: >
+          Return from current rebalance date to the immediately next
+          scheduled rebalance date.
+
+      - name: market_return
+        description: >
+          0050 return from current rebalance date to next rebalance date.
+
+    tests:
+
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - rebalance_date
+            - ticker
