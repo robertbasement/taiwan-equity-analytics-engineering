@@ -20,17 +20,33 @@ WITH master AS (
     ma20,
     ma60,
 
-    -- Revenue / financial
+    -- Monthly revenue
+    revenue,
+    revenue_month,
     yoy_growth,
     mom_growth_pct,
+    revenue_last_year,
+
+    -- Financial statement
+    financial_q_revenue,
+    financial_q_operating_income,
+
+    eps,
+    eps_ttm,
     eps_yoy_growth,
     op_margin,
+    last_year_q_eps,
 
     -- Valuation
     pe_ttm,
     pb_ratio,
+    book_value_per_share,
 
     -- Balance sheet
+    current_assets,
+    current_liabilities,
+    total_assets,
+
     shares_outstanding,
     debt_ratio,
     equity_ratio,
@@ -65,15 +81,13 @@ final AS (
     m.date,
     m.ticker,
 
-    -- ==========================================
-    -- Price / volume
-    -- ==========================================
     m.d_close,
     m.d_vol,
 
-    -- ==========================================
-    -- Fundamental characteristics
-    -- ==========================================
+    -- ==================================================
+    -- Research characteristics
+    -- ==================================================
+
     m.yoy_growth,
     m.mom_growth_pct,
     m.eps_yoy_growth,
@@ -86,11 +100,51 @@ final AS (
     m.equity_ratio,
     m.current_ratio,
 
+    -- ==================================================
+    -- Eligibility / denominator diagnostics
+    -- ==================================================
+
+    -- PE denominator
+    m.eps_ttm,
+
+    -- Current monthly revenue used by revenue research
+    m.revenue AS revenue_current,
+    m.revenue_last_year AS revenue_prior_year,
+
+    -- Quarter EPS used by eps_yoy_growth
+    m.eps AS eps_current,
+    m.last_year_q_eps AS eps_prior_year,
+
+    -- Operating-margin inputs
+    m.financial_q_revenue AS op_margin_revenue,
+    m.financial_q_operating_income AS op_margin_operating_income,
+
+    -- PB denominator
+    m.book_value_per_share,
+
+    -- Balance-sheet denominators
+    m.current_assets,
+    m.current_liabilities,
+    m.total_assets,
+
+    -- ==================================================
+    -- Size
+    -- ==================================================
+
     m.shares_outstanding,
 
-    -- ==========================================
-    -- Technical characteristics
-    -- ==========================================
+    m.d_close * m.shares_outstanding AS market_cap,
+
+    CASE
+      WHEN m.d_close > 0
+       AND m.shares_outstanding > 0
+      THEN LN(m.d_close * m.shares_outstanding)
+    END AS log_market_cap,
+
+    -- ==================================================
+    -- Technical
+    -- ==================================================
+
     SAFE_DIVIDE(
       m.d_close,
       NULLIF(m.ma20, 0)
@@ -101,30 +155,14 @@ final AS (
       NULLIF(m.ma60, 0)
     ) - 1 AS price_ma60_gap,
 
-    -- ==========================================
-    -- Size
-    -- ==========================================
-    m.d_close * m.shares_outstanding AS market_cap,
+    -- ==================================================
+    -- Expectation
+    -- ==================================================
 
-    CASE
-      WHEN m.d_close > 0
-       AND m.shares_outstanding > 0
-      THEN LN(m.d_close * m.shares_outstanding)
-    END AS log_market_cap,
-
-    -- ==========================================
-    -- Expectation / DCF
-    -- ==========================================
     e.expected_revenue_growth,
     e.forward_constant_growth,
-
-    -- NOTE:
-    -- canonical expectation-model implied growth.
-    -- This is NOT a replacement for the deprecated
-    -- implied_growth_3y/5y/10y_pct fields.
     e.implied_growth,
     e.implied_growth_pct,
-
     e.expectation_gap
 
   FROM master m
@@ -134,6 +172,7 @@ final AS (
    AND m.ticker = e.ticker
 
 )
+
 
 SELECT *
 FROM final

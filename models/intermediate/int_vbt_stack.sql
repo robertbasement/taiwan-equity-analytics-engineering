@@ -6,8 +6,9 @@ WITH empty_boxes AS (
 
   SELECT
     CAST(NULL AS STRUCT<
-      revenue INT64, 
-      yoy_growth_pct FLOAT64, 
+      revenue INT64,
+      revenue_last_year INT64,
+      yoy_growth_pct FLOAT64,
       mom_growth_pct FLOAT64,
       ytd_growth_pct FLOAT64,
       yoy_triple_increase_signal INT64,
@@ -44,6 +45,7 @@ WITH empty_boxes AS (
       net_margin_volatility FLOAT64,
       eps FLOAT64,
       eps_ttm FLOAT64,
+      last_year_q_eps FLOAT64,
       eps_yoy_growth FLOAT64,
       EBIT_signal INT64,
       net_income_signal INT64,

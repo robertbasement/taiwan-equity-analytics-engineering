@@ -59,6 +59,15 @@ filled AS (
             ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
         ) AS revenue,
 
+
+        LAST_VALUE(r.revenue_last_year IGNORE NULLS) OVER (
+            PARTITION BY ticker
+            ORDER BY date
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ) AS revenue_last_year,
+
+
+
         LAST_VALUE(r.yoy_growth_pct IGNORE NULLS) OVER (
             PARTITION BY ticker
             ORDER BY date
@@ -182,6 +191,12 @@ filled AS (
             ORDER BY date
             ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
         ) AS eps_ttm,
+
+        LAST_VALUE(f.last_year_q_eps IGNORE NULLS) OVER (
+            PARTITION BY ticker
+            ORDER BY date
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ) AS last_year_q_eps,
 
         LAST_VALUE(f.eps_yoy_growth IGNORE NULLS) OVER (
             PARTITION BY ticker

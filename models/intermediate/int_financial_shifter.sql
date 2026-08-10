@@ -51,6 +51,7 @@ WITH raw_financial AS (
 
       eps AS eps,
       eps_ttm AS eps_ttm,
+      last_year_q_eps AS last_year_q_eps,
       eps_yoy_growth AS eps_yoy_growth,
 
       EBIT_signal AS EBIT_signal,

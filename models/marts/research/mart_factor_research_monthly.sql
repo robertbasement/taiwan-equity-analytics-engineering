@@ -87,7 +87,24 @@ current_panel AS (
     d.forward_constant_growth,
     d.implied_growth,
     d.implied_growth_pct,
-    d.expectation_gap
+    d.expectation_gap,
+
+    d.eps_ttm,
+
+    d.revenue_current,
+    d.revenue_prior_year,
+
+    d.eps_current,
+    d.eps_prior_year,
+
+    d.op_margin_revenue,
+    d.op_margin_operating_income,
+
+    d.book_value_per_share,
+
+    d.current_assets,
+    d.current_liabilities,
+    d.total_assets,
 
   FROM calendar_with_next c
 
@@ -195,7 +212,24 @@ final AS (
 
     p.implied_growth,
     p.implied_growth_pct,
-    p.expectation_gap
+    p.expectation_gap,
+
+    p.eps_ttm,
+
+    p.revenue_current,
+    p.revenue_prior_year,
+
+    p.eps_current,
+    p.eps_prior_year,
+
+    p.op_margin_revenue,
+    p.op_margin_operating_income,
+
+    p.book_value_per_share,
+
+    p.current_assets,
+    p.current_liabilities,
+    p.total_assets,
 
   FROM current_panel p
 

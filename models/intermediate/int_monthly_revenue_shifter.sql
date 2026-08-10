@@ -11,6 +11,7 @@ WITH raw_revenue AS (
 
     STRUCT(
       revenue,
+      revenue_last_year,
       yoy_growth_pct,
       mom_growth_pct,
       ytd_growth_pct,

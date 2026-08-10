@@ -247,6 +247,8 @@ SELECT
   q_eps AS eps,
   eps_ttm,
 
+  last_year_q_eps,
+
   SAFE_DIVIDE(
     q_eps,
     NULLIF(last_year_q_eps, 0)
