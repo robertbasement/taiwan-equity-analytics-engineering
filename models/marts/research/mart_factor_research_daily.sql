@@ -58,6 +58,35 @@ WITH master AS (
 
 ),
 
+daily_returns AS (
+
+  SELECT
+    *,
+
+    SAFE_DIVIDE(
+      d_close,
+      LAG(d_close) OVER (
+        PARTITION BY ticker
+        ORDER BY date
+      )
+    ) - 1 AS stock_return
+
+  FROM master
+
+),
+
+market_returns AS (
+
+  SELECT
+    date,
+    stock_return AS market_factor_return
+
+  FROM daily_returns
+
+  WHERE ticker = '0050'
+
+),
+
 expectation AS (
 
   SELECT
@@ -82,6 +111,8 @@ final AS (
     m.ticker,
 
     m.d_close,
+    m.stock_return,
+    market.market_factor_return,
     m.d_vol,
 
     -- ==================================================
@@ -165,7 +196,10 @@ final AS (
     e.implied_growth_pct,
     e.expectation_gap
 
-  FROM master m
+  FROM daily_returns m
+
+  LEFT JOIN market_returns market
+    ON m.date = market.date
 
   LEFT JOIN expectation e
     ON m.date = e.date

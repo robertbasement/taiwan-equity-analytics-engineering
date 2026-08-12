@@ -20,6 +20,15 @@ models:
       - name: d_close
         description: Adjusted closing price.
 
+      - name: stock_return
+        description: >
+          Realized adjusted-close return from the ticker's immediately previous
+          observed trading date to the current date. The first observation is null.
+
+      - name: market_factor_return
+        description: >
+          Realized adjusted-close return for benchmark ticker 0050 on the same date.
+
       - name: yoy_growth
         description: >
           Revenue YoY growth. Unit must be standardized upstream.
