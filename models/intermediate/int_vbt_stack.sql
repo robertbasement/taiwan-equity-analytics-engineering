@@ -13,7 +13,10 @@ WITH empty_boxes AS (
       ytd_growth_pct FLOAT64,
       yoy_triple_increase_signal INT64,
       yoy_positive_streak_count INT64,
-      data_month_label STRING
+      -- PIT lineage
+      data_month_label STRING,
+      deadline_date DATE,
+      aligned_date DATE
     >) AS empty_rev_box,
 
     -- CAST(NULL AS STRUCT<
@@ -54,7 +57,9 @@ WITH empty_boxes AS (
       net_margin_diff_signal INT64,
       EBIT_vol_signal INT64,
       net_margin_vol_signal INT64,
-      year_quarter STRING
+      year_quarter STRING,
+      deadline_date DATE,
+      aligned_date DATE
 
     >) AS empty_fin_box,
 
@@ -76,7 +81,9 @@ WITH empty_boxes AS (
       debt_ratio FLOAT64,
       equity_ratio FLOAT64,
       current_ratio FLOAT64,
-      year_quarter STRING
+      year_quarter STRING,
+      deadline_date DATE,
+      aligned_date DATE
     >) AS empty_bs_box
 
 ),
@@ -89,7 +96,9 @@ daily_part AS (
     d.open,
     d.high,
     d.low,
+    d.raw_close,
     d.adj_close,
+    d.effective_close,
     d.volume,
     d.ma20,
     d.ma60,
@@ -111,7 +120,9 @@ revenue_part AS (
     NULL AS open,
     NULL AS high,
     NULL AS low,
+    NULL AS raw_close,
     NULL AS adj_close,
+    NULL AS effective_close,
     NULL AS volume,
     NULL AS ma20,
     NULL AS ma60,
@@ -133,7 +144,9 @@ financial_part AS (
     NULL AS open,
     NULL AS high,
     NULL AS low,
+    NULL AS raw_close,
     NULL AS adj_close,
+    NULL AS effective_close,
     NULL AS volume,
     NULL AS ma20,
     NULL AS ma60,
@@ -142,7 +155,7 @@ financial_part AS (
     e.empty_rev_box AS rev_box,
     f.fin_box,
     e.empty_bs_box AS bs_box
-  FROM {{ ref('int_financial_shifter') }} f
+  FROM {{ ref('int_income_statement_shifter') }} f
   CROSS JOIN empty_boxes e
 
 ),
@@ -155,7 +168,9 @@ balance_sheet_part AS (
     NULL AS open,
     NULL AS high,
     NULL AS low,
+    NULL AS raw_close,
     NULL AS adj_close,
+    NULL AS effective_close,
     NULL AS volume,
     NULL AS ma20,
     NULL AS ma60,

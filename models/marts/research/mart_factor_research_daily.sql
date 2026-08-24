@@ -14,20 +14,38 @@ WITH master AS (
     date,
     ticker,
 
+    -- ==================================================
     -- Price / volume
+    -- ==================================================
+
+    -- PIT-safe historical price level
+    effective_close,
+
+    -- Total-return adjusted close
     d_close,
+
     d_vol,
     ma20,
     ma60,
 
+    -- ==================================================
     -- Monthly revenue
+    -- ==================================================
+
     revenue,
     revenue_month,
     yoy_growth,
     mom_growth_pct,
     revenue_last_year,
 
-    -- Financial statement
+    -- Revenue PIT lineage
+    revenue_deadline_date,
+    revenue_aligned_date,
+
+    -- ==================================================
+    -- Income statement
+    -- ==================================================
+
     financial_q_revenue,
     financial_q_operating_income,
 
@@ -37,12 +55,23 @@ WITH master AS (
     op_margin,
     last_year_q_eps,
 
+    -- Income statement PIT lineage
+    report_quarter,
+    financial_deadline_date,
+    financial_aligned_date,
+
+    -- ==================================================
     -- Valuation
+    -- ==================================================
+
     pe_ttm,
     pb_ratio,
     book_value_per_share,
 
+    -- ==================================================
     -- Balance sheet
+    -- ==================================================
+
     current_assets,
     current_liabilities,
     total_assets,
@@ -50,10 +79,16 @@ WITH master AS (
     shares_outstanding,
     debt_ratio,
     equity_ratio,
-    current_ratio
+    current_ratio,
+
+    -- Balance-sheet PIT lineage
+    balance_sheet_quarter,
+    balance_sheet_deadline_date,
+    balance_sheet_aligned_date
 
   FROM {{ ref('mart_vbt_master_dataset') }}
 
+  -- Return series still relies on adjusted close.
   WHERE d_close > 0
 
 ),
@@ -110,7 +145,16 @@ final AS (
     m.date,
     m.ticker,
 
+    -- ==================================================
+    -- Price / return
+    -- ==================================================
+
+    -- Historical price level usable for characteristics
+    m.effective_close,
+
+    -- Adjusted close usable for return measurement
     m.d_close,
+
     m.stock_return,
     market.market_factor_return,
     m.d_vol,
@@ -130,6 +174,30 @@ final AS (
     m.debt_ratio,
     m.equity_ratio,
     m.current_ratio,
+
+    -- ==================================================
+    -- PIT lineage — Revenue
+    -- ==================================================
+
+    m.revenue_month,
+    m.revenue_deadline_date,
+    m.revenue_aligned_date,
+
+    -- ==================================================
+    -- PIT lineage — Income statement
+    -- ==================================================
+
+    m.report_quarter,
+    m.financial_deadline_date,
+    m.financial_aligned_date,
+
+    -- ==================================================
+    -- PIT lineage — Balance sheet
+    -- ==================================================
+
+    m.balance_sheet_quarter,
+    m.balance_sheet_deadline_date,
+    m.balance_sheet_aligned_date,
 
     -- ==================================================
     -- Eligibility / denominator diagnostics
@@ -164,12 +232,18 @@ final AS (
 
     m.shares_outstanding,
 
-    m.d_close * m.shares_outstanding AS market_cap,
+    CASE
+      WHEN m.effective_close > 0
+       AND m.shares_outstanding > 0
+      THEN m.effective_close * m.shares_outstanding
+    END AS market_cap,
 
     CASE
-      WHEN m.d_close > 0
+      WHEN m.effective_close > 0
        AND m.shares_outstanding > 0
-      THEN LN(m.d_close * m.shares_outstanding)
+      THEN LN(
+        m.effective_close * m.shares_outstanding
+      )
     END AS log_market_cap,
 
     -- ==================================================
@@ -206,7 +280,6 @@ final AS (
    AND m.ticker = e.ticker
 
 )
-
 
 SELECT *
 FROM final

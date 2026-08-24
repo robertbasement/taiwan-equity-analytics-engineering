@@ -6,7 +6,9 @@ SELECT
   open,
   high,
   low,
+  raw_close,
   adj_close,
+  effective_close,
   volume,
 
   AVG(adj_close) OVER(

@@ -17,7 +17,14 @@ WITH flattened AS (
         MAX(open) AS d_open,
         MAX(high) AS d_high,
         MAX(low) AS d_low,
+
+        -- PIT / price-level fields
+        MAX(raw_close) AS raw_close,
+        MAX(effective_close) AS effective_close,
+
+        -- Total-return adjusted price
         MAX(adj_close) AS d_close,
+
         MAX(volume) AS d_vol,
 
         MAX(ma20) AS ma20,
@@ -29,11 +36,14 @@ WITH flattened AS (
         ANY_VALUE(bs_box) AS b
 
     FROM {{ ref('int_vbt_stack') }}
-    GROUP BY date, ticker
+
+    GROUP BY
+        date,
+        ticker
 
 ),
 
-filled AS (
+filled_boxes AS (
 
     SELECT
         date,
@@ -42,6 +52,9 @@ filled AS (
         d_open,
         d_high,
         d_low,
+
+        raw_close,
+        effective_close,
         d_close,
         d_vol,
 
@@ -50,315 +63,199 @@ filled AS (
         bias20,
 
         /*
-         * Monthly revenue features
+         * Forward-fill the entire event snapshot instead of each
+         * field independently.
+         *
+         * This keeps values and their PIT lineage together.
          */
 
-        LAST_VALUE(r.revenue IGNORE NULLS) OVER (
+        LAST_VALUE(r IGNORE NULLS) OVER (
             PARTITION BY ticker
             ORDER BY date
             ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS revenue,
+        ) AS r_filled,
 
-
-        LAST_VALUE(r.revenue_last_year IGNORE NULLS) OVER (
+        LAST_VALUE(f IGNORE NULLS) OVER (
             PARTITION BY ticker
             ORDER BY date
             ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS revenue_last_year,
+        ) AS f_filled,
 
-
-
-        LAST_VALUE(r.yoy_growth_pct IGNORE NULLS) OVER (
+        LAST_VALUE(b IGNORE NULLS) OVER (
             PARTITION BY ticker
             ORDER BY date
             ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS yoy_growth,
-
-        LAST_VALUE(r.mom_growth_pct IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS mom_growth_pct,
-
-        LAST_VALUE(r.ytd_growth_pct IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS ytd_growth_pct,
-
-        LAST_VALUE(r.yoy_positive_streak_count IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS yoy_positive_streak_count,
-
-        LAST_VALUE(r.yoy_triple_increase_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS rev_triple_sig,
-
-        LAST_VALUE(r.data_month_label IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS revenue_month,
-
-        /*
-         * Financial statement features
-         */
-
-        LAST_VALUE(f.q_revenue IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS financial_q_revenue,
-
-        LAST_VALUE(f.revenue_ttm IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS financial_revenue_ttm,
-
-        LAST_VALUE(f.q_operating_income IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS financial_q_operating_income,
-
-        LAST_VALUE(f.operating_income_ttm IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS financial_operating_income_ttm,
-
-        LAST_VALUE(f.q_net_income IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS financial_q_net_income,
-
-        LAST_VALUE(f.net_income_ttm IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS financial_net_income_ttm,
-
-        LAST_VALUE(f.operating_margin IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS op_margin,
-
-        LAST_VALUE(f.operating_margin_ttm IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS operating_margin_ttm,
-
-        LAST_VALUE(f.net_margin IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS net_margin,
-
-        LAST_VALUE(f.net_margin_ttm IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS net_margin_ttm,
-
-        LAST_VALUE(f.ebit_volatility IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS ebit_volatility,
-
-        LAST_VALUE(f.net_margin_volatility IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS net_margin_volatility,
-
-        LAST_VALUE(f.eps IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS eps,
-
-        LAST_VALUE(f.eps_ttm IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS eps_ttm,
-
-        LAST_VALUE(f.last_year_q_eps IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS last_year_q_eps,
-
-        LAST_VALUE(f.eps_yoy_growth IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS eps_yoy_growth,
-
-        LAST_VALUE(f.EBIT_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS EBIT_signal,
-
-        LAST_VALUE(f.net_income_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS net_income_signal,
-
-        LAST_VALUE(f.EPS_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS EPS_signal,
-
-        LAST_VALUE(f.EBIT_diff_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS EBIT_diff_signal,
-
-        LAST_VALUE(f.net_margin_diff_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS net_margin_diff_signal,
-
-        LAST_VALUE(f.EBIT_vol_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS EBIT_vol_signal,
-
-        LAST_VALUE(f.net_margin_vol_signal IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS net_margin_vol_signal,
-
-        LAST_VALUE(f.year_quarter IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS report_quarter,
-
-        /*
-         * Balance sheet features
-         */
-
-        LAST_VALUE(b.current_assets IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS current_assets,
-
-        LAST_VALUE(b.non_current_assets IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS non_current_assets,
-
-        LAST_VALUE(b.total_assets IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS total_assets,
-
-        LAST_VALUE(b.current_liabilities IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS current_liabilities,
-
-        LAST_VALUE(b.non_current_liabilities IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS non_current_liabilities,
-
-        LAST_VALUE(b.total_liabilities IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS total_liabilities,
-
-        LAST_VALUE(b.share_capital IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS share_capital,
-
-        LAST_VALUE(b.share_capital_ntd IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS share_capital_ntd,
-
-        LAST_VALUE(b.shares_outstanding IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS shares_outstanding,
-
-        LAST_VALUE(b.capital_surplus IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS capital_surplus,
-
-        LAST_VALUE(b.retained_earnings IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS retained_earnings,
-
-        LAST_VALUE(b.total_equity IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS total_equity,
-
-        LAST_VALUE(b.book_value_per_share IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS book_value_per_share,
-
-        LAST_VALUE(b.debt_ratio IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS debt_ratio,
-
-        LAST_VALUE(b.equity_ratio IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS equity_ratio,
-
-        LAST_VALUE(b.current_ratio IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS current_ratio,
-
-        LAST_VALUE(b.year_quarter IGNORE NULLS) OVER (
-            PARTITION BY ticker
-            ORDER BY date
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) AS balance_sheet_quarter
+        ) AS b_filled
 
     FROM flattened
+
+),
+
+expanded AS (
+
+    SELECT
+        date,
+        ticker,
+
+        d_open,
+        d_high,
+        d_low,
+
+        raw_close,
+        effective_close,
+        d_close,
+        d_vol,
+
+        ma20,
+        ma60,
+        bias20,
+
+
+        /*
+         * ============================================================
+         * Monthly revenue
+         * ============================================================
+         */
+
+        r_filled.revenue AS revenue,
+
+        r_filled.revenue_last_year AS revenue_last_year,
+
+        r_filled.yoy_growth_pct AS yoy_growth,
+
+        r_filled.mom_growth_pct AS mom_growth_pct,
+
+        r_filled.ytd_growth_pct AS ytd_growth_pct,
+
+        r_filled.yoy_positive_streak_count AS yoy_positive_streak_count,
+
+        r_filled.yoy_triple_increase_signal AS rev_triple_sig,
+
+        /*
+         * Revenue PIT lineage
+         */
+
+        r_filled.data_month_label AS revenue_month,
+
+        r_filled.deadline_date AS revenue_deadline_date,
+
+        r_filled.aligned_date AS revenue_aligned_date,
+
+
+        /*
+         * ============================================================
+         * Income statement
+         * ============================================================
+         */
+
+        r_filled.data_month_label IS NOT NULL AS has_revenue_snapshot,
+
+        f_filled.q_revenue AS financial_q_revenue,
+
+        f_filled.revenue_ttm AS financial_revenue_ttm,
+
+        f_filled.q_operating_income AS financial_q_operating_income,
+
+        f_filled.operating_income_ttm AS financial_operating_income_ttm,
+
+        f_filled.q_net_income AS financial_q_net_income,
+
+        f_filled.net_income_ttm AS financial_net_income_ttm,
+
+        f_filled.operating_margin AS op_margin,
+
+        f_filled.operating_margin_ttm AS operating_margin_ttm,
+
+        f_filled.net_margin AS net_margin,
+
+        f_filled.net_margin_ttm AS net_margin_ttm,
+
+        f_filled.ebit_volatility AS ebit_volatility,
+
+        f_filled.net_margin_volatility AS net_margin_volatility,
+
+        f_filled.eps AS eps,
+
+        f_filled.eps_ttm AS eps_ttm,
+
+        f_filled.last_year_q_eps AS last_year_q_eps,
+
+        f_filled.eps_yoy_growth AS eps_yoy_growth,
+
+        f_filled.EBIT_signal AS EBIT_signal,
+
+        f_filled.net_income_signal AS net_income_signal,
+
+        f_filled.EPS_signal AS EPS_signal,
+
+        f_filled.EBIT_diff_signal AS EBIT_diff_signal,
+
+        f_filled.net_margin_diff_signal AS net_margin_diff_signal,
+
+        f_filled.EBIT_vol_signal AS EBIT_vol_signal,
+
+        f_filled.net_margin_vol_signal AS net_margin_vol_signal,
+
+        /*
+         * Income statement PIT lineage
+         */
+
+        f_filled.year_quarter AS report_quarter,
+
+        f_filled.deadline_date AS financial_deadline_date,
+
+        f_filled.aligned_date AS financial_aligned_date,
+
+
+        /*
+         * ============================================================
+         * Balance sheet
+         * ============================================================
+         */
+
+        b_filled.current_assets AS current_assets,
+
+        b_filled.non_current_assets AS non_current_assets,
+
+        b_filled.total_assets AS total_assets,
+
+        b_filled.current_liabilities AS current_liabilities,
+
+        b_filled.non_current_liabilities AS non_current_liabilities,
+
+        b_filled.total_liabilities AS total_liabilities,
+
+        b_filled.share_capital AS share_capital,
+
+        b_filled.share_capital_ntd AS share_capital_ntd,
+
+        b_filled.shares_outstanding AS shares_outstanding,
+
+        b_filled.capital_surplus AS capital_surplus,
+
+        b_filled.retained_earnings AS retained_earnings,
+
+        b_filled.total_equity AS total_equity,
+
+        b_filled.book_value_per_share AS book_value_per_share,
+
+        b_filled.debt_ratio AS debt_ratio,
+
+        b_filled.equity_ratio AS equity_ratio,
+
+        b_filled.current_ratio AS current_ratio,
+
+        /*
+         * Balance sheet PIT lineage
+         */
+
+        b_filled.year_quarter AS balance_sheet_quarter,
+
+        b_filled.deadline_date AS balance_sheet_deadline_date,
+
+        b_filled.aligned_date AS balance_sheet_aligned_date
+
+    FROM filled_boxes
 
 ),
 
@@ -367,15 +264,25 @@ final AS (
     SELECT
         *,
 
+        /*
+         * Valuation multiples should use a contemporaneously observable
+         * price level, not future-adjusted total-return price.
+         */
+
         SAFE_DIVIDE(
-            d_close,
+            effective_close,
             NULLIF(eps_ttm, 0)
         ) AS pe_ttm,
 
         SAFE_DIVIDE(
-            d_close,
+            effective_close,
             NULLIF(book_value_per_share, 0)
         ) AS pb_ratio,
+
+        /*
+         * Forward returns continue to use adjusted close because these
+         * are return measurements, not historical price-level features.
+         */
 
         SAFE_DIVIDE(
             LEAD(d_close, 1) OVER (
@@ -409,7 +316,8 @@ final AS (
             d_close
         ) - 1 AS ret_20d
 
-    FROM filled
+    FROM expanded
+
     WHERE date >= DATE '2010-01-01'
 
 )

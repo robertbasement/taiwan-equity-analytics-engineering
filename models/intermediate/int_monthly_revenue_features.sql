@@ -15,6 +15,9 @@ check_change AS (
       1,
       0
     ) AS state_changed,
+    -- OVER + PARTITION 代表 對ticker 這個分群並用year_month排序, 之後對每一個做  LAG(yoy_growth_pct, 1) 的計算
+    -- 也就是找到該ticker 上一個year_month的yoy_growth_pct 並在每個一個rows上輸出結果
+    -- 所以 OVER + PARTITION 並不會壓縮最後輸出的rows
     LAG(yoy_growth_pct, 1) OVER(PARTITION BY ticker ORDER BY year_month) AS yoy_lag1,
     LAG(yoy_growth_pct, 2) OVER(PARTITION BY ticker ORDER BY year_month) AS yoy_lag2
   FROM base

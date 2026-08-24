@@ -62,8 +62,17 @@ current_panel AS (
 
     d.ticker,
 
+    -- ==================================================
+    -- Price / volume
+    -- ==================================================
+
+    d.effective_close,
     d.d_close,
     d.d_vol,
+
+    -- ==================================================
+    -- Research characteristics
+    -- ==================================================
 
     d.yoy_growth,
     d.mom_growth_pct,
@@ -89,6 +98,34 @@ current_panel AS (
     d.implied_growth_pct,
     d.expectation_gap,
 
+    -- ==================================================
+    -- Revenue PIT lineage
+    -- ==================================================
+
+    d.revenue_month,
+    d.revenue_deadline_date,
+    d.revenue_aligned_date,
+
+    -- ==================================================
+    -- Income-statement PIT lineage
+    -- ==================================================
+
+    d.report_quarter,
+    d.financial_deadline_date,
+    d.financial_aligned_date,
+
+    -- ==================================================
+    -- Balance-sheet PIT lineage
+    -- ==================================================
+
+    d.balance_sheet_quarter,
+    d.balance_sheet_deadline_date,
+    d.balance_sheet_aligned_date,
+
+    -- ==================================================
+    -- Eligibility / denominator diagnostics
+    -- ==================================================
+
     d.eps_ttm,
 
     d.revenue_current,
@@ -105,6 +142,8 @@ current_panel AS (
     d.current_assets,
     d.current_liabilities,
     d.total_assets,
+
+    d.shares_outstanding
 
   FROM calendar_with_next c
 
@@ -176,19 +215,25 @@ final AS (
 
     p.ticker,
 
+    -- ==================================================
+    -- Price / return
+    -- ==================================================
+
+    p.effective_close,
     p.d_close,
     p.d_vol,
 
-    -- Forward stock return
     SAFE_DIVIDE(
       n.next_d_close,
       p.d_close
     ) - 1 AS forward_return,
 
-    -- Benchmark forward return
     b.market_return,
 
+    -- ==================================================
     -- Characteristics known at rebalance date
+    -- ==================================================
+
     p.yoy_growth,
     p.mom_growth_pct,
     p.eps_yoy_growth,
@@ -209,10 +254,29 @@ final AS (
 
     p.expected_revenue_growth,
     p.forward_constant_growth,
-
     p.implied_growth,
     p.implied_growth_pct,
     p.expectation_gap,
+
+    -- ==================================================
+    -- PIT lineage
+    -- ==================================================
+
+    p.revenue_month,
+    p.revenue_deadline_date,
+    p.revenue_aligned_date,
+
+    p.report_quarter,
+    p.financial_deadline_date,
+    p.financial_aligned_date,
+
+    p.balance_sheet_quarter,
+    p.balance_sheet_deadline_date,
+    p.balance_sheet_aligned_date,
+
+    -- ==================================================
+    -- Eligibility / denominator diagnostics
+    -- ==================================================
 
     p.eps_ttm,
 
@@ -230,6 +294,8 @@ final AS (
     p.current_assets,
     p.current_liabilities,
     p.total_assets,
+
+    p.shares_outstanding
 
   FROM current_panel p
 
