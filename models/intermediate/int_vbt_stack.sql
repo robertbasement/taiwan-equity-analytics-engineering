@@ -74,17 +74,23 @@ WITH empty_boxes AS (
       share_capital FLOAT64,
       share_capital_ntd FLOAT64,
       shares_outstanding FLOAT64,
+      adjusted_shares_outstanding FLOAT64,
+
       capital_surplus FLOAT64,
       retained_earnings FLOAT64,
       total_equity FLOAT64,
+
       book_value_per_share FLOAT64,
+      adjusted_book_value_per_share FLOAT64,
+
       debt_ratio FLOAT64,
       equity_ratio FLOAT64,
       current_ratio FLOAT64,
+
       year_quarter STRING,
       deadline_date DATE,
       aligned_date DATE
-    >) AS empty_bs_box
+  >) AS empty_bs_box
 
 ),
 

@@ -230,6 +230,8 @@ expanded AS (
         b_filled.share_capital_ntd AS share_capital_ntd,
 
         b_filled.shares_outstanding AS shares_outstanding,
+        
+        b_filled.adjusted_shares_outstanding AS adjusted_shares_outstanding,
 
         b_filled.capital_surplus AS capital_surplus,
 
@@ -238,6 +240,8 @@ expanded AS (
         b_filled.total_equity AS total_equity,
 
         b_filled.book_value_per_share AS book_value_per_share,
+        
+        b_filled.adjusted_book_value_per_share AS adjusted_book_value_per_share,
 
         b_filled.debt_ratio AS debt_ratio,
 

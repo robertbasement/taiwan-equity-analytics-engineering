@@ -36,7 +36,7 @@ models:
 
       - name: market_cap
         description: >
-          d_close * shares_outstanding.
+          Contemporaneous effective_close * shares_outstanding.
           Shares-outstanding unit must be documented upstream.
 
       - name: implied_growth
@@ -51,9 +51,10 @@ models:
     tests:
 
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - date
-            - ticker
+          arguments:
+            combination_of_columns:
+              - date
+              - ticker
 
 
   - name: mart_factor_research_monthly
@@ -83,6 +84,7 @@ models:
     tests:
 
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - rebalance_date
-            - ticker
+          arguments:
+            combination_of_columns:
+              - rebalance_date
+              - ticker
