@@ -21,15 +21,9 @@ WITH price_joined AS (
     CASE
       WHEN p.close > 0 THEN p.close
       ELSE NULL
-    END AS valid_close,
-
-    COALESCE(d.daily_factor, 1.0) AS daily_factor
+    END AS valid_close
 
   FROM {{ ref('stg_daily_prices_raw') }} p
-
-  LEFT JOIN {{ ref('stg_dividend_factor') }} d
-    ON p.date = d.ex_date
-   AND p.ticker = d.ticker
 
   WHERE p.date >= DATE '2000-01-01'
 
@@ -95,32 +89,48 @@ price_cleaned AS (
 
 ),
 
-cumulative_calculation AS (
-
+-- Include all event dates, even when the ex-date is not a price row. A price
+-- row sorts before an event on the same date, so its frame contains only
+-- events with ex_date strictly greater than its own date.
+factor_timeline AS (
+  SELECT ticker, date, 1 AS is_price, CAST(NULL AS FLOAT64) AS log_factor
+  FROM (SELECT DISTINCT ticker, date FROM price_cleaned)
+  UNION ALL
   SELECT
-    *,
-
-    EXP(
-      SUM(LN(daily_factor)) OVER (
-        PARTITION BY ticker
-        ORDER BY date DESC
-        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-      )
-    ) AS rev_cum_factor
-
-  FROM price_cleaned
-
+    d.ticker,
+    d.ex_date AS date,
+    0 AS is_price,
+    LN(CASE WHEN EXISTS (
+      SELECT 1 FROM {{ ref('manual_corporate_actions') }} a
+      WHERE a.ticker = d.ticker
+        AND a.effective_date = d.ex_date
+        AND a.price_factor != 1.0
+    ) THEN ERROR(CONCAT(
+      'source/manual price-factor collision: ', d.ticker, ' ', CAST(d.ex_date AS STRING)
+    )) ELSE d.daily_factor END) AS log_factor
+  FROM {{ ref('stg_dividend_factor') }} d
+),
+factor_windows AS (
+  SELECT
+    ticker, date, is_price,
+    EXP(COALESCE(SUM(log_factor) OVER (
+      PARTITION BY ticker
+      ORDER BY date DESC, is_price DESC
+      ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+    ), 0.0)) AS rev_cum_factor
+  FROM factor_timeline
+),
+price_factors AS (
+  SELECT ticker, date, rev_cum_factor
+  FROM factor_windows
+  WHERE is_price = 1
 )
 
 SELECT
-  c.* EXCEPT(
-    daily_factor,
-    rev_cum_factor,
-    valid_close
-  ),
+  c.* EXCEPT(valid_close),
 
   c.effective_close
-  * c.rev_cum_factor
+  * pf.rev_cum_factor
   * COALESCE((
       SELECT EXP(SUM(LN(a.price_factor)))
       FROM {{ ref('manual_corporate_actions') }} a
@@ -128,4 +138,6 @@ SELECT
         AND c.date < a.effective_date
     ), 1.0) AS adj_close
 
-FROM cumulative_calculation c
+FROM price_cleaned c
+JOIN price_factors pf
+  ON c.ticker = pf.ticker AND c.date = pf.date

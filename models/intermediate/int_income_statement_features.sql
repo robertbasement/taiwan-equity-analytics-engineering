@@ -9,27 +9,60 @@ WITH base AS (
     LEFT(i.year_quarter, 4) AS year_label,
     RIGHT(i.year_quarter, 1) AS quarter_label,
 
+    LAST_DAY(
+      DATE(
+        SAFE_CAST(LEFT(i.year_quarter, 4) AS INT64),
+        SAFE_CAST(RIGHT(i.year_quarter, 1) AS INT64) * 3,
+        1
+      ),
+      QUARTER
+    ) AS current_period_end,
+
     i.revenue,
     i.operating_income,
     i.net_income,
 
-    i.eps * COALESCE((
-      SELECT EXP(SUM(LN(a.per_share_factor)))
-      FROM {{ ref('manual_corporate_actions') }} a
-      WHERE a.ticker = i.ticker
-        AND DATE(
-          SAFE_CAST(LEFT(i.year_quarter, 4) AS INT64),
-          CASE SAFE_CAST(RIGHT(i.year_quarter, 1) AS INT64)
-            WHEN 1 THEN 3
-            WHEN 2 THEN 6
-            WHEN 3 THEN 9
-            WHEN 4 THEN 12
-          END,
-          30
-        ) < a.effective_date
-    ), 1.0) AS eps
+    -- Preserve the source value here. Later CTEs reconcile only subtraction,
+    -- rolling-window, and comparison operands to the current period basis.
+    i.eps AS eps
 
   FROM {{ ref('stg_income_statement') }} i
+
+),
+
+source_with_previous AS (
+
+  SELECT
+    *,
+
+    LAG(current_period_end) OVER (
+      PARTITION BY ticker, year_label
+      ORDER BY year_quarter
+    ) AS previous_period_end,
+
+    LAG(eps) OVER (
+      PARTITION BY ticker, year_label
+      ORDER BY year_quarter
+    ) AS previous_ytd_eps
+
+  FROM base
+
+),
+
+source_basis_reconciliation AS (
+
+  SELECT
+    p.*,
+
+    COALESCE((
+      SELECT EXP(SUM(LN(a.per_share_factor)))
+      FROM {{ ref('manual_corporate_actions') }} a
+      WHERE a.ticker = p.ticker
+        AND a.effective_date > p.previous_period_end
+        AND a.effective_date <= p.current_period_end
+    ), 1.0) AS factor_between_periods
+
+  FROM source_with_previous p
 
 ),
 
@@ -38,6 +71,7 @@ single_quarter_calc AS (
   SELECT 
     ticker,
     year_quarter,
+    current_period_end,
 
     CASE 
       WHEN quarter_label = '1' THEN revenue
@@ -65,13 +99,10 @@ single_quarter_calc AS (
 
     CASE 
       WHEN quarter_label = '1' THEN eps
-      ELSE eps - LAG(eps) OVER (
-        PARTITION BY ticker, year_label
-        ORDER BY year_quarter
-      )
+      ELSE eps - previous_ytd_eps * factor_between_periods
     END AS q_eps
 
-  FROM base
+  FROM source_basis_reconciliation
 
 ),
 
@@ -91,6 +122,38 @@ ratios_calc AS (
     ) AS net_margin
 
   FROM single_quarter_calc
+
+),
+
+eps_basis_factors AS (
+
+  SELECT
+    *,
+
+    -- This cumulative factor is an internal bridge for converting window and
+    -- comparison operands. It does not rewrite the historical q_eps row.
+    COALESCE((
+      SELECT EXP(SUM(LN(a.per_share_factor)))
+      FROM {{ ref('manual_corporate_actions') }} a
+      WHERE a.ticker = r.ticker
+        AND a.effective_date <= r.current_period_end
+    ), 1.0) AS cumulative_per_share_factor
+
+  FROM ratios_calc r
+
+),
+
+eps_basis_components AS (
+
+  SELECT
+    *,
+
+    SAFE_DIVIDE(
+      q_eps,
+      NULLIF(cumulative_per_share_factor, 0)
+    ) AS q_eps_action_neutral
+
+  FROM eps_basis_factors
 
 ),
 
@@ -133,12 +196,13 @@ signals AS (
       ORDER BY year_quarter
     ) AS prev_net_margin,
 
-    LAG(q_eps, 4) OVER (
+    -- Convert only the prior-year comparison operand to this report's basis.
+    LAG(q_eps_action_neutral, 4) OVER (
       PARTITION BY ticker
       ORDER BY year_quarter
-    ) AS last_year_q_eps
+    ) * cumulative_per_share_factor AS last_year_q_eps
 
-  FROM ratios_calc
+  FROM eps_basis_components
 
 ),
 
@@ -192,11 +256,12 @@ ttm_calc AS (
         ORDER BY year_quarter
         ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
       ) = 4
-      THEN SUM(q_eps) OVER (
-        PARTITION BY ticker
-        ORDER BY year_quarter
-        ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
-      )
+      THEN cumulative_per_share_factor
+        * SUM(q_eps_action_neutral) OVER (
+          PARTITION BY ticker
+          ORDER BY year_quarter
+          ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
+        )
     END AS eps_ttm
 
   FROM signals
