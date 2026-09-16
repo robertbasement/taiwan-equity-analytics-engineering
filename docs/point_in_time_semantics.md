@@ -62,11 +62,11 @@ The balance-sheet shifter uses a separate policy table:
 | Fiscal quarter | Assumed availability date |
 |---|---|
 | Q1 | May 16 of the same year |
-| Q2 | August 16 of the same year |
+| Q2 | August 15 of the same year |
 | Q3 | November 15 of the same year |
 | Q4 | April 1 of the following year |
 
-The Q2 balance-sheet date is therefore one day later than the income-statement Q2 date. This document records the current implementation; it does not silently harmonize the two policies. The reason and future disposition of that difference remain a policy-review item.
+The Q2 balance-sheet date matches the income-statement Q2 date so an August 15 formation snapshot does not mix Q2 income with Q1 balance-sheet state solely because of different availability policies.
 
 As with income statements, the deadline is aligned to the first market date on or after it and is not an actual publication timestamp.
 
@@ -207,7 +207,6 @@ Yageo `2327` is evidence that the implemented mechanism works for the observed s
 ## Known PIT limitations
 
 - Monthly and quarterly availability dates are policies, not complete actual publication histories.
-- Income and balance Q2 policies currently differ by one day.
 - The warehouse does not retain immutable filing snapshots.
 - An explicit historical re-fetch can replace the filing basis previously observed for an old quarter.
 - Only one usable equity corporate-action case has been validated end to end.

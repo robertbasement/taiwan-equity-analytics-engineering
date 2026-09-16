@@ -7,7 +7,7 @@ WITH raw_balance_sheet AS (
 
     CASE
       WHEN quarter = 1 THEN DATE(year, 5, 16)
-      WHEN quarter = 2 THEN DATE(year, 8, 16)
+      WHEN quarter = 2 THEN DATE(year, 8, 15)
       WHEN quarter = 3 THEN DATE(year, 11, 15)
       WHEN quarter = 4 THEN DATE(year + 1, 4, 1)
     END AS deadline_date

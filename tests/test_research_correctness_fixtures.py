@@ -17,6 +17,7 @@ FEATURES = (ROOT / "models/intermediate/int_income_statement_features.sql").read
 SHIFTER = (ROOT / "models/intermediate/int_income_statement_shifter.sql").read_text()
 PRICES = (ROOT / "models/intermediate/int_daily_prices_adjusted.sql").read_text()
 DIVIDENDS = (ROOT / "models/staging/stg_dividend_factor.sql").read_text()
+BALANCE_SHIFTER = (ROOT / "models/intermediate/int_balance_sheet_shifter.sql").read_text()
 
 
 def factor(events, observation, *, forward):
@@ -70,6 +71,40 @@ def sql_adjusted_prices(prices, events):
 
 
 class ResearchCorrectnessFixtures(unittest.TestCase):
+    def test_q2_balance_is_available_on_august_15_market_date(self):
+        self.assertRegex(
+            BALANCE_SHIFTER,
+            r"WHEN quarter = 2 THEN DATE\(year, 8, 15\)",
+        )
+        self.assertNotRegex(
+            BALANCE_SHIFTER,
+            r"WHEN quarter = 2 THEN DATE\(year, 8, 16\)",
+        )
+
+        market_dates = [
+            date(2025, 8, 14),
+            date(2025, 8, 15),
+            date(2025, 8, 18),
+        ]
+        q2_deadline = date(2025, 8, 15)
+        q2_aligned_date = min(day for day in market_dates if day >= q2_deadline)
+        self.assertEqual(q2_aligned_date, date(2025, 8, 15))
+
+        balance_events = [
+            (date(2025, 5, 16), "2025-1"),
+            (q2_aligned_date, "2025-2"),
+        ]
+
+        def visible_quarter(observation_date):
+            return max(
+                quarter
+                for available_date, quarter in balance_events
+                if available_date <= observation_date
+            )
+
+        self.assertEqual(visible_quarter(date(2025, 8, 14)), "2025-1")
+        self.assertEqual(visible_quarter(date(2025, 8, 15)), "2025-2")
+
     def test_eps_source_basis_reconciliation_without_action(self):
         q1_end = date(2026, 3, 31)
         q2_end = date(2026, 6, 30)
