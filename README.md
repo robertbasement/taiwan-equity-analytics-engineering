@@ -1,196 +1,184 @@
 # Taiwan Equity Analytics Engineering
 
-Transform raw Taiwan equity market and financial data into reproducible, point-in-time-oriented analytical datasets for quantitative research.
+Transform raw Taiwan equity market and financial data into point-in-time-oriented, research-ready analytical datasets.
 
-This dbt project is the transformation layer of a broader research platform. It standardizes six ingestion tables, models disclosure availability and corporate actions, aligns fundamentals to trading dates, and publishes daily and monthly research contracts consumed by a Streamlit application.
+## What this repository does
 
-The design is intentionally candid: several strong point-in-time controls are implemented, but assumed disclosure dates and parts of the adjusted-price/EPS logic still require review before the entire warehouse can be described as point-in-time safe.
+Raw prices, monthly revenue, quarterly statements, and corporate actions cannot be joined safely by ticker and reporting period alone. They have different grains, become observable at different times, and may use different per-share bases before and after a corporate action.
+
+This dbt project turns six BigQuery source relations into coherent daily and monthly research datasets. It models assumed information availability, aligns financial events to market dates, preserves source-period lineage, reconciles split-sensitive per-share measures, and keeps formation-date characteristics separate from future return labels.
 
 ## Platform role
 
 ```mermaid
 flowchart LR
-    Ingestion["Private ingestion layer"]
-    Raw["BigQuery raw tables<br/>stock_data"]
+    Ingestion["Private data ingestion"]
+    Raw["BigQuery raw layer"]
     Analytics["THIS REPOSITORY<br/>dbt analytics engineering"]
-    Marts["Point-in-time-oriented<br/>research marts"]
-    Research["Streamlit quantitative<br/>research platform"]
-    Publication["Research findings<br/>and bilingual blog"]
+    Research["Quantitative research platform"]
+    Publication["Research communication"]
 
-    Ingestion --> Raw --> Analytics --> Marts --> Research --> Publication
+    Ingestion --> Raw --> Analytics --> Research --> Publication
 ```
 
-The diagram represents the application and data flow. This repository includes a container entry point for dbt, but it does not contain complete Scheduler, Pub/Sub, Cloud Run, IAM, or monitoring infrastructure definitions.
+This repository owns warehouse transformations and analytical contracts. It does not implement the private ingestion jobs, cloud orchestration, or the downstream research application.
 
-## The analytical-engineering problem
-
-Quantitative research needs more than cleaned columns. The inputs arrive at different grains and become knowable at different times:
-
-- prices are daily, while revenue is monthly and financial statements are quarterly;
-- listed and OTC corporate actions must be reconciled with historical price series;
-- cumulative statements must be converted into single-quarter and trailing-period features;
-- disclosure periods must not appear on trading dates before their assumed availability;
-- fundamentals must be carried forward as coherent snapshots rather than field-by-field mixtures; and
-- formation-date characteristics must remain separate from future return labels.
-
-dbt makes those temporal and analytical choices visible as lineage instead of embedding them inside a dashboard or notebook.
-
-## Actual model architecture
+## Architecture
 
 ```mermaid
 flowchart TB
-    subgraph SourceLayer[Six BigQuery sources]
-        Prices[(daily prices)]
-        Revenue[(monthly revenue)]
-        Income[(income statement)]
-        Balance[(balance sheet)]
-        Dividends[(listed + OTC dividends)]
-    end
+    Sources["6 BigQuery source relations"]
+    Staging["Staging<br/>typing, normalization, source unions"]
+    Events["PIT-oriented intermediate models<br/>features + dated events"]
+    Master["mart_vbt_master_dataset<br/>canonical daily state"]
+    Expectation["mart_expectation_dataset<br/>expectation features"]
+    Daily["mart_factor_research_daily<br/>daily research contract"]
+    Monthly["mart_factor_research_monthly<br/>primary runtime contract"]
 
-    subgraph Staging[Staging views]
-        PriceStage["Price date normalization"]
-        RevenueStage["Revenue typing and de-duplication"]
-        IncomeStage["Income typing and de-duplication"]
-        BalanceStage["Balance-sheet projection"]
-        DividendStage["Corporate-action factors"]
-    end
-
-    subgraph Intermediate[Intermediate event and feature models]
-        Adjusted["Adjusted prices"]
-        Indicators["Daily indicators"]
-        RevenueFeatures["Revenue features + availability event"]
-        IncomeFeatures["Quarterly / TTM features + availability event"]
-        BalanceFeatures["Balance features + filing/action events"]
-        Stack["Unified dated event stack"]
-    end
-
-    subgraph ResearchMarts[Research marts]
-        Master["mart_vbt_master_dataset<br/>daily state and PIT lineage"]
-        Expectations["mart_expectation_dataset<br/>fundamental vs market expectations"]
-        Daily["mart_factor_research_daily<br/>canonical daily panel"]
-        Monthly["mart_factor_research_monthly<br/>canonical rebalance panel"]
-    end
-
-    Prices --> PriceStage --> Adjusted --> Indicators --> Stack
-    Dividends --> DividendStage --> Adjusted
-    Revenue --> RevenueStage --> RevenueFeatures --> Stack
-    Income --> IncomeStage --> IncomeFeatures --> Stack
-    Balance --> BalanceStage --> BalanceFeatures --> Stack
-    Indicators --> RevenueFeatures
-    Indicators --> IncomeFeatures
-    Indicators --> BalanceFeatures
-    Stack --> Master --> Expectations
+    Sources --> Staging --> Events --> Master
+    Master --> Expectation
     Master --> Daily
-    Expectations --> Daily --> Monthly
+    Expectation --> Daily --> Monthly
 ```
 
-Separate DCF support dimensions and older valuation/factor marts branch from the master dataset but are not the canonical Streamlit contracts.
+The four current analytical contracts are:
 
-## Upstream raw-data contract
+- `mart_vbt_master_dataset`: reusable daily market and fundamental state;
+- `mart_expectation_dataset`: forward-fundamental and market-implied expectation features;
+- `mart_factor_research_daily`: canonical daily research panel; and
+- `mart_factor_research_monthly`: primary formation-date and next-rebalance contract consumed by the research platform.
 
-The source declaration currently contains the same six table names written by the private ingestion layer:
+See [Architecture](docs/architecture.md) for the complete DAG and model classifications.
 
-| Source table | Staging model | Domain |
-| --- | --- | --- |
-| `daily_prices_partitioned` | `stg_daily_prices_raw` | Daily OHLCV |
-| `monthly_revenue` | `stg_monthly_revenue` | Monthly company revenue |
-| `income_statement` | `stg_income_statement` | Quarterly performance |
-| `balance_sheet` | `stg_balance_sheet` | Quarterly financial position |
-| `sii_dividend` | `stg_dividend_factor` | Listed-market corporate actions |
-| `otc_dividend` | `stg_dividend_factor` | OTC corporate actions |
+## Key engineering decisions
 
-This is a confirmed table-name contract. Source freshness, source-level tests, and formal dbt model contracts are not currently defined.
+- Financial information enters market time on explicit policy dates and retains its source-period and aligned-date lineage.
+- Revenue, income-statement, and balance-sheet snapshots are forward-filled as whole structs, preventing values from different source observations from being mixed field by field.
+- `effective_close` is the contemporaneous price level used for valuation; adjusted `adj_close`/`d_close` is reserved for return continuity and scale-invariant technical features.
+- Cumulative EPS subtraction reconciles reporting bases only across corporate actions between the two reporting-period ends.
+- Separate corporate-action events transition already-known per-share state on the effective date.
+- Monthly return labels join to the exact next scheduled rebalance date rather than skipping missing months with a ticker-level `LEAD`.
+- Automated correctness tests are complemented by human-readable, warehouse-backed diagnostic analyses.
 
-## Point-in-time design
+## Point-in-time semantics
 
-| Mechanism | Current assessment | What the SQL does |
-| --- | --- | --- |
-| Monthly revenue availability | **REVIEW** | Assigns an assumed date on the 11th of the following month and aligns it to the first available market date |
-| Quarterly statement availability | **REVIEW** | Maps quarters to conservative assumed deadlines, then aligns them to market dates; actual historical announcement timestamps are unavailable |
-| Fundamental propagation | **PASS** | Unions dated events and forward-fills whole revenue, income, and balance-sheet structs so values retain their lineage together |
-| Balance-sheet corporate actions | **PASS / REVIEW** | Applies split-sensitive transitions only from their effective date, but completeness depends on a small manual seed |
-| Market capitalization | **PASS** | Uses contemporaneous effective close multiplied by contemporaneous shares outstanding, not a future-adjusted price |
-| Monthly return label | **PASS** | Joins to the exact next scheduled rebalance date instead of using a ticker-level `LEAD` that could skip missing months |
-| Adjusted prices and EPS | **RISK** | Reverse cumulative price factors and future corporate-action EPS adjustments need economic and event-date validation before blanket PIT claims |
-| Legacy valuation mart | **RISK** | Uses adjusted close as an absolute P/E price input; the canonical master and expectation paths use the contemporaneous price field instead |
+The project is **point-in-time-oriented**, not universally PIT-safe. Where actual historical publication timestamps are unavailable, monthly and quarterly data use documented policy-based availability dates and align to the next market date.
 
-PIT lineage fields—including source period, assumed deadline, and aligned market date—are retained in the master and research marts so downstream analysis can audit information timing.
+The implementation distinguishes accounting period, assumed availability date, aligned market date, and corporate-action effective date. Details, including exact quarterly policies and corporate-action basis transitions, are in [Point-in-time semantics](docs/point_in_time_semantics.md).
 
-## Model layers
+## Data contracts
 
-| Layer | Materialization and responsibility |
-| --- | --- |
-| Sources | Six declared BigQuery raw tables in `stock_data` |
-| Staging | Views for type normalization, source union, and selected de-duplication |
-| Intermediate | Views plus one partitioned adjusted-price table; feature calculation and dated availability events |
-| Core mart | Partitioned `mart_vbt_master_dataset`, keyed and tested by `date + ticker` |
-| Expectation marts | DCF lookup dimensions, rolling revenue expectations, forward fundamentals, and implied-growth comparison |
-| Research marts | Partitioned daily and monthly panels with explicit formation characteristics, PIT lineage, and return labels |
+The declared upstream relations are:
 
-## Research-ready datasets
+- `daily_prices_partitioned`
+- `monthly_revenue`
+- `income_statement`
+- `balance_sheet`
+- `sii_dividend`
+- `otc_dividend`
 
-| Model | Grain | Role | Classification |
-| --- | --- | --- | --- |
-| `mart_vbt_master_dataset` | `date + ticker` | Reusable daily state combining prices, indicators, and forward-filled fundamental snapshots | Canonical reusable core |
-| `mart_expectation_dataset` | `date + ticker` | Fundamental growth expectations, DCF-implied growth, and expectation-gap signals | Reusable specialized mart |
-| `mart_factor_research_daily` | `date + ticker` | Daily returns, benchmark return, characteristics, denominators, size, and PIT lineage | Canonical research contract |
-| `mart_factor_research_monthly` | `rebalance_date + ticker` | Monthly formation panel with exact next-rebalance stock and benchmark returns | Canonical Streamlit contract |
-| `mart_factor_dataset` | `date + ticker` | Broad factor export mixing master and older valuation features | Legacy/overlapping terminal mart |
-| `mart_vbt_valuation_dataset` | `date + ticker` | Multi-horizon implied-growth lookup using the older price convention | Legacy/overlapping valuation mart |
-| `dim_dcf_surface`, `dim_dcf_lookup` | Parameter grid / rounded P/E key | Deterministic DCF support tables | Reusable supporting dimensions |
+The source YAML currently contracts relation names, not complete column-level schemas or source freshness. The important downstream contracts are the master, expectation, daily research, and monthly research marts listed above.
 
-Read-only inspection of the downstream application confirms that it queries `mart_factor_research_daily` and `mart_factor_research_monthly`; its contract checks explicitly reject the older master, factor, and expectation marts as runtime substitutes.
+See [Data contracts](docs/data_contracts.md) for required fields, expected grains, units that can be inferred from code, and assumptions that are not yet enforced.
 
-## Data quality and testing
+## Validation
 
-The project currently parses 21 dbt tests:
+The repository separates two kinds of evidence:
 
-- 12 generic tests: non-null keys and four composite uniqueness contracts;
-- nine singular tests covering master-key duplication, future dates, negative volume, three PIT-alignment checks, market-cap identity, daily stock returns, and benchmark returns.
+```text
+tests/      automated correctness contracts
+analyses/   human-readable warehouse-backed diagnostics
+```
 
-This is meaningful mart-level coverage, but testing is not yet comprehensive. Important gaps include source freshness, source/staging key tests, valid OHLC relationships, period-format tests, consecutive-quarter checks, duplicate dividend factors, deadline-versus-row-date assertions, corporate-action boundary tests, adjusted-return fixtures, expectation bounds, and primary-key tests for legacy/supporting marts. There are no snapshots, enforced model contracts, relationships tests, accepted-values tests, or custom project generic-test macros.
+Current validation includes:
 
-Runtime SQL filters and research statistics are not counted as dbt tests.
+- 12 generic dbt tests for canonical mart keys and uniqueness;
+- 10 singular dbt tests for PIT boundaries, identities, returns, and corporate-action diagnostics;
+- 11 warehouse-free Python fixtures for EPS and adjusted-price boundaries; and
+- 3 curated corporate-action analyses covering action availability, generic EPS diagnostics, and one end-to-end case study.
 
-## Reproducibility and runtime
+Yageo / 國巨 `2327` is currently the only usable equity corporate-action case validated end to end. It is evidence for the implemented mechanism, not proof of universal source-restatement behavior.
 
-- dbt Core and the BigQuery adapter are pinned in `requirements.txt`.
-- `dbt_utils` is pinned through `packages.yml` and `package-lock.yml`.
-- Models use `source()` and `ref()` lineage rather than hard-coded table references inside analytical SQL.
-- Large daily marts are materialized as BigQuery tables with date partitioning and ticker clustering where configured.
-- `Dockerfile` and `run_dbt.sh` provide a container execution path; the script runs `dbt deps` followed by the query-bearing `dbt build` command.
+## Quickstart
 
-`dbt parse` and `dbt ls` complete locally when target and log output are redirected outside the project. In this environment, `dbt compile` attempted OAuth token access, so it should not be treated as a guaranteed offline check. `dbt build`, `dbt run`, and `dbt test` execute BigQuery work and should only be run against an intentionally selected environment.
+Python 3.11 is used by the container image. Install the pinned dbt dependencies in an isolated environment:
 
-The checked-in profile currently uses OAuth/ADC-style authentication and contains environment-specific project, dataset, and region values—not stored credentials. Those identifiers and the hard-coded source database should be parameterized before public release.
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+Warehouse-free correctness fixtures:
+
+```bash
+python3 -m unittest discover \
+  -s tests \
+  -p 'test_research_correctness_fixtures.py' \
+  -v
+```
+
+Project dependency and structural checks:
+
+```bash
+dbt deps --profiles-dir .
+dbt parse --profiles-dir . --target dev
+dbt ls --profiles-dir . --target dev
+```
+
+`dbt compile` may require adapter authentication or warehouse metadata access depending on the environment:
+
+```bash
+dbt compile --profiles-dir . --target dev
+```
+
+`dbt show`, `dbt test`, `dbt run`, and `dbt build` execute BigQuery queries or materializations. They require Google Application Default Credentials plus compatible source relations. Production raw data and credentials are not distributed with this repository. The checked-in profile contains environment-specific identifiers for the current deployment and should be adapted for another project.
+
+The container entry point runs `dbt deps` followed by `dbt build`; it is therefore a warehouse-executing workflow, not an offline validation command.
 
 ## Repository structure
 
 ```text
-models/sources/       BigQuery source contract
-models/staging/       source typing, union, and de-duplication
-models/intermediate/  price adjustment, features, availability events, event stack
-models/marts/core/    reusable daily master dataset
-models/marts/expectation/  expectation and implied-growth datasets
-models/marts/research/     canonical Streamlit research contracts
-tests/                singular data-quality and PIT checks
-seeds/                manual corporate-action exceptions
+models/      source, staging, intermediate, and mart transformations
+tests/       dbt data tests and warehouse-free correctness fixtures
+analyses/    curated diagnostic and empirical validation queries
+docs/        architecture, contracts, and temporal semantics
+seeds/       manual corporate-action inputs
 ```
+
+## Canonical and legacy models
+
+Current contracts:
+
+- `mart_vbt_master_dataset`
+- `mart_expectation_dataset`
+- `mart_factor_research_daily`
+- `mart_factor_research_monthly`
+
+Legacy compatibility models:
+
+- `mart_vbt_valuation_dataset`
+- `mart_factor_dataset`
+
+The legacy marts are retained for earlier research workflows. They are not substitutes for the current daily or monthly research contracts; in particular, the older valuation path uses adjusted `d_close` as an absolute valuation price.
+
+`vbt` is a historical internal naming convention in this project; no expansion is asserted. In current models, `d_close` is the propagated name for adjusted `adj_close`, while `effective_close` is the contemporaneous price-level field.
 
 ## Known limitations
 
-- Disclosure availability uses policy dates rather than historical announcement timestamps; income and balance-sheet Q2 assumptions currently differ by one day.
-- Historical EPS is adjusted with future corporate-action factors and is used downstream, which requires PIT remediation or an explicitly non-PIT label.
-- The dividend reverse-cumulative adjustment appears to include the event-date factor and lacks a small fixture-based economic test.
-- The older valuation mart uses adjusted close as an absolute price-level input.
-- The manual corporate-action seed contains only two exceptions and has no checked-in provenance documentation.
-- Staging de-duplication is not consistently based on ingestion timestamps; monthly revenue currently keeps the greatest revenue value for duplicate month/ticker rows.
-- Environment-specific identifiers remain in `profiles.yml` and the source declaration.
-- Benchmark ticker and DCF assumptions are embedded in SQL rather than exposed as dbt variables.
-- Complete deployment infrastructure, source freshness, and warehouse DDL are outside this repository.
+- Financial availability uses policy dates rather than complete historical publication timestamps.
+- Immutable filing versions are not retained; explicitly re-fetching a historical quarter can replace the source basis previously observed.
+- Shares outstanding are inferred from financial-statement fields rather than treated as authoritative exchange-reported counts.
+- Manual corporate-action coverage and checked-in provenance are limited.
+- Only `2327` currently provides usable end-to-end equity corporate-action validation.
+- Source and staging grain enforcement is incomplete, particularly for balance-sheet ticker-quarter rows.
+- Production upstream data is private and is not distributed with this repository.
 
-## Related platform components
+## Documentation
 
-- **Data ingestion:** private production implementation; public architecture is documented in the platform landing repository.
-- **Quantitative research:** Streamlit application consuming the daily and monthly research contracts; public link pending.
-- **Research publication:** bilingual research blog and featured case study; public link pending.
+- [Architecture](docs/architecture.md)
+- [Data contracts](docs/data_contracts.md)
+- [Point-in-time semantics](docs/point_in_time_semantics.md)
+- [Corporate-action coverage analysis](analyses/corporate_action_coverage.sql)
+- [Generic corporate-action EPS validation](analyses/corporate_action_eps_validation.sql)
+- [Yageo 2327 corporate-action case study](analyses/yageo_2327_corporate_action_case_study.sql)
