@@ -64,6 +64,10 @@ See [Architecture](docs/architecture.md) for the complete DAG and model classifi
 
 The project is **point-in-time-oriented**, not universally PIT-safe. Where actual historical publication timestamps are unavailable, monthly and quarterly data use documented policy-based availability dates and align to the next market date.
 
+In V1, both Q2 income statements and Q2 balance sheets have an August 15 availability deadline. Each is aligned to the first date on or after that deadline in the common market-date calendar; monthly formation separately uses the first `0050` market date on or after the 15th.
+
+Historical financial feature rows are not retrospectively rewritten by later corporate actions. Reporting-period calculations convert quarterly, TTM, and prior-year EPS operands onto compatible share bases, while dated shifter events transition already-known per-share state only when an action becomes effective. This keeps future actions out of earlier financial PIT states, avoids applying the same factor again to the first post-action filing, and prevents artificial valuation discontinuities from mismatched price and EPS bases.
+
 The implementation distinguishes accounting period, assumed availability date, aligned market date, and corporate-action effective date. Details, including exact quarterly policies and corporate-action basis transitions, are in [Point-in-time semantics](docs/point_in_time_semantics.md).
 
 ## Data contracts
@@ -94,7 +98,7 @@ Current validation includes:
 
 - 12 generic dbt tests for canonical mart keys and uniqueness;
 - 10 singular dbt tests for PIT boundaries, identities, returns, and corporate-action diagnostics;
-- 11 warehouse-free Python fixtures for EPS and adjusted-price boundaries; and
+- 12 warehouse-free Python fixtures for EPS, adjusted-price, and Q2 balance-availability boundaries; and
 - 3 curated corporate-action analyses covering action availability, generic EPS diagnostics, and one end-to-end case study.
 
 Yageo / 國巨 `2327` is currently the only usable equity corporate-action case validated end to end. It is evidence for the implemented mechanism, not proof of universal source-restatement behavior.
@@ -171,7 +175,7 @@ The legacy marts are retained for earlier research workflows. They are not subst
 - Shares outstanding are inferred from financial-statement fields rather than treated as authoritative exchange-reported counts.
 - Manual corporate-action coverage and checked-in provenance are limited.
 - Only `2327` currently provides usable end-to-end equity corporate-action validation.
-- Source and staging grain enforcement is incomplete, particularly for balance-sheet ticker-quarter rows.
+- Source-contract, freshness, and staging-grain enforcement is incomplete, particularly for balance-sheet ticker-quarter rows.
 - Production upstream data is private and is not distributed with this repository.
 
 ## Documentation
