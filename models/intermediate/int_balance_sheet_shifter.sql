@@ -151,7 +151,9 @@ action_with_latest_filing AS (
         a.effective_date
 
       ORDER BY
-        f.date DESC
+        f.date DESC,
+        f.bs_box.deadline_date DESC,
+        f.bs_box.year_quarter DESC
     ) AS rn
 
   FROM actions a
@@ -334,7 +336,83 @@ all_events AS (
 
   FROM corporate_action_events
 
+),
+
+prioritized_events AS (
+
+  SELECT
+    *,
+    CASE event_type
+      WHEN 'corporate_action' THEN 1
+      WHEN 'financial_filing' THEN 0
+      ELSE ERROR(CONCAT('Unknown balance-sheet event type: ', event_type))
+    END AS event_priority
+
+  FROM all_events
+
+),
+
+-- Preserve the complete source history upstream, but expose one active state
+-- per ticker/market date. Corporate actions take precedence over filings, as
+-- in the income shifter; otherwise the latest policy-available quarter wins.
+-- A materially different tie after all legitimate precedence fields fails
+-- explicitly instead of creating another arbitrary selector.
+unresolved_ties AS (
+
+  SELECT
+    date,
+    ticker,
+    event_priority,
+    bs_box.deadline_date AS deadline_date,
+    bs_box.year_quarter AS year_quarter
+
+  FROM prioritized_events
+
+  GROUP BY 1, 2, 3, 4, 5
+
+  HAVING COUNT(DISTINCT TO_JSON_STRING(bs_box)) > 1
+
+),
+
+integrity_check AS (
+
+  SELECT
+    IF(
+      COUNT(*) = 0,
+      TRUE,
+      ERROR(
+        CONCAT(
+          'Balance-sheet PIT precedence leaves ',
+          CAST(COUNT(*) AS STRING),
+          ' materially different tied payload group(s)'
+        )
+      )
+    ) AS passed
+
+  FROM unresolved_ties
+
+),
+
+resolved AS (
+
+  SELECT
+    p.* EXCEPT (event_priority)
+
+  FROM prioritized_events p
+
+  CROSS JOIN integrity_check i
+
+  WHERE i.passed
+
+  QUALIFY ROW_NUMBER() OVER (
+    PARTITION BY p.date, p.ticker
+    ORDER BY
+      p.event_priority DESC,
+      p.bs_box.deadline_date DESC,
+      p.bs_box.year_quarter DESC
+  ) = 1
+
 )
 
 SELECT *
-FROM all_events
+FROM resolved

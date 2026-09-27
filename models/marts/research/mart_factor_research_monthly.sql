@@ -15,6 +15,18 @@ WITH research_daily AS (
 
 ),
 
+endpoint_prices AS (
+
+  SELECT
+    date,
+    ticker,
+    raw_close,
+    adj_close
+
+  FROM {{ ref('int_daily_prices_adjusted') }}
+
+),
+
 -- ==========================================
 -- 1. Research rebalance calendar
 -- First benchmark trading day on/after 15th
@@ -69,6 +81,9 @@ current_panel AS (
     d.effective_close,
     d.d_close,
     d.d_vol,
+
+    endpoint.raw_close AS current_raw_close,
+    endpoint.adj_close AS current_adjusted_close,
 
     -- ==================================================
     -- Research characteristics
@@ -150,6 +165,10 @@ current_panel AS (
   INNER JOIN research_daily d
     ON d.date = c.rebalance_date
 
+  LEFT JOIN endpoint_prices endpoint
+    ON endpoint.date = c.rebalance_date
+   AND endpoint.ticker = d.ticker
+
 ),
 
 -- ==========================================
@@ -167,11 +186,12 @@ next_price AS (
     c.rebalance_date,
     c.next_rebalance_date,
     d.ticker,
-    d.d_close AS next_d_close
+    d.raw_close AS next_raw_close,
+    d.adj_close AS next_adjusted_close
 
   FROM calendar_with_next c
 
-  INNER JOIN research_daily d
+  INNER JOIN endpoint_prices d
     ON d.date = c.next_rebalance_date
 
 ),
@@ -203,7 +223,46 @@ benchmark_return AS (
 ),
 
 -- ==========================================
--- 5. Final research panel
+-- 5. Return endpoint eligibility
+--
+-- Formation happens in current_panel before
+-- this eligibility gate. Invalid endpoints
+-- remain in the monthly formation dataset.
+-- ==========================================
+
+return_panel AS (
+
+  SELECT
+    p.*,
+
+    n.next_raw_close,
+    n.next_adjusted_close,
+
+    COALESCE(p.current_raw_close > 0, FALSE) AS current_endpoint_observed,
+    COALESCE(n.next_raw_close > 0, FALSE) AS next_endpoint_observed,
+
+    COALESCE(
+      p.current_raw_close > 0
+      AND n.next_raw_close > 0
+      AND p.current_adjusted_close > 0
+      AND NOT IS_NAN(p.current_adjusted_close)
+      AND NOT IS_INF(p.current_adjusted_close)
+      AND n.next_adjusted_close > 0
+      AND NOT IS_NAN(n.next_adjusted_close)
+      AND NOT IS_INF(n.next_adjusted_close),
+      FALSE
+    ) AS forward_return_eligible
+
+  FROM current_panel p
+
+  LEFT JOIN next_price n
+    ON p.rebalance_date = n.rebalance_date
+   AND p.ticker = n.ticker
+
+),
+
+-- ==========================================
+-- 6. Final research panel
 -- ==========================================
 
 final AS (
@@ -223,10 +282,21 @@ final AS (
     p.d_close,
     p.d_vol,
 
-    SAFE_DIVIDE(
-      n.next_d_close,
-      p.d_close
-    ) - 1 AS forward_return,
+    p.current_raw_close,
+    p.next_raw_close,
+    p.current_adjusted_close,
+    p.next_adjusted_close,
+    p.current_endpoint_observed,
+    p.next_endpoint_observed,
+    p.forward_return_eligible,
+
+    CASE
+      WHEN p.forward_return_eligible
+      THEN SAFE_DIVIDE(
+        p.next_adjusted_close,
+        p.current_adjusted_close
+      ) - 1
+    END AS forward_return,
 
     b.market_return,
 
@@ -297,11 +367,7 @@ final AS (
 
     p.shares_outstanding
 
-  FROM current_panel p
-
-  LEFT JOIN next_price n
-    ON p.rebalance_date = n.rebalance_date
-   AND p.ticker = n.ticker
+  FROM return_panel p
 
   LEFT JOIN benchmark_return b
     ON p.rebalance_date = b.rebalance_date

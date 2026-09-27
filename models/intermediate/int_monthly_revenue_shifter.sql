@@ -93,9 +93,69 @@ final AS (
     ON r.ticker = a.ticker
    AND r.data_month_label = a.data_month_label
 
+),
+
+-- Several historical observations can align to the first available market
+-- date. The active PIT state is the latest policy-available observation.
+-- Materially different payloads tied on every legitimate precedence field
+-- are an integrity error; they must never be resolved arbitrarily.
+unresolved_ties AS (
+
+  SELECT
+    date,
+    ticker,
+    rev_box.deadline_date AS deadline_date,
+    rev_box.data_month_label AS data_month_label
+
+  FROM final
+
+  GROUP BY 1, 2, 3, 4
+
+  HAVING COUNT(DISTINCT TO_JSON_STRING(rev_box)) > 1
+
+),
+
+integrity_check AS (
+
+  SELECT
+    IF(
+      COUNT(*) = 0,
+      TRUE,
+      ERROR(
+        CONCAT(
+          'Revenue PIT precedence leaves ',
+          CAST(COUNT(*) AS STRING),
+          ' materially different tied payload group(s)'
+        )
+      )
+    ) AS passed
+
+  FROM unresolved_ties
+
+),
+
+resolved AS (
+
+  SELECT
+    f.date,
+    f.ticker,
+    f.rev_box
+
+  FROM final f
+
+  CROSS JOIN integrity_check i
+
+  WHERE i.passed
+
+  QUALIFY ROW_NUMBER() OVER (
+    PARTITION BY f.date, f.ticker
+    ORDER BY
+      f.rev_box.deadline_date DESC,
+      f.rev_box.data_month_label DESC
+  ) = 1
+
 )
 
 SELECT *
-FROM final
-
+FROM resolved
 

@@ -75,7 +75,39 @@ models:
       - name: forward_return
         description: >
           Return from current rebalance date to the immediately next
-          scheduled rebalance date.
+          scheduled rebalance date, calculated from adjusted prices only
+          after both fixed-date endpoints have observed positive raw closes
+          and positive finite adjusted closes. Otherwise null.
+
+      - name: current_raw_close
+        description: Source-observed raw close on the common rebalance date.
+
+      - name: next_raw_close
+        description: Source-observed raw close on the next common rebalance date.
+
+      - name: current_adjusted_close
+        description: Adjusted close on the common rebalance date.
+
+      - name: next_adjusted_close
+        description: Adjusted close on the next common rebalance date.
+
+      - name: current_endpoint_observed
+        description: True only when current_raw_close is positive.
+        tests:
+          - not_null
+
+      - name: next_endpoint_observed
+        description: True only when next_raw_close is positive.
+        tests:
+          - not_null
+
+      - name: forward_return_eligible
+        description: >
+          Post-formation Methodology A label gate. True only when both raw
+          closes are observed and positive and both adjusted closes are
+          positive and finite.
+        tests:
+          - not_null
 
       - name: market_return
         description: >
