@@ -9,6 +9,10 @@ WITH base AS (
     LEFT(i.year_quarter, 4) AS year_label,
     RIGHT(i.year_quarter, 1) AS quarter_label,
 
+    SAFE_CAST(LEFT(i.year_quarter, 4) AS INT64) * 4
+      + SAFE_CAST(RIGHT(i.year_quarter, 1) AS INT64)
+        AS fiscal_quarter_index,
+
     LAST_DAY(
       DATE(
         SAFE_CAST(LEFT(i.year_quarter, 4) AS INT64),
@@ -39,6 +43,26 @@ source_with_previous AS (
       PARTITION BY ticker, year_label
       ORDER BY year_quarter
     ) AS previous_period_end,
+
+    LAG(fiscal_quarter_index) OVER (
+      PARTITION BY ticker, year_label
+      ORDER BY year_quarter
+    ) AS previous_fiscal_quarter_index,
+
+    LAG(revenue) OVER (
+      PARTITION BY ticker, year_label
+      ORDER BY year_quarter
+    ) AS previous_ytd_revenue,
+
+    LAG(operating_income) OVER (
+      PARTITION BY ticker, year_label
+      ORDER BY year_quarter
+    ) AS previous_ytd_operating_income,
+
+    LAG(net_income) OVER (
+      PARTITION BY ticker, year_label
+      ORDER BY year_quarter
+    ) AS previous_ytd_net_income,
 
     LAG(eps) OVER (
       PARTITION BY ticker, year_label
@@ -72,34 +96,34 @@ single_quarter_calc AS (
     ticker,
     year_quarter,
     current_period_end,
+    fiscal_quarter_index,
 
     CASE 
       WHEN quarter_label = '1' THEN revenue
-      ELSE revenue - LAG(revenue) OVER (
-        PARTITION BY ticker, year_label
-        ORDER BY year_quarter
-      )
+      WHEN previous_fiscal_quarter_index = fiscal_quarter_index - 1
+        THEN revenue - previous_ytd_revenue
+      ELSE NULL
     END AS q_revenue,
 
     CASE 
       WHEN quarter_label = '1' THEN operating_income
-      ELSE operating_income - LAG(operating_income) OVER (
-        PARTITION BY ticker, year_label
-        ORDER BY year_quarter
-      )
+      WHEN previous_fiscal_quarter_index = fiscal_quarter_index - 1
+        THEN operating_income - previous_ytd_operating_income
+      ELSE NULL
     END AS q_operating_income,
 
     CASE 
       WHEN quarter_label = '1' THEN net_income
-      ELSE net_income - LAG(net_income) OVER (
-        PARTITION BY ticker, year_label
-        ORDER BY year_quarter
-      )
+      WHEN previous_fiscal_quarter_index = fiscal_quarter_index - 1
+        THEN net_income - previous_ytd_net_income
+      ELSE NULL
     END AS q_net_income,
 
     CASE 
       WHEN quarter_label = '1' THEN eps
-      ELSE eps - previous_ytd_eps * factor_between_periods
+      WHEN previous_fiscal_quarter_index = fiscal_quarter_index - 1
+        THEN eps - previous_ytd_eps * factor_between_periods
+      ELSE NULL
     END AS q_eps
 
   FROM source_basis_reconciliation
@@ -197,10 +221,16 @@ signals AS (
     ) AS prev_net_margin,
 
     -- Convert only the prior-year comparison operand to this report's basis.
-    LAG(q_eps_action_neutral, 4) OVER (
-      PARTITION BY ticker
-      ORDER BY year_quarter
-    ) * cumulative_per_share_factor AS last_year_q_eps
+    CASE
+      WHEN LAG(fiscal_quarter_index, 4) OVER (
+        PARTITION BY ticker
+        ORDER BY year_quarter
+      ) = fiscal_quarter_index - 4
+      THEN LAG(q_eps_action_neutral, 4) OVER (
+        PARTITION BY ticker
+        ORDER BY year_quarter
+      ) * cumulative_per_share_factor
+    END AS last_year_q_eps
 
   FROM eps_basis_components
 
@@ -217,6 +247,10 @@ ttm_calc AS (
         ORDER BY year_quarter
         ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
       ) = 4
+        AND LAG(fiscal_quarter_index, 3) OVER (
+          PARTITION BY ticker
+          ORDER BY year_quarter
+        ) = fiscal_quarter_index - 3
       THEN SUM(q_revenue) OVER (
         PARTITION BY ticker
         ORDER BY year_quarter
@@ -230,6 +264,10 @@ ttm_calc AS (
         ORDER BY year_quarter
         ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
       ) = 4
+        AND LAG(fiscal_quarter_index, 3) OVER (
+          PARTITION BY ticker
+          ORDER BY year_quarter
+        ) = fiscal_quarter_index - 3
       THEN SUM(q_operating_income) OVER (
         PARTITION BY ticker
         ORDER BY year_quarter
@@ -243,6 +281,10 @@ ttm_calc AS (
         ORDER BY year_quarter
         ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
       ) = 4
+        AND LAG(fiscal_quarter_index, 3) OVER (
+          PARTITION BY ticker
+          ORDER BY year_quarter
+        ) = fiscal_quarter_index - 3
       THEN SUM(q_net_income) OVER (
         PARTITION BY ticker
         ORDER BY year_quarter
@@ -256,6 +298,10 @@ ttm_calc AS (
         ORDER BY year_quarter
         ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
       ) = 4
+        AND LAG(fiscal_quarter_index, 3) OVER (
+          PARTITION BY ticker
+          ORDER BY year_quarter
+        ) = fiscal_quarter_index - 3
       THEN cumulative_per_share_factor
         * SUM(q_eps_action_neutral) OVER (
           PARTITION BY ticker
