@@ -11,3 +11,4 @@ sources:
       - name: monthly_revenue
       - name: otc_dividend
       - name: sii_dividend
+      - name: security_master

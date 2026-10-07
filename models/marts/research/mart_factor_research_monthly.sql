@@ -74,6 +74,13 @@ current_panel AS (
 
     d.ticker,
 
+    d.market,
+    d.issuer_origin,
+    d.security_master_match_status,
+    d.is_v1_fundamental_eligible,
+    d.ineligibility_reason,
+    d.security_master_source_as_of_date,
+
     -- ==================================================
     -- Price / volume
     -- ==================================================
@@ -168,6 +175,10 @@ current_panel AS (
   LEFT JOIN endpoint_prices endpoint
     ON endpoint.date = c.rebalance_date
    AND endpoint.ticker = d.ticker
+
+  WHERE d.is_v1_fundamental_eligible
+    AND SAFE_CAST(SUBSTR(d.report_quarter, 1, 4) AS INT64) >= 2013
+    AND SAFE_CAST(SUBSTR(d.balance_sheet_quarter, 1, 4) AS INT64) >= 2013
 
 ),
 
@@ -273,6 +284,13 @@ final AS (
     p.next_rebalance_date,
 
     p.ticker,
+
+    p.market,
+    p.issuer_origin,
+    p.security_master_match_status,
+    p.is_v1_fundamental_eligible,
+    p.ineligibility_reason,
+    p.security_master_source_as_of_date,
 
     -- ==================================================
     -- Price / return

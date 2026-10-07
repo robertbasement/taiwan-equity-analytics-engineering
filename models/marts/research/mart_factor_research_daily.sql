@@ -139,11 +139,25 @@ expectation AS (
 
 ),
 
+eligibility AS (
+
+  SELECT *
+  FROM {{ ref('int_v1_fundamental_eligibility') }}
+
+),
+
 final AS (
 
   SELECT
     m.date,
     m.ticker,
+
+    eligibility_row.market,
+    COALESCE(eligibility_row.issuer_origin, 'UNKNOWN') AS issuer_origin,
+    COALESCE(eligibility_row.security_master_match_status, 'UNMATCHED') AS security_master_match_status,
+    COALESCE(eligibility_row.is_v1_fundamental_eligible, FALSE) AS is_v1_fundamental_eligible,
+    COALESCE(eligibility_row.ineligibility_reason, 'SECURITY_MASTER_UNMATCHED') AS ineligibility_reason,
+    eligibility_row.source_as_of_date AS security_master_source_as_of_date,
 
     -- ==================================================
     -- Price / return
@@ -278,6 +292,9 @@ final AS (
   LEFT JOIN expectation e
     ON m.date = e.date
    AND m.ticker = e.ticker
+
+  LEFT JOIN eligibility eligibility_row
+    ON m.ticker = eligibility_row.ticker
 
 )
 

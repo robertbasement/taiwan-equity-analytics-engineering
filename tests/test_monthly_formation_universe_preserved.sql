@@ -25,6 +25,10 @@ expected_formation AS (
   INNER JOIN {{ ref('mart_factor_research_daily') }} d
     ON d.date = c.rebalance_date
 
+  WHERE d.is_v1_fundamental_eligible
+    AND SAFE_CAST(SUBSTR(d.report_quarter, 1, 4) AS INT64) >= 2013
+    AND SAFE_CAST(SUBSTR(d.balance_sheet_quarter, 1, 4) AS INT64) >= 2013
+
 ),
 
 actual_formation AS (
