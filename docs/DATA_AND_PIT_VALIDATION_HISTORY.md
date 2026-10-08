@@ -349,6 +349,7 @@ the production-owned monthly-revenue storage boundary:
 gs://tw-stockdata-monthly-storage/monthly_revenue_raw/
   historical_reconstruction/source_contract_v1/  # certified historical v1
   source_contract_v2/                             # ongoing production captures
+  acquisition_evidence/legacy_source_vintages/    # non-canonical earlier captures
 ```
 
 The promotion preserved the original relative paths and object bytes. It did
@@ -404,6 +405,75 @@ The original `tw-stockdata-historical-backfill` objects, lifecycle rules, and
 retention settings were not changed. That bucket remains a retained
 historical/recovery copy for monthly revenue; production lineage can now be
 audited wholly within `tw-stockdata-monthly-storage`.
+
+### Final raw-namespace cleanup and acquisition evidence
+
+A read-only audit found 30 live objects outside the two authoritative
+namespaces. The 24 structured-JSON objects under top-level `2008/` and `2009/`
+were derived parser output from the former raw layout. Under the frozen shared
+normalizer, all 30,847 resulting records exactly matched the certified v1 HTML
+reconstruction for those periods. They were therefore redundant and were
+removed from the live namespace on 2026-10-08.
+
+The six structured-JSON objects under top-level `2026/`, covering 2026-03
+through 2026-08, were different. They preserve earlier MOPS acquisition
+vintages, and their normalized content differs from the later certified
+historical reconstruction. In particular, the 2026-08 capture supports the
+documented observation that the MOPS historical archive can change after
+initial acquisition. These objects are audit evidence, not canonical monthly
+revenue inputs.
+
+Before removing the ambiguous top-level `2026/` prefix, all six objects were
+copied byte-for-byte with create-only generation preconditions to:
+
+```text
+gs://tw-stockdata-monthly-storage/monthly_revenue_raw/
+  acquisition_evidence/legacy_source_vintages/2026/
+```
+
+The source and independent destination read-back inventories both produced:
+
+```text
+a6e2c66dc667eaa8835486876f0c595e60f52c3ad77dfceb747ec704479e360c
+```
+
+This hash uses the same sorted
+`relative_path<TAB>decimal_size<TAB>lowercase_sha256<LF>` contract as the B4
+archive promotion. The certified evidence set contains six objects totaling
+4,022,325 bytes, with zero missing, extra, size-mismatched, or
+SHA256-mismatched objects.
+
+The create-only evidence manifest is:
+
+```text
+gs://tw-stockdata-monthly-storage/monthly_revenue_raw/acquisition_evidence/legacy_source_vintages/2026/evidence_manifest.json
+```
+
+Its generation is `1791430582252448` and its read-back SHA256 is
+`c6e9d094cc691bb685f9f9ae25b6c27d0528eb2dd4d44d887efc13c9c46f1cf9`.
+It explicitly marks the six objects as neither source-contract v1 nor v2,
+non-canonical, and prohibited from normal production processing.
+
+Only after this evidence certification passed were the 12 top-level 2008
+objects (7,391,755 bytes), 12 top-level 2009 objects (7,529,732 bytes), and six
+original top-level 2026 objects (4,022,325 bytes) removed. The bucket's
+seven-day soft-delete policy applies to those deleted generations.
+
+The final live `monthly_revenue_raw/` boundary contains only three explicit
+semantic namespaces:
+
+```text
+historical_reconstruction/source_contract_v1/       # canonical history
+source_contract_v2/                                  # active ingestion
+acquisition_evidence/legacy_source_vintages/2026/   # non-canonical evidence
+```
+
+Post-cleanup verification reproduced the certified v1 inventory hash, retained
+all three v2 object generations and SHA256s, found no unexplained live objects,
+and reconfirmed the six evidence hashes. `stock_data.monthly_revenue`, relevant
+dbt relations, Revenue YoY, PIT policy, normalization, and research methodology
+were unchanged. No Pub/Sub publication, monthly-revenue function invocation,
+pipeline-handler execution, or dbt job execution was caused by the cleanup.
 
 ### Certification evidence
 
