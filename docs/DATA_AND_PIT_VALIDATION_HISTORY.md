@@ -335,13 +335,75 @@ The live V2 raw layout is rooted under:
 gs://tw-stockdata-monthly-storage/monthly_revenue_raw/source_contract_v2/
 ```
 
-The isolated historical reconstruction evidence used:
+The certified historical reconstruction is retained at its original recovery
+location:
 
 ```text
-gs://tw-stockdata-monthly-storage/monthly_revenue_raw/historical_reconstruction/source_contract_v1/
+gs://tw-stockdata-historical-backfill/monthly_revenue/source_contract_v1/
 ```
 
-The production-migration report records that it did not copy or modify GCS objects during that B3 execution; therefore this document does not claim that the isolated historical prefix was separately promoted into a new production prefix.
+On 2026-10-08, Phase B4 promoted exact copies of that certified archive into
+the production-owned monthly-revenue storage boundary:
+
+```text
+gs://tw-stockdata-monthly-storage/monthly_revenue_raw/
+  historical_reconstruction/source_contract_v1/  # certified historical v1
+  source_contract_v2/                             # ongoing production captures
+```
+
+The promotion preserved the original relative paths and object bytes. It did
+not rewrite historical v1 as v2, alter either source contract's semantics, or
+change the existing v2 ingestion namespace.
+
+### Phase B4 raw-archive promotion certification
+
+The authoritative source inventory contained 672 objects: 448 raw HTML pages
+and 224 monthly manifests covering 2008-01 through 2026-08. Raw HTML accounted
+for 180,846,782 bytes; the complete archive including manifests accounted for
+181,409,636 bytes. Every manifest recorded `SUCCESS` for both markets, and its
+recorded raw length and SHA256 matched an independent read of the referenced
+object.
+
+The deterministic archive inventory hash is:
+
+```text
+849f6ba32b4b0978669c8ca686785fd11b9d920c9c14d66cc17c4da3d78e8167
+```
+
+It is SHA256 over UTF-8 records sorted by relative path, with each record
+encoded as `relative_path<TAB>decimal_size<TAB>lowercase_sha256<LF>`. The
+source and independently read-back destination inventories produced the same
+hash. Verification found zero missing objects, zero extra archive objects,
+zero size mismatches, and zero SHA256 mismatches. All 672 destination objects
+were created with no-clobber generation preconditions; zero objects were
+already present.
+
+The create-only promotion manifest was written last at:
+
+```text
+gs://tw-stockdata-monthly-storage/monthly_revenue_raw/historical_reconstruction/source_contract_v1/promotion_manifest.json
+```
+
+Its generation is `1791428925685649` and its read-back SHA256 is
+`c085882441ab19bc368e86d85b45bc0055a8e8a1d6ac4c87a89960389ae25470`.
+
+Trigger safety was established before copying: the destination bucket had no
+legacy GCS notifications, and the project Eventarc inventory had no
+finalized-object trigger for this bucket. Monthly-revenue processing remains
+Pub/Sub-driven by explicit scraper publication. Post-copy logs showed no
+monthly-revenue scraper, processor, or pipeline-handler execution during the
+promotion window, and no dbt job execution began in that window.
+
+This was storage-lineage work only. `stock_data.monthly_revenue` remained at
+369,110 rows with unchanged last-modified time `1790751278298`; the relevant
+staging, feature, shifter, and monthly research relations also retained their
+pre-copy metadata. No BigQuery data, dbt relation, Revenue YoY definition, PIT
+policy, normalization, or research methodology was modified.
+
+The original `tw-stockdata-historical-backfill` objects, lifecycle rules, and
+retention settings were not changed. That bucket remains a retained
+historical/recovery copy for monthly revenue; production lineage can now be
+audited wholly within `tw-stockdata-monthly-storage`.
 
 ### Certification evidence
 
@@ -361,7 +423,7 @@ Source code commits include:
 
 ### Remaining limitation
 
-The official historical pages are current-vintage MOPS representations. Reporting changes and revisions can be reflected. The historical archive promotion status is as described above, not overstated.
+The official historical pages are current-vintage MOPS representations. Reporting changes and revisions can be reflected. The old historical-backfill copy remains retained until a separately authorized cleanup decision.
 
 ### Reopen only if
 
