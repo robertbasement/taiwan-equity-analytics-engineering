@@ -1068,3 +1068,29 @@ Commit identifiers were verified with `git rev-parse` during preparation of this
 12. **Do not maximize coverage at the expense of a coherent contract.** Legacy-only and unknown rows were deliberately excluded where their meaning could not be certified.
 13. **Add complexity only when evidence shows it is necessary.** V1 did not build SCD2 issuer origin, filing-time archives, or financial-sector comparability without a material requirement.
 14. **Keep research conclusions downstream of data certification.** A surviving association deserves further study; it is not automatically alpha.
+
+## 20. Production dbt Artifact Remediation — 2026-10-10
+
+The C2 warehouse state was valid on 2026-10-07 but was replaced the next day by
+the scheduled `dbt-build` Cloud Run job using image digest
+`sha256:f41265a34c7d05547b3bf70287c262b1d7da5ac6b5b318e7b2670364c3c675b7`
+from pre-C2 commit `7dc9b6eb380320e9fc53418122be93897c5fc326`. The older image
+did not contain the eligibility boundary or financial adjacency protections.
+
+Production was restored from approved Git SHA
+`a1324722bd10bfb53f529e43147fc8d018d7a2ac` using immutable image digest
+`sha256:c89884be47a19ac7021f22f470919df66feb42303d8d3af69e23bcf7fb0755f5`.
+Cloud Run generation 15 is digest-pinned. Production startup now compares the
+image-embedded `DBT_CODE_GIT_SHA` with a unique, create-only approved-release
+manifest before dbt can execute.
+
+Cloud Run execution `dbt-build-x7ffn`, dbt invocation
+`99ec30be-3aba-4b4e-99f6-f1301db6f9de`, completed 91/91 nodes successfully.
+The monthly mart returned to 240,327 rows with zero ineligible, foreign,
+unmatched, unknown, or non-general-schema observations. Its key and full-row
+fingerprints exactly matched the original C2 time-travel state. Both financial
+adjacency tests returned zero violations.
+
+The full incident, release identity, manifest generation/hash, fail-closed
+evidence, affected DAG, and recurrence check are recorded in
+[`production_dbt_release_remediation_20261010.md`](production_dbt_release_remediation_20261010.md).
