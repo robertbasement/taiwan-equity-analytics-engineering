@@ -1,0 +1,16 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --no-cache
+      - --build-arg
+      - DBT_CODE_GIT_SHA=${_DBT_CODE_GIT_SHA}
+      - --tag
+      - ${_IMAGE_URI}
+      - .
+
+images:
+  - ${_IMAGE_URI}
+
+options:
+  logging: LEGACY
