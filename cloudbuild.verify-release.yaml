@@ -1,0 +1,19 @@
+steps:
+  - name: ${_IMAGE_REF}
+    entrypoint: bash
+    dir: /app
+    args:
+      - -ceu
+      - |
+        test "$${DBT_CODE_GIT_SHA}" = "${_DBT_CODE_GIT_SHA}"
+        test -f dbt_project.yml
+        test -f release_guard.py
+        test -x run_dbt.sh
+        python -m unittest \
+          tests.test_release_guard \
+          tests.test_income_quarter_adjacency \
+          tests.test_issuer_eligibility_contract
+        dbt parse --profiles-dir . --target prod --no-partial-parse
+
+options:
+  logging: LEGACY
