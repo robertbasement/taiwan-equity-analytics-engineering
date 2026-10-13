@@ -12,6 +12,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 EXPECTATION_SQL = (ROOT / "models/marts/expectation/mart_expectation_features.sql").read_text()
 REVENUE_FEATURE_SQL = (ROOT / "models/intermediate/int_monthly_revenue_features.sql").read_text()
+CONTRACT_TEST_SQL = (ROOT / "tests/test_expectation_revenue_features_contract.sql").read_text()
 
 
 def months(start_year: int, start_month: int, count: int, ticker: str = "T") -> list[dict]:
@@ -85,6 +86,13 @@ class RevenueCorrectnessV1Tests(unittest.TestCase):
         self.assertNotIn("WHEN ABS(yoy_growth)", EXPECTATION_SQL)
         self.assertIn("PARTITION BY ticker, continuity_segment", EXPECTATION_SQL)
         self.assertIn("DATE_DIFF(revenue_month_date, month_lag1, MONTH) = 1", REVENUE_FEATURE_SQL)
+
+    def test_expectation_rollups_use_complete_monthly_history(self):
+        self.assertIn("FROM {{ ref('int_monthly_revenue_features') }}", EXPECTATION_SQL)
+        monthly_block = EXPECTATION_SQL.split("monthly_revenue AS (", 1)[1].split("),", 1)[0]
+        self.assertNotIn("FROM base", monthly_block)
+        self.assertNotIn("ANY_VALUE", monthly_block)
+        self.assertNotIn("ANY_VALUE", CONTRACT_TEST_SQL)
 
 
 if __name__ == "__main__":

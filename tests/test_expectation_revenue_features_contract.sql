@@ -57,15 +57,14 @@ expected AS (
   FROM segmented
 ),
 actual AS (
-  SELECT
+  SELECT DISTINCT
     ticker,
     revenue_month,
-    ANY_VALUE(monthly_revenue_ttm) AS actual_ttm,
-    ANY_VALUE(revenue_yoy_3m_avg) AS actual_3m,
-    ANY_VALUE(revenue_yoy_6m_avg) AS actual_6m
+    monthly_revenue_ttm AS actual_ttm,
+    revenue_yoy_3m_avg AS actual_3m,
+    revenue_yoy_6m_avg AS actual_6m
   FROM {{ ref('mart_expectation_features') }}
   WHERE revenue_month IS NOT NULL
-  GROUP BY 1, 2
 )
 SELECT actual.*, expected.expected_ttm, expected.expected_3m, expected.expected_6m
 FROM actual

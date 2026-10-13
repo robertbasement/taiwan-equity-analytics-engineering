@@ -8,32 +8,25 @@ WITH base AS (
 ),
 
 /*
- * 每個 ticker、revenue_month 只保留一次月營收資料。
+ * 使用完整的月營收歷史計算 rolling features。
  *
- * mart_vbt_master_dataset 已將月營收 forward fill 到每日，
- * 因此必須先還原成月頻資料，避免 rolling window 重複計算。
+ * mart_vbt_master_dataset 是每日 PIT attachment spine；部分月營收不會成為
+ * active daily snapshot，因此不可由該 relation 反推完整的月頻歷史。
  */
 monthly_revenue AS (
 
     SELECT
         ticker,
-        revenue_month,
-        PARSE_DATE('%Y-%m', revenue_month) AS revenue_month_date,
-
-        MIN(date) AS revenue_available_date,
-
-        ANY_VALUE(revenue) AS revenue,
+        year_month AS revenue_month,
+        PARSE_DATE('%Y-%m', year_month) AS revenue_month_date,
+        revenue,
         -- MOPS 去年同月增減(%) is contractually percentage points.
-        ANY_VALUE(yoy_growth) AS yoy_growth_pct
+        yoy_growth_pct
 
-    FROM base
+    FROM {{ ref('int_monthly_revenue_features') }}
 
-    WHERE revenue_month IS NOT NULL
+    WHERE year_month IS NOT NULL
       AND revenue IS NOT NULL
-
-    GROUP BY
-        ticker,
-        revenue_month
 
 ),
 
