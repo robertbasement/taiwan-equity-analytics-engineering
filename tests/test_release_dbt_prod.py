@@ -8,6 +8,21 @@ import unittest
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[1]
 SCRIPT = REPO_ROOT / "tools" / "release_dbt_prod.sh"
+DOCKERFILE = REPO_ROOT / "Dockerfile"
+
+
+class ReleaseImageContractTests(unittest.TestCase):
+    def test_dbt_packages_are_installed_during_image_build(self):
+        dockerfile = DOCKERFILE.read_text()
+
+        project_copy = dockerfile.index("COPY . .")
+        dependency_install = dockerfile.index("RUN dbt deps --profiles-dir .")
+        entrypoint = dockerfile.index('ENTRYPOINT ["./run_dbt.sh"]')
+
+        self.assertLess(project_copy, dependency_install)
+        self.assertLess(dependency_install, entrypoint)
+        self.assertTrue((REPO_ROOT / "packages.yml").is_file())
+        self.assertTrue((REPO_ROOT / "package-lock.yml").is_file())
 
 
 class ReleaseScriptFunctionTests(unittest.TestCase):

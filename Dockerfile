@@ -12,6 +12,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Install the packages pinned by package-lock.yml into the immutable image.
+# Artifact verification invokes dbt directly and does not run the entrypoint.
+RUN dbt deps --profiles-dir .
+
 ENV DBT_PROFILES_DIR=/app
 
 RUN chmod +x run_dbt.sh
