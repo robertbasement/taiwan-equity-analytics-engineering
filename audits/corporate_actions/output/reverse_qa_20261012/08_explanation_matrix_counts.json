@@ -1,0 +1,22 @@
+[
+  {
+    "category": "A_EXPLAINED_BY_EXISTING_ADJUSTMENT",
+    "count": 32
+  },
+  {
+    "category": "C_UNEXPLAINED_NO_SESSION_GAP",
+    "count": 12
+  },
+  {
+    "category": "D_UNEXPLAINED_AFTER_QUOTE_GAP",
+    "count": 525
+  },
+  {
+    "category": "E_ADJUSTMENT_CREATES_EXTREME_RETURN",
+    "count": 1
+  },
+  {
+    "category": "OTHER",
+    "count": 1
+  }
+]

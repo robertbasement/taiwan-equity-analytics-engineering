@@ -1,0 +1,38 @@
+{
+  "dry_run_estimated_bytes": {
+    "monthly_panel": 36887886,
+    "relationships": 100207820
+  },
+  "stages": {
+    "local_quality_layer": {
+      "bytes_billed": 0,
+      "bytes_processed": 0,
+      "completed_at": "2026-10-13T00:53:54.015923+00:00",
+      "job_id": null,
+      "output_file": "output/mart_factor_research_monthly_quality_v1.parquet",
+      "row_count": 240327,
+      "status": "COMPLETED"
+    },
+    "monthly_panel": {
+      "bytes_billed": 37748736,
+      "bytes_processed": 36887886,
+      "completed_at": "2026-10-13T00:45:55.101786+00:00",
+      "job_id": "5acb17f0-0145-4053-b956-fc72fc170645",
+      "output_file": "output/raw_monthly_panel.parquet",
+      "row_count": 240327,
+      "status": "COMPLETED"
+    },
+    "relationships": {
+      "bytes_billed": 100663296,
+      "bytes_processed": 100207820,
+      "completed_at": "2026-10-13T00:45:24.472525+00:00",
+      "job_id": "807a2724-86d3-4277-8c0d-82f5ab6fb7fa",
+      "output_file": "output/raw_relationships.parquet",
+      "row_count": 1048,
+      "status": "COMPLETED"
+    }
+  },
+  "started_at": "2026-10-13T00:45:22.705969+00:00",
+  "statement_type": "SELECT_ONLY",
+  "total_estimated_bytes": 137095706
+}

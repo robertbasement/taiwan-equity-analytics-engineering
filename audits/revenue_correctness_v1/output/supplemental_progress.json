@@ -1,0 +1,10 @@
+{
+  "bytes_billed": 20971520,
+  "bytes_processed": 16953697,
+  "dry_run_bytes": 16953697,
+  "job_id": "9adb434e-84bc-42fc-9205-f56dd546ac5f",
+  "row_count": 15,
+  "started_at": "2026-10-13T02:57:06.501061+00:00",
+  "statement_type": "SELECT_ONLY",
+  "status": "COMPLETED"
+}

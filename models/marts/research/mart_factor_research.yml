@@ -31,8 +31,10 @@ models:
 
       - name: yoy_growth
         description: >
-          Revenue YoY growth. Unit must be standardized upstream.
-          Do not infer unit from magnitude.
+          Official MOPS revenue YoY growth in percentage points, preserved as
+          the canonical rank signal. For example, 0.5 means 0.5 percent.
+          Consumers requiring a decimal rate must divide by 100.0 and must not
+          infer units from magnitude.
 
       - name: market_cap
         description: >

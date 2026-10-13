@@ -1,0 +1,36 @@
+{
+  "classification_limit": "Internal data identifies absent calendar months but does not by itself distinguish source-boundary, listing-history, or reporting-history causes.",
+  "duplicate_ticker_month_keys_before_staging_policy": 0,
+  "feature_impact": {
+    "affected_feature_months": 158,
+    "affected_feature_tickers": 116,
+    "monthly_revenue_ttm": 1180,
+    "revenue_yoy_3m_avg": 307,
+    "revenue_yoy_6m_avg": 742,
+    "unique_any_rolling_feature": 1425,
+    "yoy_positive_streak_count": 331,
+    "yoy_triple_increase_signal": 52
+  },
+  "fix": "Ticker-month continuity segments; full TTM requires 12 rows inside one segment; partial 3m/6m warm-up resets after a gap.",
+  "gap_count": 165,
+  "gap_tickers": 116,
+  "gaps_missing_12plus_months": 15,
+  "gaps_missing_1_month": 51,
+  "gaps_missing_2_to_5_months": 45,
+  "gaps_missing_6_to_11_months": 54,
+  "max_missing_months": 60,
+  "median_missing_months": 2,
+  "min_missing_months": 1,
+  "regression_4749": {
+    "current_month": "2021-08",
+    "expected": "new continuity segment; no feature crosses the gap",
+    "missing_months": 60,
+    "previous_month": "2016-07"
+  },
+  "research_impact": {
+    "months": 42,
+    "observations": 54,
+    "tickers": 6
+  },
+  "unique_monthly_observations": 369110
+}

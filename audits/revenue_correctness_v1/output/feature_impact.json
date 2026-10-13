@@ -1,0 +1,54 @@
+[
+  {
+    "metric": "calendar_changed_3m_rows",
+    "value": 307
+  },
+  {
+    "metric": "calendar_changed_6m_rows",
+    "value": 742
+  },
+  {
+    "metric": "calendar_changed_any_feature_rows",
+    "value": 1425
+  },
+  {
+    "metric": "calendar_changed_ttm_rows",
+    "value": 1180
+  },
+  {
+    "metric": "monthly_feature_rows",
+    "value": 369110
+  },
+  {
+    "metric": "research_calendar_changed_feature_observations",
+    "value": 54
+  },
+  {
+    "metric": "research_canonical_yoy_source_mismatches",
+    "value": 0
+  },
+  {
+    "metric": "research_observations",
+    "value": 240327
+  },
+  {
+    "metric": "research_unit_changed_expected_growth_observations",
+    "value": 41681
+  },
+  {
+    "metric": "unit_changed_3m_feature_rows",
+    "value": 32441
+  },
+  {
+    "metric": "unit_changed_6m_feature_rows",
+    "value": 59449
+  },
+  {
+    "metric": "unit_changed_expected_growth_rows",
+    "value": 58826
+  },
+  {
+    "metric": "unit_changed_source_rows",
+    "value": 11687
+  }
+]

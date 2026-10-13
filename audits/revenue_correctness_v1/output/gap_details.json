@@ -1,0 +1,992 @@
+[
+  {
+    "current_revenue_month": "2021-08",
+    "missing_months": 60,
+    "previous_revenue_month": "2016-07",
+    "ticker": "4749"
+  },
+  {
+    "current_revenue_month": "2022-03",
+    "missing_months": 56,
+    "previous_revenue_month": "2017-06",
+    "ticker": "6526"
+  },
+  {
+    "current_revenue_month": "2019-08",
+    "missing_months": 49,
+    "previous_revenue_month": "2015-06",
+    "ticker": "6515"
+  },
+  {
+    "current_revenue_month": "2014-06",
+    "missing_months": 39,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3321"
+  },
+  {
+    "current_revenue_month": "2015-01",
+    "missing_months": 35,
+    "previous_revenue_month": "2012-01",
+    "ticker": "2630"
+  },
+  {
+    "current_revenue_month": "2015-01",
+    "missing_months": 35,
+    "previous_revenue_month": "2012-01",
+    "ticker": "8367"
+  },
+  {
+    "current_revenue_month": "2020-08",
+    "missing_months": 26,
+    "previous_revenue_month": "2018-05",
+    "ticker": "6546"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 23,
+    "previous_revenue_month": "2011-01",
+    "ticker": "3592"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 23,
+    "previous_revenue_month": "2011-01",
+    "ticker": "5222"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 22,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3138"
+  },
+  {
+    "current_revenue_month": "2017-05",
+    "missing_months": 22,
+    "previous_revenue_month": "2015-06",
+    "ticker": "4989"
+  },
+  {
+    "current_revenue_month": "2015-01",
+    "missing_months": 21,
+    "previous_revenue_month": "2013-03",
+    "ticker": "3447"
+  },
+  {
+    "current_revenue_month": "2025-06",
+    "missing_months": 17,
+    "previous_revenue_month": "2023-12",
+    "ticker": "4195"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 13,
+    "previous_revenue_month": "2009-12",
+    "ticker": "3664"
+  },
+  {
+    "current_revenue_month": "2014-01",
+    "missing_months": 12,
+    "previous_revenue_month": "2012-12",
+    "ticker": "8341"
+  },
+  {
+    "current_revenue_month": "2011-12",
+    "missing_months": 11,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1256"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "1587"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "1598"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "1760"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "1776"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "2633"
+  },
+  {
+    "current_revenue_month": "2010-11",
+    "missing_months": 11,
+    "previous_revenue_month": "2009-11",
+    "ticker": "2637"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "2897"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "3413"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "3530"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "3543"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "4155"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "4943"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "4961"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "4967"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "4968"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "4989"
+  },
+  {
+    "current_revenue_month": "2013-01",
+    "missing_months": 11,
+    "previous_revenue_month": "2012-01",
+    "ticker": "5258"
+  },
+  {
+    "current_revenue_month": "2015-12",
+    "missing_months": 11,
+    "previous_revenue_month": "2014-12",
+    "ticker": "8455"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "1568"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "1587"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "1760"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "1776"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "1783"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "1786"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "2228"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "2630"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "2633"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "2634"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "2712"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "2897"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3167"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3338"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3413"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3530"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3543"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3682"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "4155"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "4916"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "4961"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "4967"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "4968"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "4989"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "4999"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "6288"
+  },
+  {
+    "current_revenue_month": "2013-11",
+    "missing_months": 10,
+    "previous_revenue_month": "2012-12",
+    "ticker": "8027"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "8150"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "8222"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "8341"
+  },
+  {
+    "current_revenue_month": "2012-01",
+    "missing_months": 10,
+    "previous_revenue_month": "2011-02",
+    "ticker": "8367"
+  },
+  {
+    "current_revenue_month": "2013-10",
+    "missing_months": 9,
+    "previous_revenue_month": "2012-12",
+    "ticker": "8222"
+  },
+  {
+    "current_revenue_month": "2012-03",
+    "missing_months": 8,
+    "previous_revenue_month": "2011-06",
+    "ticker": "3583"
+  },
+  {
+    "current_revenue_month": "2019-09",
+    "missing_months": 8,
+    "previous_revenue_month": "2018-12",
+    "ticker": "6763"
+  },
+  {
+    "current_revenue_month": "2012-07",
+    "missing_months": 6,
+    "previous_revenue_month": "2011-12",
+    "ticker": "1256"
+  },
+  {
+    "current_revenue_month": "2011-08",
+    "missing_months": 5,
+    "previous_revenue_month": "2011-02",
+    "ticker": "3664"
+  },
+  {
+    "current_revenue_month": "2015-01",
+    "missing_months": 5,
+    "previous_revenue_month": "2014-07",
+    "ticker": "4931"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-11",
+    "ticker": "1339"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1469"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1613"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1704"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1715"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1729"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1902"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2311"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2315"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2325"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2361"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2384"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2437"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2448"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2475"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2499"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2833"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2837"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2847"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2856"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3061"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3315"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3474"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3514"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3519"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3559"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3561"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3573"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3579"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3584"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3598"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3599"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3638"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3697"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3698"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "4725"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "4733"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "5305"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "6145"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "6286"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "6702"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "8008"
+  },
+  {
+    "current_revenue_month": "2011-03",
+    "missing_months": 2,
+    "previous_revenue_month": "2010-12",
+    "ticker": "8078"
+  },
+  {
+    "current_revenue_month": "2016-08",
+    "missing_months": 1,
+    "previous_revenue_month": "2016-06",
+    "ticker": "1449"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "1469"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1507"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "1613"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "1704"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "1715"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "1724"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "1729"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "1902"
+  },
+  {
+    "current_revenue_month": "2025-04",
+    "missing_months": 1,
+    "previous_revenue_month": "2025-02",
+    "ticker": "2236"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2311"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2325"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2361"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2384"
+  },
+  {
+    "current_revenue_month": "2008-04",
+    "missing_months": 1,
+    "previous_revenue_month": "2008-02",
+    "ticker": "2396"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2437"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2456"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2475"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2823"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2833"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "2841"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2847"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "2856"
+  },
+  {
+    "current_revenue_month": "2013-11",
+    "missing_months": 1,
+    "previous_revenue_month": "2013-09",
+    "ticker": "2915"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3315"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "3383"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3474"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3514"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3519"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3559"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3561"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3573"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3579"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3584"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "3598"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "4733"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "4984"
+  },
+  {
+    "current_revenue_month": "2022-09",
+    "missing_months": 1,
+    "previous_revenue_month": "2022-07",
+    "ticker": "5475"
+  },
+  {
+    "current_revenue_month": "2013-10",
+    "missing_months": 1,
+    "previous_revenue_month": "2013-08",
+    "ticker": "5907"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "6131"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "6145"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "6172"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "6251"
+  },
+  {
+    "current_revenue_month": "2014-01",
+    "missing_months": 1,
+    "previous_revenue_month": "2013-11",
+    "ticker": "6264"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "6286"
+  },
+  {
+    "current_revenue_month": "2011-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2010-12",
+    "ticker": "6289"
+  },
+  {
+    "current_revenue_month": "2012-02",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-12",
+    "ticker": "6702"
+  },
+  {
+    "current_revenue_month": "2023-06",
+    "missing_months": 1,
+    "previous_revenue_month": "2023-04",
+    "ticker": "7736"
+  },
+  {
+    "current_revenue_month": "2013-03",
+    "missing_months": 1,
+    "previous_revenue_month": "2013-01",
+    "ticker": "8071"
+  },
+  {
+    "current_revenue_month": "2011-10",
+    "missing_months": 1,
+    "previous_revenue_month": "2011-08",
+    "ticker": "8088"
+  },
+  {
+    "current_revenue_month": "2020-03",
+    "missing_months": 1,
+    "previous_revenue_month": "2020-01",
+    "ticker": "912000"
+  }
+]

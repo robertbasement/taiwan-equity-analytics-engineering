@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-10-12T07:31:51.143921+00:00",
+  "input_path": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/material_population_360.json",
+  "input_sha256": "e7db6b7384fa70eb7e1402551f4110cb6daa4fdd194aee1e65374660bee671e0",
+  "material_anomaly_rows": 360,
+  "stages": {
+    "dry_run": {
+      "queries": {
+        "exposure_details": {
+          "estimated_bytes": 104259079
+        },
+        "metrics": {
+          "estimated_bytes": 104259079
+        }
+      },
+      "status": "COMPLETED",
+      "timestamp": "2026-10-12T07:50:18.525443+00:00",
+      "total_estimated_bytes": 208518158
+    },
+    "exposure_details": {
+      "bytes_billed": 104857600,
+      "bytes_processed": 104259079,
+      "output_csv": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/research_exposure_details.csv",
+      "output_json": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/research_exposure_details.json",
+      "query_job_id": "3ab5fcc2-3c3f-48ac-a1d3-614a6461a3ff",
+      "row_count": 835,
+      "status": "COMPLETED",
+      "timestamp": "2026-10-12T07:50:44.138807+00:00"
+    },
+    "metrics": {
+      "bytes_billed": 104857600,
+      "bytes_processed": 104259079,
+      "output_csv": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/research_metrics.csv",
+      "output_json": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/research_metrics.json",
+      "query_job_id": "624e8a0b-e31e-4859-a202-3f5574f66a02",
+      "row_count": 1,
+      "status": "COMPLETED",
+      "timestamp": "2026-10-12T07:50:41.652075+00:00"
+    }
+  }
+}

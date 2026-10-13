@@ -1,0 +1,290 @@
+[
+  {
+    "correct_decimal": 1.1902,
+    "recomputed_pct": 119.02369912416279,
+    "revenue": 17005,
+    "revenue_last_year": 7764,
+    "ticker": "1107",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 119.02
+  },
+  {
+    "correct_decimal": -0.008100000000000001,
+    "recomputed_pct": -0.8125044545200357,
+    "revenue": 180917,
+    "revenue_last_year": 182399,
+    "ticker": "1109",
+    "year_month": "2008-01",
+    "yoy_growth_pct": -0.81
+  },
+  {
+    "correct_decimal": 0.005699999999999999,
+    "recomputed_pct": 0.5777717885658458,
+    "revenue": 59709,
+    "revenue_last_year": 59366,
+    "ticker": "1213",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 0.57
+  },
+  {
+    "correct_decimal": 1.4157,
+    "recomputed_pct": 141.57004002287022,
+    "revenue": 422506,
+    "revenue_last_year": 174900,
+    "ticker": "1229",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 141.57
+  },
+  {
+    "correct_decimal": 0.0085,
+    "recomputed_pct": 0.8560887678069501,
+    "revenue": 431657,
+    "revenue_last_year": 427993,
+    "ticker": "1307",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 0.85
+  },
+  {
+    "correct_decimal": -0.0073,
+    "recomputed_pct": -0.7349491790461298,
+    "revenue": 749064,
+    "revenue_last_year": 754610,
+    "ticker": "1319",
+    "year_month": "2008-01",
+    "yoy_growth_pct": -0.73
+  },
+  {
+    "correct_decimal": 0.0019,
+    "recomputed_pct": 0.19222514603512306,
+    "revenue": 107372,
+    "revenue_last_year": 107166,
+    "ticker": "1323",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 0.19
+  },
+  {
+    "correct_decimal": 16.1538,
+    "recomputed_pct": 1615.3846153846152,
+    "revenue": 446,
+    "revenue_last_year": 26,
+    "ticker": "1436",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 1615.38
+  },
+  {
+    "correct_decimal": 0.0054,
+    "recomputed_pct": 0.5475924327536683,
+    "revenue": 71060,
+    "revenue_last_year": 70673,
+    "ticker": "1443",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 0.54
+  },
+  {
+    "correct_decimal": 0.005699999999999999,
+    "recomputed_pct": 0.5795315714181295,
+    "revenue": 866898,
+    "revenue_last_year": 861903,
+    "ticker": "1451",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 0.57
+  },
+  {
+    "correct_decimal": -0.0048,
+    "recomputed_pct": -0.48981383797810096,
+    "revenue": 303723,
+    "revenue_last_year": 305218,
+    "ticker": "1457",
+    "year_month": "2008-01",
+    "yoy_growth_pct": -0.48
+  },
+  {
+    "correct_decimal": 1.7755,
+    "recomputed_pct": 177.5598152732467,
+    "revenue": 458576,
+    "revenue_last_year": 165217,
+    "ticker": "1535",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 177.55
+  },
+  {
+    "correct_decimal": 2.2178,
+    "recomputed_pct": 221.78318975038658,
+    "revenue": 233074,
+    "revenue_last_year": 72432,
+    "ticker": "2022",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 221.78
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": 0.0024832689752790574,
+    "revenue": 161082,
+    "revenue_last_year": 161078,
+    "ticker": "2406",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 0.0
+  },
+  {
+    "correct_decimal": 1.0946,
+    "recomputed_pct": 109.46708565767784,
+    "revenue": 257965,
+    "revenue_last_year": 123153,
+    "ticker": "2474",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 109.46
+  },
+  {
+    "correct_decimal": 1.0002,
+    "recomputed_pct": 100.02922576088457,
+    "revenue": 246394,
+    "revenue_last_year": 123179,
+    "ticker": "2501",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 100.02
+  },
+  {
+    "correct_decimal": 5.855599999999999,
+    "recomputed_pct": 585.568267753031,
+    "revenue": 281035,
+    "revenue_last_year": 40993,
+    "ticker": "2509",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 585.56
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 0,
+    "revenue_last_year": 0,
+    "ticker": "2547",
+    "year_month": "2008-01",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": 0.009492785483032895,
+    "revenue": 400342,
+    "revenue_last_year": 400304,
+    "ticker": "3035",
+    "year_month": "2008-01",
+    "yoy_growth_pct": 0.0
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 50261,
+    "revenue_last_year": 0,
+    "ticker": "3611",
+    "year_month": "2008-01",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 81,
+    "revenue_last_year": 0,
+    "ticker": "4801",
+    "year_month": "2008-01",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 0,
+    "revenue_last_year": 0,
+    "ticker": "5529",
+    "year_month": "2008-01",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 4,
+    "revenue_last_year": 0,
+    "ticker": "5607",
+    "year_month": "2008-01",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 430,
+    "revenue_last_year": 0,
+    "ticker": "1436",
+    "year_month": "2008-02",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 0,
+    "revenue_last_year": 0,
+    "ticker": "2547",
+    "year_month": "2008-02",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": null,
+    "recomputed_pct": null,
+    "revenue": 50442,
+    "revenue_last_year": 0,
+    "ticker": "3611",
+    "year_month": "2008-02",
+    "yoy_growth_pct": null
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": -0.0016536761220192486,
+    "revenue": 181411,
+    "revenue_last_year": 181414,
+    "ticker": "4535",
+    "year_month": "2008-03",
+    "yoy_growth_pct": 0.0
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": 0.0,
+    "revenue": 1659,
+    "revenue_last_year": 1659,
+    "ticker": "4108",
+    "year_month": "2008-07",
+    "yoy_growth_pct": 0.0
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": -0.00197004222457168,
+    "revenue": 152278,
+    "revenue_last_year": 152281,
+    "ticker": "5432",
+    "year_month": "2008-07",
+    "yoy_growth_pct": 0.0
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": -0.005147557063009842,
+    "revenue": 1068413,
+    "revenue_last_year": 1068468,
+    "ticker": "2395",
+    "year_month": "2008-08",
+    "yoy_growth_pct": 0.0
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": 0.0,
+    "revenue": 27000,
+    "revenue_last_year": 27000,
+    "ticker": "3085",
+    "year_month": "2009-03",
+    "yoy_growth_pct": 0.0
+  },
+  {
+    "correct_decimal": 0.0,
+    "recomputed_pct": 0.0059709049742415156,
+    "revenue": 418722,
+    "revenue_last_year": 418697,
+    "ticker": "1726",
+    "year_month": "2009-09",
+    "yoy_growth_pct": 0.0
+  }
+]

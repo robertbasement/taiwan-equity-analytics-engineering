@@ -1,0 +1,4664 @@
+[
+  {
+    "ticker": "5364",
+    "prev_quote_date": "2013-11-27",
+    "quote_date": "2013-12-10",
+    "adjusted_return": 36.2608695652174,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-12-10",
+      "ticker": "5364",
+      "name": "易福",
+      "pre_close": "1.15",
+      "reference_price": "46.04",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5364 / 易福 停止買賣日期: 102/11/28 恢復買賣日期: 102/12/10 每壹仟股換發新股票: 24.97900000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "3095",
+    "prev_quote_date": "2022-10-19",
+    "quote_date": "2022-10-31",
+    "adjusted_return": 9.830324909747292,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-10-31",
+      "ticker": "3095",
+      "name": "及成",
+      "pre_close": "2.77",
+      "reference_price": "30.27",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3095 / 及成 停止買賣日期: 111/10/20 恢復買賣日期: 111/10/31 每壹仟股換發新股票: 91.51113000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "2348",
+    "prev_quote_date": "2012-12-14",
+    "quote_date": "2012-12-28",
+    "adjusted_return": 9.232142857142858,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-12-28",
+      "ticker": "2348",
+      "name": "力廣",
+      "pre_close": "2.80",
+      "reference_price": "28.66",
+      "reason": "彌補虧損",
+      "details": "2348  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "2408",
+    "prev_quote_date": "2014-08-25",
+    "quote_date": "2014-09-09",
+    "adjusted_return": 8.320987654320987,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-09-09",
+      "ticker": "2408",
+      "name": "南科",
+      "pre_close": "8.10",
+      "reference_price": "80.93",
+      "reason": "彌補虧損",
+      "details": "2408  ,20140820",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "8941",
+    "prev_quote_date": "2013-10-04",
+    "quote_date": "2013-10-18",
+    "adjusted_return": 8.306451612903226,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-10-18",
+      "ticker": "8941",
+      "name": "關中",
+      "pre_close": "3.10",
+      "reference_price": "31.00",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8941 / 關中 停止買賣日期: 102/10/07 恢復買賣日期: 102/10/18 每壹仟股換發新股票: 100.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "2364",
+    "prev_quote_date": "2021-09-29",
+    "quote_date": "2021-10-08",
+    "adjusted_return": 6.1217105263157885,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-10-08",
+      "ticker": "2364",
+      "name": "倫飛",
+      "pre_close": "3.04",
+      "reference_price": "24.01",
+      "reason": "彌補虧損",
+      "details": "2364  ,20210929",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "6246",
+    "prev_quote_date": "2016-10-18",
+    "quote_date": "2016-10-31",
+    "adjusted_return": 5.862745098039216,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-31",
+      "ticker": "6246",
+      "name": "臺龍",
+      "pre_close": "3.06",
+      "reference_price": "19.13",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6246 / 臺龍 停止買賣日期: 105/10/19 恢復買賣日期: 105/10/31 每壹仟股換發新股票: 160.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "6259",
+    "prev_quote_date": "2020-09-09",
+    "quote_date": "2020-09-21",
+    "adjusted_return": 5.645299145299146,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-21",
+      "ticker": "6259",
+      "name": "百徽",
+      "pre_close": "2.34",
+      "reference_price": "16.80",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6259 / 百徽 停止買賣日期: 109/09/10 恢復買賣日期: 109/09/21 每壹仟股換發新股票: 139.28240000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "6103",
+    "prev_quote_date": "2023-02-24",
+    "quote_date": "2023-03-08",
+    "adjusted_return": 5.419753086419753,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-03-08",
+      "ticker": "6103",
+      "name": "合邦",
+      "pre_close": "5.67",
+      "reference_price": "37.27",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6103 / 合邦 停止買賣日期: 112/03/01 恢復買賣日期: 112/03/08 每壹仟股換發新股票: 152.12539000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "2429",
+    "prev_quote_date": "2013-02-26",
+    "quote_date": "2013-03-13",
+    "adjusted_return": 5.303724928366761,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-03-13",
+      "ticker": "2429",
+      "name": "銘旺科",
+      "pre_close": "6.98",
+      "reference_price": "43.62",
+      "reason": "彌補虧損",
+      "details": "2429  ,20130318",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20130101&endDate=20131231&response=json"
+    }
+  },
+  {
+    "ticker": "2496",
+    "prev_quote_date": "2016-08-26",
+    "quote_date": "2016-09-10",
+    "adjusted_return": 5.226993865030675,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-09-10",
+      "ticker": "2496",
+      "name": "卓越",
+      "pre_close": "16.30",
+      "reference_price": "101.15",
+      "reason": "彌補虧損",
+      "details": "2496  ,20160825",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "9906",
+    "prev_quote_date": "2011-03-21",
+    "quote_date": "2011-04-08",
+    "adjusted_return": 4.526315789473684,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-04-08",
+      "ticker": "9906",
+      "name": "興達",
+      "pre_close": "1.33",
+      "reference_price": "6.87",
+      "reason": "彌補虧損",
+      "details": "9906  ,20110420",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "8077",
+    "prev_quote_date": "2023-02-01",
+    "quote_date": "2023-02-13",
+    "adjusted_return": 4.096439169139465,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-02-13",
+      "ticker": "8077",
+      "name": "洛碁",
+      "pre_close": "6.74",
+      "reference_price": "33.70",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8077 / 洛碁 停止買賣日期: 112/02/02 恢復買賣日期: 112/02/13 每壹仟股換發新股票: 200.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "2342",
+    "prev_quote_date": "2017-09-25",
+    "quote_date": "2017-10-06",
+    "adjusted_return": 3.9400000000000004,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-10-06",
+      "ticker": "2342",
+      "name": "茂矽",
+      "pre_close": "5.00",
+      "reference_price": "24.77",
+      "reason": "彌補虧損",
+      "details": "2342  ,20170925",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "4198",
+    "prev_quote_date": "2022-08-03",
+    "quote_date": "2022-08-15",
+    "adjusted_return": 3.8117154811715475,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-08-15",
+      "ticker": "4198",
+      "name": "欣大健康",
+      "pre_close": "4.78",
+      "reference_price": "23.90",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4198 / 欣大健康 停止買賣日期: 111/08/04 恢復買賣日期: 111/08/15 每壹仟股換發新股票: 200.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "3043",
+    "prev_quote_date": "2022-12-07",
+    "quote_date": "2022-12-19",
+    "adjusted_return": 3.653614457831325,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-12-19",
+      "ticker": "3043",
+      "name": "科風",
+      "pre_close": "6.64",
+      "reference_price": "33.20",
+      "reason": "彌補虧損",
+      "details": "3043  ,20221207",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json"
+    }
+  },
+  {
+    "ticker": "3086",
+    "prev_quote_date": "2019-12-31",
+    "quote_date": "2020-01-13",
+    "adjusted_return": 3.5609065155807373,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-01-13",
+      "ticker": "3086",
+      "name": "華義",
+      "pre_close": "7.06",
+      "reference_price": "32.18",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3086 / 華義 停止買賣日期: 109/01/02 恢復買賣日期: 109/01/13 每壹仟股換發新股票: 219.36000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "8077",
+    "prev_quote_date": "2014-04-07",
+    "quote_date": "2014-10-20",
+    "adjusted_return": 3.189944134078212,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-10-20",
+      "ticker": "8077",
+      "name": "冠華",
+      "pre_close": "5.37",
+      "reference_price": "21.06",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8077 / 冠華 停止買賣日期: 103/10/06 恢復買賣日期: 103/10/20 每壹仟股換發新股票: 255.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "5314",
+    "prev_quote_date": "2022-11-23",
+    "quote_date": "2022-12-02",
+    "adjusted_return": 3.1631799163179917,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-12-02",
+      "ticker": "5314",
+      "name": "世紀",
+      "pre_close": "4.78",
+      "reference_price": "19.51",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5314 / 世紀 停止買賣日期: 111/11/24 恢復買賣日期: 111/12/02 每壹仟股換發新股票: 245.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "2434",
+    "prev_quote_date": "2020-09-07",
+    "quote_date": "2020-09-15",
+    "adjusted_return": 3.1489361702127656,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-15",
+      "ticker": "2434",
+      "name": "統懋",
+      "pre_close": "6.11",
+      "reference_price": "25.37",
+      "reason": "彌補虧損",
+      "details": "2434  ,20200904",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "3383",
+    "prev_quote_date": "2019-10-23",
+    "quote_date": "2019-11-04",
+    "adjusted_return": 3.049019607843137,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-11-04",
+      "ticker": "3383",
+      "name": "新世紀",
+      "pre_close": "1.02",
+      "reference_price": "4.48",
+      "reason": "彌補虧損",
+      "details": "3383  ,20191023",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "6287",
+    "prev_quote_date": "2022-09-21",
+    "quote_date": "2022-10-03",
+    "adjusted_return": 3.0012406947890815,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-10-03",
+      "ticker": "6287",
+      "name": "元隆",
+      "pre_close": "8.06",
+      "reference_price": "32.24",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6287 / 元隆 停止買賣日期: 111/09/22 恢復買賣日期: 111/10/03 每壹仟股換發新股票: 250.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "3562",
+    "prev_quote_date": "2016-09-30",
+    "quote_date": "2016-10-17",
+    "adjusted_return": 2.9032258064516125,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-17",
+      "ticker": "3562",
+      "name": "頂晶科",
+      "pre_close": "3.10",
+      "reference_price": "12.40",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3562 / 頂晶科 停止買賣日期: 105/10/03 恢復買賣日期: 105/10/17 每壹仟股換發新股票: 250.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "6242",
+    "prev_quote_date": "2014-03-27",
+    "quote_date": "2014-04-11",
+    "adjusted_return": 2.7323943661971835,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-04-11",
+      "ticker": "6242",
+      "name": "亨豐",
+      "pre_close": "7.10",
+      "reference_price": "26.52",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6242 / 亨豐 停止買賣日期: 103/03/28 恢復買賣日期: 103/04/11 每壹仟股換發新股票: 267.76096000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "8291",
+    "prev_quote_date": "2025-07-30",
+    "quote_date": "2025-08-11",
+    "adjusted_return": 2.665689149560117,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-08-11",
+      "ticker": "8291",
+      "name": "尚茂",
+      "pre_close": "6.82",
+      "reference_price": "25.26",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8291 / 尚茂 停止買賣日期: 114/07/31 恢復買賣日期: 114/08/11 每壹仟股換發新股票: 270.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2025/01/01&endDate=2025/12/31"
+    }
+  },
+  {
+    "ticker": "3085",
+    "prev_quote_date": "2020-06-23",
+    "quote_date": "2020-07-06",
+    "adjusted_return": 2.6414141414141414,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-07-06",
+      "ticker": "3085",
+      "name": "新零售",
+      "pre_close": "1.98",
+      "reference_price": "7.53",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3085 / 新零售 停止買賣日期: 109/06/24 恢復買賣日期: 109/07/06 每壹仟股換發新股票: 262.85670000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "5468",
+    "prev_quote_date": "2019-09-25",
+    "quote_date": "2019-10-07",
+    "adjusted_return": 2.5822784810126582,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-10-07",
+      "ticker": "5468",
+      "name": "凱鈺",
+      "pre_close": "3.95",
+      "reference_price": "13.91",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5468 / 凱鈺 停止買賣日期: 108/09/26 恢復買賣日期: 108/10/07 每壹仟股換發新股票: 283.90265000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "4413",
+    "prev_quote_date": "2015-04-23",
+    "quote_date": "2015-05-08",
+    "adjusted_return": 2.5619834710743805,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-05-08",
+      "ticker": "4413",
+      "name": "飛寶",
+      "pre_close": "6.05",
+      "reference_price": "20.17",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4413 / 飛寶 停止買賣日期: 104/04/24 恢復買賣日期: 104/05/08 每壹仟股換發新股票: 300.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "4414",
+    "prev_quote_date": "2025-07-02",
+    "quote_date": "2025-07-14",
+    "adjusted_return": 2.548895899053628,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-07-14",
+      "ticker": "4414",
+      "name": "如興",
+      "pre_close": "3.17",
+      "reference_price": "12.03",
+      "reason": "彌補虧損",
+      "details": "4414  ,20250702",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20250101&endDate=20251231&response=json"
+    }
+  },
+  {
+    "ticker": "5906",
+    "prev_quote_date": "2016-06-29",
+    "quote_date": "2016-07-14",
+    "adjusted_return": 2.525423728813559,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-07-14",
+      "ticker": "5906",
+      "name": "台南-KY",
+      "pre_close": "1.77",
+      "reference_price": "5.68",
+      "reason": "彌補虧損",
+      "details": "5906  ,20160629",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "8913",
+    "prev_quote_date": "2017-09-05",
+    "quote_date": "2017-09-18",
+    "adjusted_return": 2.5000000000000004,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-09-18",
+      "ticker": "8913",
+      "name": "全銓",
+      "pre_close": "32.00",
+      "reference_price": "120.00",
+      "reason": "現金減資",
+      "details": "股票代號/股票名稱: 8913 / 全銓 停止買賣日期: 106/09/06 恢復買賣日期: 106/09/18 每壹仟股換發新股票: 200.00000000 股 每股退還股款: 8.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31"
+    }
+  },
+  {
+    "ticker": "4192",
+    "prev_quote_date": "2023-06-28",
+    "quote_date": "2023-07-10",
+    "adjusted_return": 2.398876404494382,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-07-10",
+      "ticker": "4192",
+      "name": "杏國",
+      "pre_close": "17.80",
+      "reference_price": "66.63",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4192 / 杏國 停止買賣日期: 112/06/29 恢復買賣日期: 112/07/10 每壹仟股換發新股票: 267.16459000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "6248",
+    "prev_quote_date": "2014-11-17",
+    "quote_date": "2014-11-28",
+    "adjusted_return": 2.373493975903614,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-28",
+      "ticker": "6248",
+      "name": "沛波",
+      "pre_close": "8.30",
+      "reference_price": "27.67",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6248 / 沛波 停止買賣日期: 103/11/18 恢復買賣日期: 103/11/28 每壹仟股換發新股票: 300.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "6131",
+    "prev_quote_date": "2020-09-17",
+    "quote_date": "2020-09-28",
+    "adjusted_return": 2.290909090909091,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-28",
+      "ticker": "6131",
+      "name": "鈞泰",
+      "pre_close": "2.75",
+      "reference_price": "9.34",
+      "reason": "彌補虧損",
+      "details": "6131  ,20200917",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "2380",
+    "prev_quote_date": "2026-06-16",
+    "quote_date": "2026-06-29",
+    "adjusted_return": 2.257575757575758,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-06-29",
+      "ticker": "2380",
+      "name": "虹光",
+      "pre_close": "6.60",
+      "reference_price": "23.86",
+      "reason": "彌補虧損",
+      "details": "2380  ,20260616",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20260101&endDate=20261231&response=json"
+    }
+  },
+  {
+    "ticker": "1516",
+    "prev_quote_date": "2012-09-12",
+    "quote_date": "2012-09-28",
+    "adjusted_return": 2.256880733944954,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-09-28",
+      "ticker": "1516",
+      "name": "川飛",
+      "pre_close": "3.27",
+      "reference_price": "9.96",
+      "reason": "彌補虧損",
+      "details": "1516  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "5345",
+    "prev_quote_date": "2023-09-13",
+    "quote_date": "2023-09-25",
+    "adjusted_return": 2.2386363636363633,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-09-25",
+      "ticker": "5345",
+      "name": "天揚",
+      "pre_close": "4.40",
+      "reference_price": "13.75",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5345 / 天揚 停止買賣日期: 112/09/14 恢復買賣日期: 112/09/25 每壹仟股換發新股票: 320.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "5321",
+    "prev_quote_date": "2013-11-08",
+    "quote_date": "2013-11-25",
+    "adjusted_return": 2.235747303543914,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-11-25",
+      "ticker": "5321",
+      "name": "友銓",
+      "pre_close": "6.49",
+      "reference_price": "20.28",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5321 / 友銓 停止買賣日期: 102/11/11 恢復買賣日期: 102/11/25 每壹仟股換發新股票: 320.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "4303",
+    "prev_quote_date": "2017-09-21",
+    "quote_date": "2017-10-06",
+    "adjusted_return": 2.2171581769437,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-10-06",
+      "ticker": "4303",
+      "name": "信立",
+      "pre_close": "37.30",
+      "reference_price": "109.40",
+      "reason": "現金減資",
+      "details": "股票代號/股票名稱: 4303 / 信立 停止買賣日期: 106/09/22 恢復買賣日期: 106/10/06 每壹仟股換發新股票: 274.64605000 股 每股退還股款: 7.25353950 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31"
+    }
+  },
+  {
+    "ticker": "1472",
+    "prev_quote_date": "2021-10-06",
+    "quote_date": "2021-10-18",
+    "adjusted_return": 2.166666666666667,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-10-18",
+      "ticker": "1472",
+      "name": "三洋紡",
+      "pre_close": "10.20",
+      "reference_price": "35.12",
+      "reason": "彌補虧損",
+      "details": "1472  ,20211005",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "4198",
+    "prev_quote_date": "2018-08-15",
+    "quote_date": "2018-08-27",
+    "adjusted_return": 2.0748663101604277,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-08-27",
+      "ticker": "4198",
+      "name": "環瑞醫",
+      "pre_close": "5.61",
+      "reference_price": "18.70",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4198 / 環瑞醫 停止買賣日期: 107/08/16 恢復買賣日期: 107/08/27 每壹仟股換發新股票: 300.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31"
+    }
+  },
+  {
+    "ticker": "1516",
+    "prev_quote_date": "2011-08-19",
+    "quote_date": "2011-09-01",
+    "adjusted_return": 2.055248618784531,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-09-01",
+      "ticker": "1516",
+      "name": "川飛",
+      "pre_close": "1.81",
+      "reference_price": "5.17",
+      "reason": "彌補虧損",
+      "details": "1516  ,20110914",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "3686",
+    "prev_quote_date": "2019-11-13",
+    "quote_date": "2019-11-25",
+    "adjusted_return": 2.0479041916167664,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-11-25",
+      "ticker": "3686",
+      "name": "達能",
+      "pre_close": "1.67",
+      "reference_price": "5.14",
+      "reason": "彌補虧損",
+      "details": "3686  ,20191113",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "4702",
+    "prev_quote_date": "2019-11-27",
+    "quote_date": "2019-12-09",
+    "adjusted_return": 2.0294117647058827,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-12-09",
+      "ticker": "4702",
+      "name": "中美實",
+      "pre_close": "3.40",
+      "reference_price": "10.58",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4702 / 中美實 停止買賣日期: 108/11/28 恢復買賣日期: 108/12/09 每壹仟股換發新股票: 321.48089000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "3064",
+    "prev_quote_date": "2024-01-24",
+    "quote_date": "2024-02-05",
+    "adjusted_return": 2.023474178403756,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-02-05",
+      "ticker": "3064",
+      "name": "泰偉",
+      "pre_close": "10.65",
+      "reference_price": "35.50",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3064 / 泰偉 停止買賣日期: 113/01/25 恢復買賣日期: 113/02/05 每壹仟股換發新股票: 300.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2024/01/01&endDate=2024/12/31"
+    }
+  },
+  {
+    "ticker": "1475",
+    "prev_quote_date": "2017-11-01",
+    "quote_date": "2017-11-13",
+    "adjusted_return": 2.01840490797546,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-11-13",
+      "ticker": "1475",
+      "name": "本盟",
+      "pre_close": "40.75",
+      "reference_price": "133.61",
+      "reason": "彌補虧損",
+      "details": "1475  ,20171101",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "2321",
+    "prev_quote_date": "2023-02-08",
+    "quote_date": "2023-02-17",
+    "adjusted_return": 2.0094043887147337,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-02-17",
+      "ticker": "2321",
+      "name": "東訊",
+      "pre_close": "6.38",
+      "reference_price": "19.93",
+      "reason": "彌補虧損",
+      "details": "2321  ,20230206",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "2321",
+    "prev_quote_date": "2020-10-06",
+    "quote_date": "2020-10-19",
+    "adjusted_return": 2.007915567282322,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-10-19",
+      "ticker": "2321",
+      "name": "東訊",
+      "pre_close": "3.79",
+      "reference_price": "12.63",
+      "reason": "彌補虧損",
+      "details": "2321  ,20201006",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "3046",
+    "prev_quote_date": "2017-11-29",
+    "quote_date": "2017-12-11",
+    "adjusted_return": 2.0,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-12-11",
+      "ticker": "3046",
+      "name": "建碁",
+      "pre_close": "5.40",
+      "reference_price": "18.00",
+      "reason": "彌補虧損",
+      "details": "3046  ,20171128",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "6289",
+    "prev_quote_date": "2020-02-26",
+    "quote_date": "2020-03-09",
+    "adjusted_return": 2.0,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-03-09",
+      "ticker": "6289",
+      "name": "華上",
+      "pre_close": "0.85",
+      "reference_price": "2.83",
+      "reason": "彌補虧損",
+      "details": "6289  ,20200226",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "2348",
+    "prev_quote_date": "2011-02-08",
+    "quote_date": "2011-03-01",
+    "adjusted_return": 1.9999999999999996,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-03-01",
+      "ticker": "2348",
+      "name": "力廣",
+      "pre_close": "2.49",
+      "reference_price": "6.99",
+      "reason": "彌補虧損",
+      "details": "2348  ,20110311",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "4530",
+    "prev_quote_date": "2013-12-10",
+    "quote_date": "2013-12-23",
+    "adjusted_return": 1.9681818181818183,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-12-23",
+      "ticker": "4530",
+      "name": "宏易",
+      "pre_close": "2.20",
+      "reference_price": "6.11",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4530 / 宏易 停止買賣日期: 102/12/11 恢復買賣日期: 102/12/23 每壹仟股換發新股票: 360.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "3555",
+    "prev_quote_date": "2015-09-04",
+    "quote_date": "2015-09-21",
+    "adjusted_return": 1.9218241042345277,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-09-21",
+      "ticker": "3555",
+      "name": "擎泰",
+      "pre_close": "3.07",
+      "reference_price": "8.38",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3555 / 擎泰 停止買賣日期: 104/09/07 恢復買賣日期: 104/09/21 每壹仟股換發新股票: 366.19634000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "3064",
+    "prev_quote_date": "2020-09-22",
+    "quote_date": "2020-09-30",
+    "adjusted_return": 1.860655737704918,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-30",
+      "ticker": "3064",
+      "name": "泰偉",
+      "pre_close": "12.20",
+      "reference_price": "38.37",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3064 / 泰偉 停止買賣日期: 109/09/23 恢復買賣日期: 109/09/30 每壹仟股換發新股票: 317.91665000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "6404",
+    "prev_quote_date": "2021-10-20",
+    "quote_date": "2021-11-01",
+    "adjusted_return": 1.858108108108108,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-11-01",
+      "ticker": "6404",
+      "name": "通訊-KY",
+      "pre_close": "7.40",
+      "reference_price": "19.25",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6404 / 通訊-KY 停止買賣日期: 110/10/21 恢復買賣日期: 110/11/01 每壹仟股換發新股票: 384.50000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "6291",
+    "prev_quote_date": "2019-02-25",
+    "quote_date": "2019-03-11",
+    "adjusted_return": 1.8517110266159702,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-03-11",
+      "ticker": "6291",
+      "name": "沛亨",
+      "pre_close": "5.26",
+      "reference_price": "15.47",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6291 / 沛亨 停止買賣日期: 108/02/26 恢復買賣日期: 108/03/11 每壹仟股換發新股票: 340.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "4502",
+    "prev_quote_date": "2015-11-06",
+    "quote_date": "2015-11-23",
+    "adjusted_return": 1.8011363636363638,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-11-23",
+      "ticker": "4502",
+      "name": "源恆",
+      "pre_close": "8.80",
+      "reference_price": "24.44",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4502 / 源恆 停止買賣日期: 104/11/09 恢復買賣日期: 104/11/23 每壹仟股換發新股票: 360.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "8266",
+    "prev_quote_date": "2014-04-28",
+    "quote_date": "2014-05-12",
+    "adjusted_return": 1.7687499999999998,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-05-12",
+      "ticker": "8266",
+      "name": "中日新",
+      "pre_close": "8.00",
+      "reference_price": "20.71",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8266 / 中日新 停止買賣日期: 103/04/29 恢復買賣日期: 103/05/12 每壹仟股換發新股票: 386.28648000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "1512",
+    "prev_quote_date": "2023-03-01",
+    "quote_date": "2023-03-13",
+    "adjusted_return": 1.7586206896551726,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-03-13",
+      "ticker": "1512",
+      "name": "瑞利",
+      "pre_close": "5.80",
+      "reference_price": "16.09",
+      "reason": "彌補虧損",
+      "details": "1512  ,20230301",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "8080",
+    "prev_quote_date": "2020-12-29",
+    "quote_date": "2021-01-11",
+    "adjusted_return": 1.7435897435897436,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-01-11",
+      "ticker": "8080",
+      "name": "永利聯合",
+      "pre_close": "3.90",
+      "reference_price": "9.75",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8080 / 永利聯合 停止買賣日期: 109/12/30 恢復買賣日期: 110/01/11 每壹仟股換發新股票: 400.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "6541",
+    "prev_quote_date": "2023-03-01",
+    "quote_date": "2023-03-13",
+    "adjusted_return": 1.7016129032258065,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-03-13",
+      "ticker": "6541",
+      "name": "泰福-KY",
+      "pre_close": "37.20",
+      "reference_price": "111.51",
+      "reason": "彌補虧損",
+      "details": "6541  ,20230301",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "3339",
+    "prev_quote_date": "2016-09-22",
+    "quote_date": "2016-10-07",
+    "adjusted_return": 1.692307692307692,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-07",
+      "ticker": "3339",
+      "name": "泰谷",
+      "pre_close": "2.60",
+      "reference_price": "7.44",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3339 / 泰谷 停止買賣日期: 105/09/23 恢復買賣日期: 105/10/07 每壹仟股換發新股票: 349.36350000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "1456",
+    "prev_quote_date": "2013-12-30",
+    "quote_date": "2014-01-13",
+    "adjusted_return": 1.6735294117647062,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-01-13",
+      "ticker": "1456",
+      "name": "怡華",
+      "pre_close": "3.40",
+      "reference_price": "8.50",
+      "reason": "彌補虧損",
+      "details": "1456  ,20140124",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "5205",
+    "prev_quote_date": "2014-02-12",
+    "quote_date": "2014-02-25",
+    "adjusted_return": 1.672268907563025,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-02-25",
+      "ticker": "5205",
+      "name": "漢康",
+      "pre_close": "5.95",
+      "reference_price": "14.88",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5205 / 漢康 停止買賣日期: 103/02/13 恢復買賣日期: 103/02/25 每壹仟股換發新股票: 400.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "5259",
+    "prev_quote_date": "2016-11-04",
+    "quote_date": "2016-11-21",
+    "adjusted_return": 1.6470588235294117,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-11-21",
+      "ticker": "5259",
+      "name": "清惠",
+      "pre_close": "2.04",
+      "reference_price": "5.99",
+      "reason": "彌補虧損",
+      "details": "5259  ,20161104",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "8101",
+    "prev_quote_date": "2022-09-21",
+    "quote_date": "2022-10-03",
+    "adjusted_return": 1.6399999999999997,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-10-03",
+      "ticker": "8101",
+      "name": "華冠",
+      "pre_close": "2.50",
+      "reference_price": "7.14",
+      "reason": "彌補虧損",
+      "details": "8101  ,20220921",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json"
+    }
+  },
+  {
+    "ticker": "6225",
+    "prev_quote_date": "2021-07-14",
+    "quote_date": "2021-07-26",
+    "adjusted_return": 1.619047619047619,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-07-26",
+      "ticker": "6225",
+      "name": "天瀚",
+      "pre_close": "4.20",
+      "reference_price": "12.20",
+      "reason": "彌補虧損",
+      "details": "6225  ,20210714",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "3229",
+    "prev_quote_date": "2021-12-28",
+    "quote_date": "2022-01-10",
+    "adjusted_return": 1.6153846153846154,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-01-10",
+      "ticker": "3229",
+      "name": "晟鈦",
+      "pre_close": "6.50",
+      "reference_price": "18.84",
+      "reason": "彌補虧損",
+      "details": "3229  ,20211228",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json"
+    }
+  },
+  {
+    "ticker": "2208",
+    "prev_quote_date": "2018-07-18",
+    "quote_date": "2018-07-30",
+    "adjusted_return": 1.6121794871794872,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-07-30",
+      "ticker": "2208",
+      "name": "台船",
+      "pre_close": "15.60",
+      "reference_price": "37.06",
+      "reason": "彌補虧損",
+      "details": "2208  ,20180718",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "1449",
+    "prev_quote_date": "2014-11-05",
+    "quote_date": "2014-11-18",
+    "adjusted_return": 1.6115107913669067,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-18",
+      "ticker": "1449",
+      "name": "佳和",
+      "pre_close": "1.39",
+      "reference_price": "3.90",
+      "reason": "彌補虧損",
+      "details": "1449  ,20141126",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "4131",
+    "prev_quote_date": "2021-12-28",
+    "quote_date": "2022-01-10",
+    "adjusted_return": 1.5999999999999996,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-01-10",
+      "ticker": "4131",
+      "name": "晶宇",
+      "pre_close": "6.50",
+      "reference_price": "16.52",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4131 / 晶宇 停止買賣日期: 110/12/29 恢復買賣日期: 111/01/10 每壹仟股換發新股票: 393.44044000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "4950",
+    "prev_quote_date": "2025-11-03",
+    "quote_date": "2025-11-11",
+    "adjusted_return": 1.553398058252427,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-11-11",
+      "ticker": "4950",
+      "name": "金耘國際",
+      "pre_close": "10.30",
+      "reference_price": "26.18",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4950 / 金耘國際 停止買賣日期: 114/11/04 恢復買賣日期: 114/11/11 每壹仟股換發新股票: 393.35790000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2025/01/01&endDate=2025/12/31"
+    }
+  },
+  {
+    "ticker": "1436",
+    "prev_quote_date": "2012-07-24",
+    "quote_date": "2012-08-06",
+    "adjusted_return": 1.496478873239437,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-08-06",
+      "ticker": "1436",
+      "name": "福益",
+      "pre_close": "14.20",
+      "reference_price": "33.14",
+      "reason": "退還股款",
+      "details": "1436  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "3089",
+    "prev_quote_date": "2018-02-27",
+    "quote_date": "2018-03-12",
+    "adjusted_return": 1.4474187380497132,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-03-12",
+      "ticker": "3089",
+      "name": "遠昇",
+      "pre_close": "5.23",
+      "reference_price": "12.24",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3089 / 遠昇 停止買賣日期: 107/03/01 恢復買賣日期: 107/03/12 每壹仟股換發新股票: 427.23523000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31"
+    }
+  },
+  {
+    "ticker": "2371",
+    "prev_quote_date": "2011-03-23",
+    "quote_date": "2011-04-11",
+    "adjusted_return": 1.4444444444444446,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-04-11",
+      "ticker": "2371",
+      "name": "大同",
+      "pre_close": "6.75",
+      "reference_price": "16.02",
+      "reason": "彌補虧損",
+      "details": "2371  ,20110421",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "4725",
+    "prev_quote_date": "2020-07-08",
+    "quote_date": "2020-07-20",
+    "adjusted_return": 1.4320241691842903,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-07-20",
+      "ticker": "4725",
+      "name": "信昌化",
+      "pre_close": "6.62",
+      "reference_price": "14.64",
+      "reason": "彌補虧損",
+      "details": "4725  ,20200708",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "1538",
+    "prev_quote_date": "2020-11-06",
+    "quote_date": "2020-11-16",
+    "adjusted_return": 1.3894080996884735,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-11-16",
+      "ticker": "1538",
+      "name": "正峰新",
+      "pre_close": "3.21",
+      "reference_price": "8.41",
+      "reason": "彌補虧損",
+      "details": "1538  ,20201106",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "2438",
+    "prev_quote_date": "2012-11-13",
+    "quote_date": "2012-11-26",
+    "adjusted_return": 1.379518072289157,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-11-26",
+      "ticker": "2438",
+      "name": "英誌",
+      "pre_close": "1.66",
+      "reference_price": "4.24",
+      "reason": "彌補虧損",
+      "details": "2438  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "3073",
+    "prev_quote_date": "2013-09-18",
+    "quote_date": "2013-10-07",
+    "adjusted_return": 1.377952755905512,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-10-07",
+      "ticker": "3073",
+      "name": "普格",
+      "pre_close": "6.35",
+      "reference_price": "15.34",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3073 / 普格 停止買賣日期: 102/09/23 恢復買賣日期: 102/10/07 每壹仟股換發新股票: 414.06395000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "6103",
+    "prev_quote_date": "2015-03-05",
+    "quote_date": "2015-03-20",
+    "adjusted_return": 1.3690205011389525,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-03-20",
+      "ticker": "6103",
+      "name": "合邦",
+      "pre_close": "4.39",
+      "reference_price": "9.72",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6103 / 合邦 停止買賣日期: 104/03/06 恢復買賣日期: 104/03/20 每壹仟股換發新股票: 451.50000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "5701",
+    "prev_quote_date": "2023-04-18",
+    "quote_date": "2023-04-26",
+    "adjusted_return": 1.361878453038674,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-04-26",
+      "ticker": "5701",
+      "name": "劍湖山",
+      "pre_close": "3.62",
+      "reference_price": "8.95",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5701 / 劍湖山 停止買賣日期: 112/04/19 恢復買賣日期: 112/04/26 每壹仟股換發新股票: 404.37131000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "4530",
+    "prev_quote_date": "2025-12-17",
+    "quote_date": "2025-12-29",
+    "adjusted_return": 1.3292682926829267,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-12-29",
+      "ticker": "4530",
+      "name": "宏易",
+      "pre_close": "12.30",
+      "reference_price": "31.32",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4530 / 宏易 停止買賣日期: 114/12/18 恢復買賣日期: 114/12/29 每壹仟股換發新股票: 392.72795000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2025/01/01&endDate=2025/12/31"
+    }
+  },
+  {
+    "ticker": "2443",
+    "prev_quote_date": "2013-10-02",
+    "quote_date": "2013-10-17",
+    "adjusted_return": 1.3076923076923075,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-10-17",
+      "ticker": "2443",
+      "name": "新利虹",
+      "pre_close": "2.60",
+      "reference_price": "6.31",
+      "reason": "彌補虧損",
+      "details": "2443  ,20131024",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20130101&endDate=20131231&response=json"
+    }
+  },
+  {
+    "ticker": "3288",
+    "prev_quote_date": "2018-12-13",
+    "quote_date": "2018-12-24",
+    "adjusted_return": 1.3068181818181817,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-12-24",
+      "ticker": "3288",
+      "name": "點晶",
+      "pre_close": "4.40",
+      "reference_price": "11.00",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3288 / 點晶 停止買賣日期: 107/12/14 恢復買賣日期: 107/12/24 每壹仟股換發新股票: 400.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31"
+    }
+  },
+  {
+    "ticker": "3629",
+    "prev_quote_date": "2015-11-12",
+    "quote_date": "2015-11-27",
+    "adjusted_return": 1.2823529411764705,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-11-27",
+      "ticker": "3629",
+      "name": "卓韋",
+      "pre_close": "8.50",
+      "reference_price": "17.64",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3629 / 卓韋 停止買賣日期: 104/11/13 恢復買賣日期: 104/11/27 每壹仟股換發新股票: 481.90000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "3372",
+    "prev_quote_date": "2019-09-26",
+    "quote_date": "2019-10-07",
+    "adjusted_return": 1.2702702702702706,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-10-07",
+      "ticker": "3372",
+      "name": "典範",
+      "pre_close": "3.70",
+      "reference_price": "8.75",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3372 / 典範 停止買賣日期: 108/09/27 恢復買賣日期: 108/10/07 每壹仟股換發新股票: 422.97026000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "6243",
+    "prev_quote_date": "2021-10-27",
+    "quote_date": "2021-11-04",
+    "adjusted_return": 1.2681318681318685,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-11-04",
+      "ticker": "6243",
+      "name": "迅杰",
+      "pre_close": "22.75",
+      "reference_price": "46.95",
+      "reason": "彌補虧損",
+      "details": "6243  ,20211026",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "2337",
+    "prev_quote_date": "2017-08-14",
+    "quote_date": "2017-08-28",
+    "adjusted_return": 1.2356495468277942,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-08-28",
+      "ticker": "2337",
+      "name": "旺宏",
+      "pre_close": "16.55",
+      "reference_price": "33.64",
+      "reason": "彌補虧損",
+      "details": "2337  ,20170814",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "9928",
+    "prev_quote_date": "2022-03-23",
+    "quote_date": "2022-04-06",
+    "adjusted_return": 1.2352941176470589,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-04-06",
+      "ticker": "9928",
+      "name": "中視",
+      "pre_close": "6.80",
+      "reference_price": "16.87",
+      "reason": "彌補虧損",
+      "details": "9928  ,20220323",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json"
+    }
+  },
+  {
+    "ticker": "2314",
+    "prev_quote_date": "2025-10-07",
+    "quote_date": "2025-10-20",
+    "adjusted_return": 1.2233009708737863,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-10-20",
+      "ticker": "2314",
+      "name": "台揚",
+      "pre_close": "10.30",
+      "reference_price": "24.46",
+      "reason": "彌補虧損",
+      "details": "2314  ,20251007",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20250101&endDate=20251231&response=json"
+    }
+  },
+  {
+    "ticker": "3191",
+    "prev_quote_date": "2024-02-02",
+    "quote_date": "2024-02-21",
+    "adjusted_return": 1.196172248803828,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-02-21",
+      "ticker": "3191",
+      "name": "和進",
+      "pre_close": "10.45",
+      "reference_price": "20.90",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3191 / 和進 停止買賣日期: 113/02/05 恢復買賣日期: 113/02/21 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2024/01/01&endDate=2024/12/31"
+    }
+  },
+  {
+    "ticker": "3452",
+    "prev_quote_date": "2018-11-28",
+    "quote_date": "2018-12-10",
+    "adjusted_return": 1.1958762886597936,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-12-10",
+      "ticker": "3452",
+      "name": "益通",
+      "pre_close": "2.91",
+      "reference_price": "7.10",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3452 / 益通 停止買賣日期: 107/11/29 恢復買賣日期: 107/12/10 每壹仟股換發新股票: 409.85031000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31"
+    }
+  },
+  {
+    "ticker": "2465",
+    "prev_quote_date": "2017-10-11",
+    "quote_date": "2017-10-23",
+    "adjusted_return": 1.1958637469586373,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-10-23",
+      "ticker": "2465",
+      "name": "麗臺",
+      "pre_close": "8.22",
+      "reference_price": "16.44",
+      "reason": "彌補虧損",
+      "details": "2465  ,20171006",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "5310",
+    "prev_quote_date": "2021-12-22",
+    "quote_date": "2021-12-30",
+    "adjusted_return": 1.1943573667711598,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-12-30",
+      "ticker": "5310",
+      "name": "天剛",
+      "pre_close": "15.95",
+      "reference_price": "35.05",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5310 / 天剛 停止買賣日期: 110/12/23 恢復買賣日期: 110/12/30 每壹仟股換發新股票: 455.07800000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "6419",
+    "prev_quote_date": "2020-02-12",
+    "quote_date": "2020-02-24",
+    "adjusted_return": 1.1933621933621934,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-02-24",
+      "ticker": "6419",
+      "name": "京晨科",
+      "pre_close": "6.93",
+      "reference_price": "14.64",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6419 / 京晨科 停止買賣日期: 109/02/13 恢復買賣日期: 109/02/24 每壹仟股換發新股票: 473.26343000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "3321",
+    "prev_quote_date": "2023-08-23",
+    "quote_date": "2023-08-31",
+    "adjusted_return": 1.1855828220858897,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-08-31",
+      "ticker": "3321",
+      "name": "同泰",
+      "pre_close": "6.52",
+      "reference_price": "15.15",
+      "reason": "彌補虧損",
+      "details": "3321  ,20230822",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "2327",
+    "prev_quote_date": "2014-09-26",
+    "quote_date": "2014-10-09",
+    "adjusted_return": 1.183673469387755,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-10-09",
+      "ticker": "2327",
+      "name": "國巨",
+      "pre_close": "22.05",
+      "reference_price": "49.82",
+      "reason": "退還股款",
+      "details": "2327  ,20141022",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "2614",
+    "prev_quote_date": "2013-10-30",
+    "quote_date": "2013-11-12",
+    "adjusted_return": 1.1752577319587632,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-11-12",
+      "ticker": "2614",
+      "name": "東森",
+      "pre_close": "4.85",
+      "reference_price": "9.88",
+      "reason": "彌補虧損",
+      "details": "2614  ,20131121",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20130101&endDate=20131231&response=json"
+    }
+  },
+  {
+    "ticker": "1449",
+    "prev_quote_date": "2020-11-18",
+    "quote_date": "2020-11-30",
+    "adjusted_return": 1.1689189189189189,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-11-30",
+      "ticker": "1449",
+      "name": "佳和",
+      "pre_close": "14.80",
+      "reference_price": "32.49",
+      "reason": "彌補虧損",
+      "details": "1449  ,20201118",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "2609",
+    "prev_quote_date": "2017-04-19",
+    "quote_date": "2017-05-04",
+    "adjusted_return": 1.1626016260162602,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-05-04",
+      "ticker": "2609",
+      "name": "陽明",
+      "pre_close": "6.15",
+      "reference_price": "13.16",
+      "reason": "彌補虧損",
+      "details": "2609  ,20170418",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "4944",
+    "prev_quote_date": "2020-09-21",
+    "quote_date": "2020-09-29",
+    "adjusted_return": 1.1496598639455784,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-29",
+      "ticker": "4944",
+      "name": "兆遠",
+      "pre_close": "14.70",
+      "reference_price": "34.98",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4944 / 兆遠 停止買賣日期: 109/09/22 恢復買賣日期: 109/09/29 每壹仟股換發新股票: 420.20370000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "6291",
+    "prev_quote_date": "2013-08-30",
+    "quote_date": "2013-09-14",
+    "adjusted_return": 1.13,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-09-14",
+      "ticker": "6291",
+      "name": "沛亨",
+      "pre_close": "2.00",
+      "reference_price": "4.00",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6291 / 沛亨 停止買賣日期: 102/09/02 恢復買賣日期: 102/09/14 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "6225",
+    "prev_quote_date": "2012-07-23",
+    "quote_date": "2012-08-06",
+    "adjusted_return": 1.1282051282051286,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-08-06",
+      "ticker": "6225",
+      "name": "天瀚",
+      "pre_close": "2.34",
+      "reference_price": "5.35",
+      "reason": "彌補虧損",
+      "details": "6225  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "3051",
+    "prev_quote_date": "2021-12-15",
+    "quote_date": "2021-12-27",
+    "adjusted_return": 1.102209944751381,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-12-27",
+      "ticker": "3051",
+      "name": "力特",
+      "pre_close": "18.10",
+      "reference_price": "34.63",
+      "reason": "彌補虧損",
+      "details": "3051  ,20211214",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "1538",
+    "prev_quote_date": "2014-10-24",
+    "quote_date": "2014-11-10",
+    "adjusted_return": 1.101328903654485,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-10",
+      "ticker": "1538",
+      "name": "正峰新",
+      "pre_close": "6.02",
+      "reference_price": "11.86",
+      "reason": "彌補虧損",
+      "details": "1538  ,20141124",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "8277",
+    "prev_quote_date": "2026-09-09",
+    "quote_date": "2026-09-21",
+    "adjusted_return": 1.0931677018633539,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-09-21",
+      "ticker": "8277",
+      "name": "商丞",
+      "pre_close": "8.05",
+      "reference_price": "18.67",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8277 / 商丞 停止買賣日期: 115/09/10 恢復買賣日期: 115/09/21 每壹仟股換發新股票: 431.08701000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2026/01/01&endDate=2026/12/31"
+    }
+  },
+  {
+    "ticker": "2603",
+    "prev_quote_date": "2022-09-06",
+    "quote_date": "2022-09-19",
+    "adjusted_return": 1.0915841584158414,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-09-19",
+      "ticker": "2603",
+      "name": "長榮",
+      "pre_close": "80.80",
+      "reference_price": "187.00",
+      "reason": "退還股款",
+      "details": "2603  ,20220906",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json"
+    }
+  },
+  {
+    "ticker": "6144",
+    "prev_quote_date": "2020-09-09",
+    "quote_date": "2020-09-21",
+    "adjusted_return": 1.0915032679738563,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-21",
+      "ticker": "6144",
+      "name": "得利影",
+      "pre_close": "6.12",
+      "reference_price": "11.69",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6144 / 得利影 停止買賣日期: 109/09/10 恢復買賣日期: 109/09/21 每壹仟股換發新股票: 523.45300000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "5301",
+    "prev_quote_date": "2025-11-04",
+    "quote_date": "2025-11-12",
+    "adjusted_return": 1.090483619344774,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-11-12",
+      "ticker": "5301",
+      "name": "寶得利",
+      "pre_close": "6.41",
+      "reference_price": "13.89",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5301 / 寶得利 停止買賣日期: 114/11/05 恢復買賣日期: 114/11/12 每壹仟股換發新股票: 461.57000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2025/01/01&endDate=2025/12/31"
+    }
+  },
+  {
+    "ticker": "1432",
+    "prev_quote_date": "2020-09-09",
+    "quote_date": "2020-09-21",
+    "adjusted_return": 1.0628997867803838,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-21",
+      "ticker": "1432",
+      "name": "大魯閣",
+      "pre_close": "9.38",
+      "reference_price": "21.00",
+      "reason": "彌補虧損",
+      "details": "1432  ,20200909",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "1438",
+    "prev_quote_date": "2021-03-18",
+    "quote_date": "2021-03-29",
+    "adjusted_return": 1.0555555555555558,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-03-29",
+      "ticker": "1438",
+      "name": "三地開發",
+      "pre_close": "12.60",
+      "reference_price": "25.20",
+      "reason": "彌補虧損",
+      "details": "1438  ,20210318",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "3532",
+    "prev_quote_date": "2018-09-12",
+    "quote_date": "2018-09-25",
+    "adjusted_return": 1.0554854981084492,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-09-25",
+      "ticker": "3532",
+      "name": "台勝科",
+      "pre_close": "79.30",
+      "reference_price": "148.60",
+      "reason": "退還股款",
+      "details": "3532  ,20180912",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "3701",
+    "prev_quote_date": "2018-11-02",
+    "quote_date": "2018-11-12",
+    "adjusted_return": 1.0531400966183577,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-11-12",
+      "ticker": "3701",
+      "name": "大眾控",
+      "pre_close": "6.21",
+      "reference_price": "12.42",
+      "reason": "彌補虧損",
+      "details": "3701  ,20181101",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "1456",
+    "prev_quote_date": "2016-01-20",
+    "quote_date": "2016-02-02",
+    "adjusted_return": 1.047619047619047,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-02-02",
+      "ticker": "1456",
+      "name": "怡華",
+      "pre_close": "4.41",
+      "reference_price": "10.02",
+      "reason": "彌補虧損",
+      "details": "1456  ,20160119",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "3580",
+    "prev_quote_date": "2017-10-18",
+    "quote_date": "2017-10-30",
+    "adjusted_return": 1.0456989247311825,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-10-30",
+      "ticker": "3580",
+      "name": "友威科",
+      "pre_close": "37.20",
+      "reference_price": "69.19",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3580 / 友威科 停止買賣日期: 106/10/19 恢復買賣日期: 106/10/30 每壹仟股換發新股票: 537.67324000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31"
+    }
+  },
+  {
+    "ticker": "2719",
+    "prev_quote_date": "2019-10-07",
+    "quote_date": "2019-10-21",
+    "adjusted_return": 1.036175710594315,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-10-21",
+      "ticker": "2719",
+      "name": "燦星旅",
+      "pre_close": "3.87",
+      "reference_price": "7.64",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 2719 / 燦星旅 停止買賣日期: 108/10/08 恢復買賣日期: 108/10/21 每壹仟股換發新股票: 506.66000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "6283",
+    "prev_quote_date": "2016-10-05",
+    "quote_date": "2016-10-21",
+    "adjusted_return": 1.015625,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-21",
+      "ticker": "6283",
+      "name": "淳安",
+      "pre_close": "6.40",
+      "reference_price": "11.75",
+      "reason": "彌補虧損",
+      "details": "6283  ,20161004",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "3085",
+    "prev_quote_date": "2023-02-01",
+    "quote_date": "2023-02-13",
+    "adjusted_return": 1.0090909090909093,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-02-13",
+      "ticker": "3085",
+      "name": "新零售",
+      "pre_close": "11.00",
+      "reference_price": "22.00",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3085 / 新零售 停止買賣日期: 112/02/02 恢復買賣日期: 112/02/13 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "3230",
+    "prev_quote_date": "2021-03-16",
+    "quote_date": "2021-03-24",
+    "adjusted_return": 1.00734394124847,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-03-24",
+      "ticker": "3230",
+      "name": "錦明",
+      "pre_close": "8.17",
+      "reference_price": "14.92",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3230 / 錦明 停止買賣日期: 110/03/17 恢復買賣日期: 110/03/24 每壹仟股換發新股票: 547.68263000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "1443",
+    "prev_quote_date": "2011-09-06",
+    "quote_date": "2011-09-22",
+    "adjusted_return": 1.0061728395061729,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-09-22",
+      "ticker": "1443",
+      "name": "立益",
+      "pre_close": "3.24",
+      "reference_price": "6.97",
+      "reason": "彌補虧損",
+      "details": "1443  ,20111003",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "3339",
+    "prev_quote_date": "2020-10-07",
+    "quote_date": "2020-10-19",
+    "adjusted_return": 1.0052083333333335,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-10-19",
+      "ticker": "3339",
+      "name": "泰谷",
+      "pre_close": "5.76",
+      "reference_price": "12.80",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3339 / 泰谷 停止買賣日期: 109/10/08 恢復買賣日期: 109/10/19 每壹仟股換發新股票: 450.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "3494",
+    "prev_quote_date": "2024-11-13",
+    "quote_date": "2024-11-25",
+    "adjusted_return": 1.0050761421319798,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-11-25",
+      "ticker": "3494",
+      "name": "誠研",
+      "pre_close": "7.88",
+      "reference_price": "17.51",
+      "reason": "彌補虧損",
+      "details": "3494  ,20241113",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20240101&endDate=20241231&response=json"
+    }
+  },
+  {
+    "ticker": "2724",
+    "prev_quote_date": "2021-12-28",
+    "quote_date": "2022-01-10",
+    "adjusted_return": 1.0,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-01-10",
+      "ticker": "2724",
+      "name": "富驛-KY",
+      "pre_close": "8.90",
+      "reference_price": "17.80",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 2724 / 富驛-KY 停止買賣日期: 110/12/29 恢復買賣日期: 111/01/10 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "6287",
+    "prev_quote_date": "2013-08-07",
+    "quote_date": "2013-08-22",
+    "adjusted_return": 0.9966666666666666,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-08-22",
+      "ticker": "6287",
+      "name": "元隆",
+      "pre_close": "3.00",
+      "reference_price": "5.77",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6287 / 元隆 停止買賣日期: 102/08/08 恢復買賣日期: 102/08/22 每壹仟股換發新股票: 519.85740000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "3557",
+    "prev_quote_date": "2017-09-30",
+    "quote_date": "2017-10-16",
+    "adjusted_return": 0.9849624060150375,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-10-16",
+      "ticker": "3557",
+      "name": "嘉威",
+      "pre_close": "6.65",
+      "reference_price": "12.31",
+      "reason": "彌補虧損",
+      "details": "3557  ,20170929",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "6228",
+    "prev_quote_date": "2023-09-26",
+    "quote_date": "2023-10-11",
+    "adjusted_return": 0.9824561403508774,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-10-11",
+      "ticker": "6228",
+      "name": "全譜",
+      "pre_close": "11.40",
+      "reference_price": "22.67",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6228 / 全譜 停止買賣日期: 112/09/27 恢復買賣日期: 112/10/11 每壹仟股換發新股票: 502.89000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "5259",
+    "prev_quote_date": "2017-11-08",
+    "quote_date": "2017-11-20",
+    "adjusted_return": 0.9753086419753085,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-11-20",
+      "ticker": "5259",
+      "name": "清惠",
+      "pre_close": "4.86",
+      "reference_price": "9.72",
+      "reason": "彌補虧損",
+      "details": "5259  ,20171108",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "6225",
+    "prev_quote_date": "2022-11-16",
+    "quote_date": "2022-11-28",
+    "adjusted_return": 0.9702127659574467,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-11-28",
+      "ticker": "6225",
+      "name": "天瀚",
+      "pre_close": "4.70",
+      "reference_price": "10.27",
+      "reason": "彌補虧損",
+      "details": "6225  ,20221115",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json"
+    }
+  },
+  {
+    "ticker": "4944",
+    "prev_quote_date": "2022-08-23",
+    "quote_date": "2022-08-31",
+    "adjusted_return": 0.965686274509804,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-08-31",
+      "ticker": "4944",
+      "name": "兆遠",
+      "pre_close": "10.20",
+      "reference_price": "20.42",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4944 / 兆遠 停止買賣日期: 111/08/24 恢復買賣日期: 111/08/31 每壹仟股換發新股票: 499.54000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "4934",
+    "prev_quote_date": "2020-01-08",
+    "quote_date": "2020-01-20",
+    "adjusted_return": 0.9541984732824429,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-01-20",
+      "ticker": "4934",
+      "name": "太極",
+      "pre_close": "6.55",
+      "reference_price": "11.67",
+      "reason": "彌補虧損",
+      "details": "4934  ,20200108",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "2349",
+    "prev_quote_date": "2020-09-28",
+    "quote_date": "2020-10-12",
+    "adjusted_return": 0.9529837251356239,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-10-12",
+      "ticker": "2349",
+      "name": "錸德",
+      "pre_close": "5.53",
+      "reference_price": "10.23",
+      "reason": "彌補虧損",
+      "details": "2349  ,20200928",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "5348",
+    "prev_quote_date": "2024-09-18",
+    "quote_date": "2024-09-30",
+    "adjusted_return": 0.9407407407407407,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-09-30",
+      "ticker": "5348",
+      "name": "正能量智能",
+      "pre_close": "13.50",
+      "reference_price": "26.45",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5348 / 正能量智能 停止買賣日期: 113/09/19 恢復買賣日期: 113/09/30 每壹仟股換發新股票: 510.38890000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2024/01/01&endDate=2024/12/31"
+    }
+  },
+  {
+    "ticker": "3095",
+    "prev_quote_date": "2014-09-05",
+    "quote_date": "2014-09-22",
+    "adjusted_return": 0.937704918032787,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-09-22",
+      "ticker": "3095",
+      "name": "及成",
+      "pre_close": "3.05",
+      "reference_price": "6.35",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3095 / 及成 停止買賣日期: 103/09/09 恢復買賣日期: 103/09/22 每壹仟股換發新股票: 480.39616000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "3321",
+    "prev_quote_date": "2025-09-05",
+    "quote_date": "2025-09-15",
+    "adjusted_return": 0.9356955380577427,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-09-15",
+      "ticker": "3321",
+      "name": "同泰",
+      "pre_close": "7.62",
+      "reference_price": "13.93",
+      "reason": "彌補虧損",
+      "details": "3321  ,20250905",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20250101&endDate=20251231&response=json"
+    }
+  },
+  {
+    "ticker": "1472",
+    "prev_quote_date": "2017-10-18",
+    "quote_date": "2017-10-30",
+    "adjusted_return": 0.9239904988123511,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-10-30",
+      "ticker": "1472",
+      "name": "三洋紡",
+      "pre_close": "21.05",
+      "reference_price": "37.67",
+      "reason": "彌補虧損",
+      "details": "1472  ,20171018",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "4402",
+    "prev_quote_date": "2014-10-30",
+    "quote_date": "2014-11-14",
+    "adjusted_return": 0.9221698113207546,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-14",
+      "ticker": "4402",
+      "name": "福大",
+      "pre_close": "4.24",
+      "reference_price": "8.76",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4402 / 福大 停止買賣日期: 103/10/31 恢復買賣日期: 103/11/14 每壹仟股換發新股票: 484.16616000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "2364",
+    "prev_quote_date": "2016-09-22",
+    "quote_date": "2016-10-07",
+    "adjusted_return": 0.9161290322580646,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-07",
+      "ticker": "2364",
+      "name": "倫飛",
+      "pre_close": "1.55",
+      "reference_price": "3.13",
+      "reason": "彌補虧損",
+      "details": "2364  ,20160922",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "3523",
+    "prev_quote_date": "2018-08-22",
+    "quote_date": "2018-09-03",
+    "adjusted_return": 0.9126984126984128,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-09-03",
+      "ticker": "3523",
+      "name": "迎輝",
+      "pre_close": "6.30",
+      "reference_price": "12.60",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3523 / 迎輝 停止買賣日期: 107/08/23 恢復買賣日期: 107/09/03 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31"
+    }
+  },
+  {
+    "ticker": "3465",
+    "prev_quote_date": "2016-11-16",
+    "quote_date": "2016-11-29",
+    "adjusted_return": 0.9099099099099102,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-11-29",
+      "ticker": "3465",
+      "name": "祥業",
+      "pre_close": "5.55",
+      "reference_price": "11.10",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3465 / 祥業 停止買賣日期: 105/11/17 恢復買賣日期: 105/11/29 每壹仟股換發新股票: 500.00002000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "3520",
+    "prev_quote_date": "2018-12-20",
+    "quote_date": "2019-01-02",
+    "adjusted_return": 0.9077757685352623,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-01-02",
+      "ticker": "3520",
+      "name": "振維",
+      "pre_close": "5.53",
+      "reference_price": "10.54",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3520 / 振維 停止買賣日期: 107/12/21 恢復買賣日期: 108/01/02 每壹仟股換發新股票: 524.72588000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "3555",
+    "prev_quote_date": "2016-09-13",
+    "quote_date": "2016-09-30",
+    "adjusted_return": 0.9017432646592709,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-09-30",
+      "ticker": "3555",
+      "name": "重鳥鵬",
+      "pre_close": "31.55",
+      "reference_price": "62.27",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3555 / 重鳥鵬 停止買賣日期: 105/09/14 恢復買賣日期: 105/09/30 每壹仟股換發新股票: 506.70000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "6198",
+    "prev_quote_date": "2013-11-13",
+    "quote_date": "2013-11-28",
+    "adjusted_return": 0.8900343642611683,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-11-28",
+      "ticker": "6198",
+      "name": "凌泰",
+      "pre_close": "8.73",
+      "reference_price": "15.45",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6198 / 凌泰 停止買賣日期: 102/11/14 恢復買賣日期: 102/11/28 每壹仟股換發新股票: 565.00031000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "2358",
+    "prev_quote_date": "2016-10-19",
+    "quote_date": "2016-10-31",
+    "adjusted_return": 0.877496671105193,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-31",
+      "ticker": "2358",
+      "name": "廷鑫",
+      "pre_close": "7.51",
+      "reference_price": "12.86",
+      "reason": "彌補虧損",
+      "details": "2358  ,20161019",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "3252",
+    "prev_quote_date": "2013-01-23",
+    "quote_date": "2013-02-06",
+    "adjusted_return": 0.8708487084870848,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-02-06",
+      "ticker": "3252",
+      "name": "海灣",
+      "pre_close": "13.55",
+      "reference_price": "23.71",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3252 / 海灣 停止買賣日期: 102/01/24 恢復買賣日期: 102/02/06 每壹仟股換發新股票: 571.42857000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "5701",
+    "prev_quote_date": "2013-09-12",
+    "quote_date": "2013-09-26",
+    "adjusted_return": 0.8676056338028169,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-09-26",
+      "ticker": "5701",
+      "name": "劍湖山",
+      "pre_close": "3.55",
+      "reference_price": "6.60",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5701 / 劍湖山 停止買賣日期: 102/09/13 恢復買賣日期: 102/09/26 每壹仟股換發新股票: 538.27730000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "2388",
+    "prev_quote_date": "2012-09-20",
+    "quote_date": "2012-10-04",
+    "adjusted_return": 0.8644859813084114,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-10-04",
+      "ticker": "2388",
+      "name": "威盛",
+      "pre_close": "10.70",
+      "reference_price": "21.40",
+      "reason": "彌補虧損",
+      "details": "2388  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "6116",
+    "prev_quote_date": "2012-09-12",
+    "quote_date": "2012-09-27",
+    "adjusted_return": 0.863905325443787,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-09-27",
+      "ticker": "6116",
+      "name": "彩晶",
+      "pre_close": "1.69",
+      "reference_price": "3.38",
+      "reason": "彌補虧損",
+      "details": "6116  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "6235",
+    "prev_quote_date": "2011-08-11",
+    "quote_date": "2011-08-31",
+    "adjusted_return": 0.8600682593856654,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-08-31",
+      "ticker": "6235",
+      "name": "華孚",
+      "pre_close": "5.86",
+      "reference_price": "11.71",
+      "reason": "彌補虧損",
+      "details": "6235  ,20110909",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "5906",
+    "prev_quote_date": "2018-06-06",
+    "quote_date": "2018-06-19",
+    "adjusted_return": 0.853881278538813,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-06-19",
+      "ticker": "5906",
+      "name": "台南-KY",
+      "pre_close": "10.95",
+      "reference_price": "21.90",
+      "reason": "彌補虧損",
+      "details": "5906  ,20180606",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "3536",
+    "prev_quote_date": "2015-01-16",
+    "quote_date": "2015-03-20",
+    "adjusted_return": 0.8465045592705167,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-03-20",
+      "ticker": "3536",
+      "name": "誠創",
+      "pre_close": "6.58",
+      "reference_price": "13.33",
+      "reason": "彌補虧損",
+      "details": "3536  ,20150331",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20150101&endDate=20151231&response=json"
+    }
+  },
+  {
+    "ticker": "3018",
+    "prev_quote_date": "2023-11-15",
+    "quote_date": "2023-11-27",
+    "adjusted_return": 0.8374316939890709,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-11-27",
+      "ticker": "3018",
+      "name": "隆銘綠能",
+      "pre_close": "7.32",
+      "reference_price": "14.64",
+      "reason": "彌補虧損",
+      "details": "3018  ,20231114",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "2424",
+    "prev_quote_date": "2020-12-09",
+    "quote_date": "2020-12-21",
+    "adjusted_return": 0.8324175824175826,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-12-21",
+      "ticker": "2424",
+      "name": "隴華",
+      "pre_close": "18.20",
+      "reference_price": "30.33",
+      "reason": "彌補虧損",
+      "details": "2424  ,20201209",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "4174",
+    "prev_quote_date": "2026-01-26",
+    "quote_date": "2026-02-03",
+    "adjusted_return": 0.8297101449275361,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-02-03",
+      "ticker": "4174",
+      "name": "浩鼎",
+      "pre_close": "27.60",
+      "reference_price": "55.20",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4174 / 浩鼎 停止買賣日期: 115/01/27 恢復買賣日期: 115/02/03 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2026/01/01&endDate=2026/12/31"
+    }
+  },
+  {
+    "ticker": "4946",
+    "prev_quote_date": "2023-11-08",
+    "quote_date": "2023-11-20",
+    "adjusted_return": 0.8226086956521739,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-11-20",
+      "ticker": "4946",
+      "name": "辣椒",
+      "pre_close": "28.75",
+      "reference_price": "57.50",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4946 / 辣椒 停止買賣日期: 112/11/09 恢復買賣日期: 112/11/20 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "3086",
+    "prev_quote_date": "2017-03-20",
+    "quote_date": "2017-03-30",
+    "adjusted_return": 0.8201133144475921,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-03-30",
+      "ticker": "3086",
+      "name": "華義",
+      "pre_close": "7.06",
+      "reference_price": "14.25",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3086 / 華義 停止買賣日期: 106/03/21 恢復買賣日期: 106/03/30 每壹仟股換發新股票: 495.31897000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31"
+    }
+  },
+  {
+    "ticker": "2204",
+    "prev_quote_date": "2019-09-25",
+    "quote_date": "2019-10-07",
+    "adjusted_return": 0.8174442190669373,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-10-07",
+      "ticker": "2204",
+      "name": "中華",
+      "pre_close": "24.65",
+      "reference_price": "46.62",
+      "reason": "退還股款",
+      "details": "2204  ,20190925",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "3162",
+    "prev_quote_date": "2021-06-23",
+    "quote_date": "2021-07-05",
+    "adjusted_return": 0.8166666666666664,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-07-05",
+      "ticker": "3162",
+      "name": "精確",
+      "pre_close": "27.00",
+      "reference_price": "44.64",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3162 / 精確 停止買賣日期: 110/06/24 恢復買賣日期: 110/07/05 每壹仟股換發新股票: 604.84100000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "3523",
+    "prev_quote_date": "2021-11-17",
+    "quote_date": "2021-11-29",
+    "adjusted_return": 0.8119891008174389,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-11-29",
+      "ticker": "3523",
+      "name": "迎輝",
+      "pre_close": "7.34",
+      "reference_price": "12.23",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3523 / 迎輝 停止買賣日期: 110/11/18 恢復買賣日期: 110/11/29 每壹仟股換發新股票: 600.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "5351",
+    "prev_quote_date": "2020-09-16",
+    "quote_date": "2020-09-28",
+    "adjusted_return": 0.8119022316684379,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-28",
+      "ticker": "5351",
+      "name": "鈺創",
+      "pre_close": "9.41",
+      "reference_price": "18.81",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5351 / 鈺創 停止買賣日期: 109/09/17 恢復買賣日期: 109/09/28 每壹仟股換發新股票: 500.20087000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "2740",
+    "prev_quote_date": "2024-12-31",
+    "quote_date": "2025-01-13",
+    "adjusted_return": 0.8097447795823665,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-01-13",
+      "ticker": "2740",
+      "name": "天蔥",
+      "pre_close": "21.55",
+      "reference_price": "39.18",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 2740 / 天蔥 停止買賣日期: 114/01/02 恢復買賣日期: 114/01/13 每壹仟股換發新股票: 550.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2025/01/01&endDate=2025/12/31"
+    }
+  },
+  {
+    "ticker": "6289",
+    "prev_quote_date": "2022-09-06",
+    "quote_date": "2022-09-19",
+    "adjusted_return": 0.8053097345132745,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-09-19",
+      "ticker": "6289",
+      "name": "華上",
+      "pre_close": "1.13",
+      "reference_price": "2.26",
+      "reason": "彌補虧損",
+      "details": "6289  ,20220906",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json"
+    }
+  },
+  {
+    "ticker": "8080",
+    "prev_quote_date": "2022-01-25",
+    "quote_date": "2022-02-14",
+    "adjusted_return": 0.8050941306755262,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-02-14",
+      "ticker": "8080",
+      "name": "永利聯合",
+      "pre_close": "9.03",
+      "reference_price": "18.06",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8080 / 永利聯合 停止買賣日期: 111/01/26 恢復買賣日期: 111/02/14 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "8291",
+    "prev_quote_date": "2021-01-20",
+    "quote_date": "2021-02-01",
+    "adjusted_return": 0.8026315789473684,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-02-01",
+      "ticker": "8291",
+      "name": "尚茂",
+      "pre_close": "3.80",
+      "reference_price": "7.60",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8291 / 尚茂 停止買賣日期: 110/01/21 恢復買賣日期: 110/02/01 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "3431",
+    "prev_quote_date": "2014-11-28",
+    "quote_date": "2014-12-15",
+    "adjusted_return": 0.801762114537445,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-12-15",
+      "ticker": "3431",
+      "name": "長天",
+      "pre_close": "11.35",
+      "reference_price": "19.15",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3431 / 長天 停止買賣日期: 103/12/01 恢復買賣日期: 103/12/15 每壹仟股換發新股票: 592.75139000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "8101",
+    "prev_quote_date": "2018-08-24",
+    "quote_date": "2018-09-03",
+    "adjusted_return": 0.8016877637130799,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-09-03",
+      "ticker": "8101",
+      "name": "華冠",
+      "pre_close": "2.37",
+      "reference_price": "4.74",
+      "reason": "彌補虧損",
+      "details": "8101  ,20180824",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "2321",
+    "prev_quote_date": "2018-10-24",
+    "quote_date": "2018-11-05",
+    "adjusted_return": 0.8,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-11-05",
+      "ticker": "2321",
+      "name": "東訊",
+      "pre_close": "2.30",
+      "reference_price": "4.60",
+      "reason": "彌補虧損",
+      "details": "2321  ,20181019",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "4946",
+    "prev_quote_date": "2020-09-22",
+    "quote_date": "2020-09-30",
+    "adjusted_return": 0.8,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-30",
+      "ticker": "4946",
+      "name": "辣椒",
+      "pre_close": "11.00",
+      "reference_price": "22.00",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4946 / 辣椒 停止買賣日期: 109/09/23 恢復買賣日期: 109/09/30 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "2491",
+    "prev_quote_date": "2012-09-21",
+    "quote_date": "2012-10-08",
+    "adjusted_return": 0.7987804878048783,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-10-08",
+      "ticker": "2491",
+      "name": "吉祥全",
+      "pre_close": "1.64",
+      "reference_price": "3.17",
+      "reason": "彌補虧損",
+      "details": "2491  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "5529",
+    "prev_quote_date": "2023-09-13",
+    "quote_date": "2023-09-25",
+    "adjusted_return": 0.7955555555555553,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-09-25",
+      "ticker": "5529",
+      "name": "鉅陞",
+      "pre_close": "11.25",
+      "reference_price": "20.27",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5529 / 鉅陞 停止買賣日期: 112/09/14 恢復買賣日期: 112/09/25 每壹仟股換發新股票: 554.90447000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "5227",
+    "prev_quote_date": "2020-06-10",
+    "quote_date": "2020-06-22",
+    "adjusted_return": 0.79,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-06-22",
+      "ticker": "5227",
+      "name": "立凱-KY",
+      "pre_close": "10.00",
+      "reference_price": "18.58",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5227 / 立凱-KY 停止買賣日期: 109/06/11 恢復買賣日期: 109/06/22 每壹仟股換發新股票: 538.21955000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "3536",
+    "prev_quote_date": "2011-10-03",
+    "quote_date": "2011-10-20",
+    "adjusted_return": 0.7766393442622952,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-10-20",
+      "ticker": "3536",
+      "name": "誠創",
+      "pre_close": "4.88",
+      "reference_price": "9.32",
+      "reason": "彌補虧損",
+      "details": "3536  ,20111027",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "5227",
+    "prev_quote_date": "2021-06-16",
+    "quote_date": "2021-06-28",
+    "adjusted_return": 0.7757009345794394,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-06-28",
+      "ticker": "5227",
+      "name": "立凱-KY",
+      "pre_close": "10.70",
+      "reference_price": "18.59",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5227 / 立凱-KY 停止買賣日期: 110/06/17 恢復買賣日期: 110/06/28 每壹仟股換發新股票: 575.55232000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "2705",
+    "prev_quote_date": "2019-10-30",
+    "quote_date": "2019-11-11",
+    "adjusted_return": 0.7752808988764046,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-11-11",
+      "ticker": "2705",
+      "name": "六福",
+      "pre_close": "8.90",
+      "reference_price": "16.18",
+      "reason": "彌補虧損",
+      "details": "2705  ,20191030",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "5484",
+    "prev_quote_date": "2019-09-11",
+    "quote_date": "2019-09-23",
+    "adjusted_return": 0.7546125461254611,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-09-23",
+      "ticker": "5484",
+      "name": "慧友",
+      "pre_close": "5.42",
+      "reference_price": "9.19",
+      "reason": "彌補虧損",
+      "details": "5484  ,20190906",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "6550",
+    "prev_quote_date": "2026-09-16",
+    "quote_date": "2026-09-29",
+    "adjusted_return": 0.754032258064516,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-09-29",
+      "ticker": "6550",
+      "name": "北極星藥業-KY",
+      "pre_close": "9.92",
+      "reference_price": "19.09",
+      "reason": "彌補虧損",
+      "details": "6550  ,20260916",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20260101&endDate=20261231&response=json"
+    }
+  },
+  {
+    "ticker": "6145",
+    "prev_quote_date": "2013-01-16",
+    "quote_date": "2013-01-30",
+    "adjusted_return": 0.7489878542510122,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-01-30",
+      "ticker": "6145",
+      "name": "勁永",
+      "pre_close": "12.35",
+      "reference_price": "20.58",
+      "reason": "彌補虧損",
+      "details": "6145  ,20130206",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20130101&endDate=20131231&response=json"
+    }
+  },
+  {
+    "ticker": "3057",
+    "prev_quote_date": "2020-09-16",
+    "quote_date": "2020-09-28",
+    "adjusted_return": 0.747787610619469,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-28",
+      "ticker": "3057",
+      "name": "喬鼎",
+      "pre_close": "6.78",
+      "reference_price": "12.99",
+      "reason": "彌補虧損",
+      "details": "3057  ,20200916",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "4712",
+    "prev_quote_date": "2016-11-09",
+    "quote_date": "2016-11-24",
+    "adjusted_return": 0.7462686567164178,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-11-24",
+      "ticker": "4712",
+      "name": "南璋",
+      "pre_close": "6.70",
+      "reference_price": "10.66",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4712 / 南璋 停止買賣日期: 105/11/10 恢復買賣日期: 105/11/24 每壹仟股換發新股票: 628.62476000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "2740",
+    "prev_quote_date": "2020-02-12",
+    "quote_date": "2020-02-24",
+    "adjusted_return": 0.7444717444717444,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-02-24",
+      "ticker": "2740",
+      "name": "天蔥",
+      "pre_close": "8.14",
+      "reference_price": "15.57",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 2740 / 天蔥 停止買賣日期: 109/02/13 恢復買賣日期: 109/02/24 每壹仟股換發新股票: 522.74347000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "6228",
+    "prev_quote_date": "2016-11-02",
+    "quote_date": "2016-11-15",
+    "adjusted_return": 0.7441860465116279,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-11-15",
+      "ticker": "6228",
+      "name": "全譜",
+      "pre_close": "8.60",
+      "reference_price": "16.66",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6228 / 全譜 停止買賣日期: 105/11/03 恢復買賣日期: 105/11/15 每壹仟股換發新股票: 516.19442000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "2837",
+    "prev_quote_date": "2013-02-19",
+    "quote_date": "2013-03-01",
+    "adjusted_return": 0.7413793103448276,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-03-01",
+      "ticker": "2837",
+      "name": "萬泰銀",
+      "pre_close": "11.60",
+      "reference_price": "21.69",
+      "reason": "彌補虧損",
+      "details": "2837  ,20130206",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20130101&endDate=20131231&response=json"
+    }
+  },
+  {
+    "ticker": "6172",
+    "prev_quote_date": "2011-10-24",
+    "quote_date": "2011-11-10",
+    "adjusted_return": 0.7290969899665549,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-11-10",
+      "ticker": "6172",
+      "name": "互億",
+      "pre_close": "2.99",
+      "reference_price": "5.55",
+      "reason": "彌補虧損",
+      "details": "6172  ,20111114",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "2321",
+    "prev_quote_date": "2026-09-09",
+    "quote_date": "2026-09-21",
+    "adjusted_return": 0.7218543046357617,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-09-21",
+      "ticker": "2321",
+      "name": "東訊",
+      "pre_close": "15.10",
+      "reference_price": "27.61",
+      "reason": "彌補虧損",
+      "details": "2321  ,20260909",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20260101&endDate=20261231&response=json"
+    }
+  },
+  {
+    "ticker": "6165",
+    "prev_quote_date": "2015-08-07",
+    "quote_date": "2015-08-24",
+    "adjusted_return": 0.7214285714285715,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-08-24",
+      "ticker": "6165",
+      "name": "捷泰",
+      "pre_close": "7.00",
+      "reference_price": "13.38",
+      "reason": "彌補虧損",
+      "details": "6165  ,20150807",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20150101&endDate=20151231&response=json"
+    }
+  },
+  {
+    "ticker": "1742",
+    "prev_quote_date": "2018-03-05",
+    "quote_date": "2018-03-13",
+    "adjusted_return": 0.712678936605317,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-03-13",
+      "ticker": "1742",
+      "name": "台蠟",
+      "pre_close": "9.78",
+      "reference_price": "15.26",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 1742 / 台蠟 停止買賣日期: 107/03/06 恢復買賣日期: 107/03/13 每壹仟股換發新股票: 640.91451000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31"
+    }
+  },
+  {
+    "ticker": "3629",
+    "prev_quote_date": "2014-10-23",
+    "quote_date": "2014-11-07",
+    "adjusted_return": 0.7073170731707317,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-07",
+      "ticker": "3629",
+      "name": "卓韋",
+      "pre_close": "2.87",
+      "reference_price": "5.22",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3629 / 卓韋 停止買賣日期: 103/10/24 恢復買賣日期: 103/11/07 每壹仟股換發新股票: 550.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "2506",
+    "prev_quote_date": "2011-11-09",
+    "quote_date": "2011-11-25",
+    "adjusted_return": 0.7070175438596491,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-11-25",
+      "ticker": "2506",
+      "name": "太設",
+      "pre_close": "5.70",
+      "reference_price": "10.46",
+      "reason": "彌補虧損",
+      "details": "2506  ,20111202",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "3576",
+    "prev_quote_date": "2021-07-28",
+    "quote_date": "2021-08-09",
+    "adjusted_return": 0.7066115702479339,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-08-09",
+      "ticker": "3576",
+      "name": "聯合再生",
+      "pre_close": "12.10",
+      "reference_price": "21.38",
+      "reason": "彌補虧損",
+      "details": "3576  ,20210728",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "9928",
+    "prev_quote_date": "2016-12-30",
+    "quote_date": "2017-01-16",
+    "adjusted_return": 0.7011718750000002,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-01-16",
+      "ticker": "9928",
+      "name": "中視",
+      "pre_close": "5.12",
+      "reference_price": "9.60",
+      "reason": "彌補虧損",
+      "details": "9928  ,20161229",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "3073",
+    "prev_quote_date": "2019-12-31",
+    "quote_date": "2020-01-13",
+    "adjusted_return": 0.698076923076923,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-01-13",
+      "ticker": "3073",
+      "name": "凱柏實業",
+      "pre_close": "5.20",
+      "reference_price": "9.76",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3073 / 凱柏實業 停止買賣日期: 109/01/02 恢復買賣日期: 109/01/13 每壹仟股換發新股票: 532.54300000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "3049",
+    "prev_quote_date": "2015-09-23",
+    "quote_date": "2015-10-08",
+    "adjusted_return": 0.696969696969697,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-10-08",
+      "ticker": "3049",
+      "name": "和鑫",
+      "pre_close": "3.30",
+      "reference_price": "5.21",
+      "reason": "彌補虧損",
+      "details": "3049  ,20150923",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20150101&endDate=20151231&response=json"
+    }
+  },
+  {
+    "ticker": "3066",
+    "prev_quote_date": "2014-11-17",
+    "quote_date": "2014-12-01",
+    "adjusted_return": 0.6920289855072466,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-12-01",
+      "ticker": "3066",
+      "name": "李洲",
+      "pre_close": "5.52",
+      "reference_price": "10.04",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3066 / 李洲 停止買賣日期: 103/11/18 恢復買賣日期: 103/12/01 每壹仟股換發新股票: 550.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "2342",
+    "prev_quote_date": "2012-10-17",
+    "quote_date": "2012-11-01",
+    "adjusted_return": 0.6885245901639343,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-11-01",
+      "ticker": "2342",
+      "name": "茂矽",
+      "pre_close": "1.83",
+      "reference_price": "3.32",
+      "reason": "彌補虧損",
+      "details": "2342  ,20130205",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "5227",
+    "prev_quote_date": "2021-12-01",
+    "quote_date": "2021-12-13",
+    "adjusted_return": 0.6873563218390808,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-12-13",
+      "ticker": "5227",
+      "name": "立凱-KY",
+      "pre_close": "43.50",
+      "reference_price": "66.77",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5227 / 立凱-KY 停止買賣日期: 110/12/02 恢復買賣日期: 110/12/13 每壹仟股換發新股票: 651.46800000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "2444",
+    "prev_quote_date": "2014-10-22",
+    "quote_date": "2014-11-04",
+    "adjusted_return": 0.6872890888638918,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-04",
+      "ticker": "2444",
+      "name": "友旺",
+      "pre_close": "8.89",
+      "reference_price": "14.05",
+      "reason": "彌補虧損",
+      "details": "2444  ,20141113",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "2607",
+    "prev_quote_date": "2025-09-24",
+    "quote_date": "2025-10-07",
+    "adjusted_return": 0.6857142857142857,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-10-07",
+      "ticker": "2607",
+      "name": "榮運",
+      "pre_close": "35.00",
+      "reference_price": "60.00",
+      "reason": "退還股款",
+      "details": "2607  ,20250924",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20250101&endDate=20251231&response=json"
+    }
+  },
+  {
+    "ticker": "5523",
+    "prev_quote_date": "2013-09-23",
+    "quote_date": "2013-10-07",
+    "adjusted_return": 0.6746987951807231,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-10-07",
+      "ticker": "5523",
+      "name": "宏都",
+      "pre_close": "12.45",
+      "reference_price": "19.49",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5523 / 宏都 停止買賣日期: 102/09/24 恢復買賣日期: 102/10/07 每壹仟股換發新股票: 638.64600000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "2028",
+    "prev_quote_date": "2016-10-25",
+    "quote_date": "2016-11-07",
+    "adjusted_return": 0.6726190476190477,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-11-07",
+      "ticker": "2028",
+      "name": "威致",
+      "pre_close": "1.68",
+      "reference_price": "2.80",
+      "reason": "彌補虧損",
+      "details": "2028  ,20161024",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "3432",
+    "prev_quote_date": "2024-01-10",
+    "quote_date": "2024-01-22",
+    "adjusted_return": 0.6666666666666665,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-01-22",
+      "ticker": "3432",
+      "name": "台端",
+      "pre_close": "10.65",
+      "reference_price": "19.69",
+      "reason": "彌補虧損",
+      "details": "3432  ,20240110",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20240101&endDate=20241231&response=json"
+    }
+  },
+  {
+    "ticker": "2719",
+    "prev_quote_date": "2022-07-20",
+    "quote_date": "2022-08-01",
+    "adjusted_return": 0.6607142857142858,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-08-01",
+      "ticker": "2719",
+      "name": "燦星旅",
+      "pre_close": "14.00",
+      "reference_price": "25.45",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 2719 / 燦星旅 停止買賣日期: 111/07/21 恢復買賣日期: 111/08/01 每壹仟股換發新股票: 550.07000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "6179",
+    "prev_quote_date": "2014-02-10",
+    "quote_date": "2014-02-24",
+    "adjusted_return": 0.6530612244897958,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-02-24",
+      "ticker": "6179",
+      "name": "世仰",
+      "pre_close": "12.25",
+      "reference_price": "18.94",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6179 / 世仰 停止買賣日期: 103/02/11 恢復買賣日期: 103/02/24 每壹仟股換發新股票: 646.86154000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "8261",
+    "prev_quote_date": "2015-08-27",
+    "quote_date": "2015-09-11",
+    "adjusted_return": 0.6529411764705884,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-09-11",
+      "ticker": "8261",
+      "name": "富鼎",
+      "pre_close": "17.00",
+      "reference_price": "25.56",
+      "reason": "退還股款",
+      "details": "8261  ,20150827",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20150101&endDate=20151231&response=json"
+    }
+  },
+  {
+    "ticker": "4961",
+    "prev_quote_date": "2023-09-06",
+    "quote_date": "2023-09-18",
+    "adjusted_return": 0.6517571884984024,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-09-18",
+      "ticker": "4961",
+      "name": "天鈺",
+      "pre_close": "156.50",
+      "reference_price": "235.38",
+      "reason": "退還股款",
+      "details": "4961  ,20230906",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "6291",
+    "prev_quote_date": "2017-09-01",
+    "quote_date": "2017-09-15",
+    "adjusted_return": 0.6494845360824741,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-09-15",
+      "ticker": "6291",
+      "name": "沛亨",
+      "pre_close": "2.91",
+      "reference_price": "4.80",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6291 / 沛亨 停止買賣日期: 106/09/04 恢復買賣日期: 106/09/15 每壹仟股換發新股票: 606.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31"
+    }
+  },
+  {
+    "ticker": "1441",
+    "prev_quote_date": "2023-08-21",
+    "quote_date": "2023-08-29",
+    "adjusted_return": 0.6492146596858639,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-08-29",
+      "ticker": "1441",
+      "name": "大東",
+      "pre_close": "7.64",
+      "reference_price": "13.74",
+      "reason": "彌補虧損",
+      "details": "1441  ,20230821",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "6248",
+    "prev_quote_date": "2013-01-03",
+    "quote_date": "2013-01-16",
+    "adjusted_return": 0.648456057007126,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-01-16",
+      "ticker": "6248",
+      "name": "沛波",
+      "pre_close": "4.21",
+      "reference_price": "6.92",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6248 / 沛波 停止買賣日期: 102/01/04 恢復買賣日期: 102/01/16 每壹仟股換發新股票: 607.98247 股 每股退還股款: 0 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "3465",
+    "prev_quote_date": "2015-02-25",
+    "quote_date": "2015-03-13",
+    "adjusted_return": 0.6410788381742736,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-03-13",
+      "ticker": "3465",
+      "name": "祥業",
+      "pre_close": "4.82",
+      "reference_price": "8.05",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3465 / 祥業 停止買賣日期: 104/02/26 恢復買賣日期: 104/03/13 每壹仟股換發新股票: 598.41580000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "6199",
+    "prev_quote_date": "2014-02-11",
+    "quote_date": "2014-02-24",
+    "adjusted_return": 0.6275862068965519,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-02-24",
+      "ticker": "6199",
+      "name": "精威",
+      "pre_close": "14.50",
+      "reference_price": "22.07",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6199 / 精威 停止買賣日期: 103/02/12 恢復買賣日期: 103/02/24 每壹仟股換發新股票: 657.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "3041",
+    "prev_quote_date": "2019-10-23",
+    "quote_date": "2019-11-04",
+    "adjusted_return": 0.6274509803921569,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-11-04",
+      "ticker": "3041",
+      "name": "揚智",
+      "pre_close": "12.75",
+      "reference_price": "20.03",
+      "reason": "彌補虧損",
+      "details": "3041  ,20191023",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "4943",
+    "prev_quote_date": "2023-04-12",
+    "quote_date": "2023-04-24",
+    "adjusted_return": 0.6262135922330097,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-04-24",
+      "ticker": "4943",
+      "name": "康控-KY",
+      "pre_close": "10.30",
+      "reference_price": "18.57",
+      "reason": "彌補虧損",
+      "details": "4943  ,20230412",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json"
+    }
+  },
+  {
+    "ticker": "1316",
+    "prev_quote_date": "2017-01-11",
+    "quote_date": "2017-01-24",
+    "adjusted_return": 0.6228070175438596,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-01-24",
+      "ticker": "1316",
+      "name": "上曜",
+      "pre_close": "11.40",
+      "reference_price": "16.86",
+      "reason": "彌補虧損",
+      "details": "1316  ,20170110",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json"
+    }
+  },
+  {
+    "ticker": "3593",
+    "prev_quote_date": "2018-10-17",
+    "quote_date": "2018-10-29",
+    "adjusted_return": 0.6109422492401215,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-10-29",
+      "ticker": "3593",
+      "name": "力銘",
+      "pre_close": "6.58",
+      "reference_price": "11.76",
+      "reason": "彌補虧損",
+      "details": "3593  ,20181017",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "2426",
+    "prev_quote_date": "2014-10-17",
+    "quote_date": "2014-11-03",
+    "adjusted_return": 0.607929515418502,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-03",
+      "ticker": "2426",
+      "name": "鼎元",
+      "pre_close": "6.81",
+      "reference_price": "10.27",
+      "reason": "彌補虧損",
+      "details": "2426  ,20141113",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "3311",
+    "prev_quote_date": "2019-09-10",
+    "quote_date": "2019-09-23",
+    "adjusted_return": 0.606896551724138,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-09-23",
+      "ticker": "3311",
+      "name": "閎暉",
+      "pre_close": "14.50",
+      "reference_price": "23.45",
+      "reason": "退還股款",
+      "details": "3311  ,20190906",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "9935",
+    "prev_quote_date": "2011-12-14",
+    "quote_date": "2012-01-02",
+    "adjusted_return": 0.6059602649006621,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2012-01-02",
+      "ticker": "9935",
+      "name": "慶豐富",
+      "pre_close": "3.02",
+      "reference_price": "4.54",
+      "reason": "彌補虧損",
+      "details": "9935  ,20120106",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json"
+    }
+  },
+  {
+    "ticker": "1413",
+    "prev_quote_date": "2014-11-13",
+    "quote_date": "2014-11-28",
+    "adjusted_return": 0.6058823529411765,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-11-28",
+      "ticker": "1413",
+      "name": "宏洲",
+      "pre_close": "3.40",
+      "reference_price": "5.66",
+      "reason": "彌補虧損",
+      "details": "1413  ,20141209",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json"
+    }
+  },
+  {
+    "ticker": "8093",
+    "prev_quote_date": "2025-12-30",
+    "quote_date": "2026-01-12",
+    "adjusted_return": 0.6000000000000001,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-01-12",
+      "ticker": "8093",
+      "name": "保銳",
+      "pre_close": "13.00",
+      "reference_price": "21.67",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8093 / 保銳 停止買賣日期: 114/12/31 恢復買賣日期: 115/01/12 每壹仟股換發新股票: 600.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2026/01/01&endDate=2026/12/31"
+    }
+  },
+  {
+    "ticker": "6264",
+    "prev_quote_date": "2016-02-03",
+    "quote_date": "2016-02-24",
+    "adjusted_return": 0.5993589743589742,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-02-24",
+      "ticker": "6264",
+      "name": "富裔",
+      "pre_close": "6.24",
+      "reference_price": "9.94",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6264 / 富裔 停止買賣日期: 105/02/15 恢復買賣日期: 105/02/24 每壹仟股換發新股票: 627.72560000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "2329",
+    "prev_quote_date": "2018-11-21",
+    "quote_date": "2018-12-03",
+    "adjusted_return": 0.5986394557823129,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-12-03",
+      "ticker": "2329",
+      "name": "華泰",
+      "pre_close": "7.35",
+      "reference_price": "10.72",
+      "reason": "彌補虧損",
+      "details": "2329  ,20181120",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "6219",
+    "prev_quote_date": "2023-07-03",
+    "quote_date": "2023-07-11",
+    "adjusted_return": 0.5985130111524166,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-07-11",
+      "ticker": "6219",
+      "name": "富旺",
+      "pre_close": "13.45",
+      "reference_price": "22.03",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6219 / 富旺 停止買賣日期: 112/07/04 恢復買賣日期: 112/07/11 每壹仟股換發新股票: 610.43078000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "9929",
+    "prev_quote_date": "2015-03-26",
+    "quote_date": "2015-04-10",
+    "adjusted_return": 0.5964912280701751,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-04-10",
+      "ticker": "9929",
+      "name": "秋雨",
+      "pre_close": "8.55",
+      "reference_price": "13.31",
+      "reason": "彌補虧損",
+      "details": "9929  ,20150417",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20150101&endDate=20151231&response=json"
+    }
+  },
+  {
+    "ticker": "8067",
+    "prev_quote_date": "2023-02-15",
+    "quote_date": "2023-03-01",
+    "adjusted_return": 0.5934684684684683,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2023-03-01",
+      "ticker": "8067",
+      "name": "志旭",
+      "pre_close": "8.88",
+      "reference_price": "15.40",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8067 / 志旭 停止買賣日期: 112/02/16 恢復買賣日期: 112/03/01 每壹仟股換發新股票: 576.66670000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31"
+    }
+  },
+  {
+    "ticker": "4154",
+    "prev_quote_date": "2024-08-22",
+    "quote_date": "2024-09-02",
+    "adjusted_return": 0.5931034482758621,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-09-02",
+      "ticker": "4154",
+      "name": "樂威科-KY",
+      "pre_close": "14.50",
+      "reference_price": "21.00",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4154 / 樂威科-KY 停止買賣日期: 113/08/23 恢復買賣日期: 113/09/02 每壹仟股換發新股票: 690.41489000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2024/01/01&endDate=2024/12/31"
+    }
+  },
+  {
+    "ticker": "8935",
+    "prev_quote_date": "2013-10-21",
+    "quote_date": "2013-11-04",
+    "adjusted_return": 0.592050209205021,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-11-04",
+      "ticker": "8935",
+      "name": "邦泰",
+      "pre_close": "4.78",
+      "reference_price": "8.02",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8935 / 邦泰 停止買賣日期: 102/10/22 恢復買賣日期: 102/11/04 每壹仟股換發新股票: 595.86496000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31"
+    }
+  },
+  {
+    "ticker": "3149",
+    "prev_quote_date": "2016-09-26",
+    "quote_date": "2016-10-11",
+    "adjusted_return": 0.589519650655022,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-11",
+      "ticker": "3149",
+      "name": "正達",
+      "pre_close": "11.45",
+      "reference_price": "18.09",
+      "reason": "彌補虧損",
+      "details": "3149  ,20160928",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "2438",
+    "prev_quote_date": "2020-12-29",
+    "quote_date": "2021-01-11",
+    "adjusted_return": 0.5892053973013494,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-01-11",
+      "ticker": "2438",
+      "name": "翔耀",
+      "pre_close": "6.67",
+      "reference_price": "10.55",
+      "reason": "彌補虧損",
+      "details": "2438  ,20201229",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "2201",
+    "prev_quote_date": "2020-10-06",
+    "quote_date": "2020-10-19",
+    "adjusted_return": 0.5866388308977035,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-10-19",
+      "ticker": "2201",
+      "name": "裕隆",
+      "pre_close": "23.95",
+      "reference_price": "37.67",
+      "reason": "彌補虧損",
+      "details": "2201  ,20201006",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json"
+    }
+  },
+  {
+    "ticker": "2025",
+    "prev_quote_date": "2025-02-04",
+    "quote_date": "2025-02-12",
+    "adjusted_return": 0.5857142857142856,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-02-12",
+      "ticker": "2025",
+      "name": "千興",
+      "pre_close": "10.50",
+      "reference_price": "17.09",
+      "reason": "彌補虧損",
+      "details": "2025  ,20250204",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20250101&endDate=20251231&response=json"
+    }
+  },
+  {
+    "ticker": "3171",
+    "prev_quote_date": "2024-09-25",
+    "quote_date": "2024-10-07",
+    "adjusted_return": 0.581132075471698,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-10-07",
+      "ticker": "3171",
+      "name": "新洲",
+      "pre_close": "26.50",
+      "reference_price": "43.00",
+      "reason": "現金減資",
+      "details": "股票代號/股票名稱: 3171 / 新洲 停止買賣日期: 113/09/26 恢復買賣日期: 113/10/07 每壹仟股換發新股票: 500.00000000 股 每股退還股款: 5.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2024/01/01&endDate=2024/12/31"
+    }
+  },
+  {
+    "ticker": "6291",
+    "prev_quote_date": "2022-09-14",
+    "quote_date": "2022-09-26",
+    "adjusted_return": 0.5732087227414329,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-09-26",
+      "ticker": "6291",
+      "name": "沛亨",
+      "pre_close": "64.20",
+      "reference_price": "96.30",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6291 / 沛亨 停止買賣日期: 111/09/15 恢復買賣日期: 111/09/26 每壹仟股換發新股票: 666.66667000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "5475",
+    "prev_quote_date": "2021-04-07",
+    "quote_date": "2021-04-19",
+    "adjusted_return": 0.570909090909091,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-04-19",
+      "ticker": "5475",
+      "name": "德宏",
+      "pre_close": "5.50",
+      "reference_price": "7.86",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 5475 / 德宏 停止買賣日期: 110/04/08 恢復買賣日期: 110/04/19 每壹仟股換發新股票: 700.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "8933",
+    "prev_quote_date": "2019-12-11",
+    "quote_date": "2019-12-23",
+    "adjusted_return": 0.5707762557077625,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-12-23",
+      "ticker": "8933",
+      "name": "愛地雅",
+      "pre_close": "4.38",
+      "reference_price": "6.26",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8933 / 愛地雅 停止買賣日期: 108/12/12 恢復買賣日期: 108/12/23 每壹仟股換發新股票: 700.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "2314",
+    "prev_quote_date": "2013-02-26",
+    "quote_date": "2013-03-13",
+    "adjusted_return": 0.5620155038759689,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2013-03-13",
+      "ticker": "2314",
+      "name": "台揚",
+      "pre_close": "12.90",
+      "reference_price": "19.73",
+      "reason": "彌補虧損",
+      "details": "2314  ,20130318",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20130101&endDate=20131231&response=json"
+    }
+  },
+  {
+    "ticker": "3152",
+    "prev_quote_date": "2026-06-22",
+    "quote_date": "2026-06-30",
+    "adjusted_return": 0.5600961538461537,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-06-30",
+      "ticker": "3152",
+      "name": "璟德",
+      "pre_close": "208.00",
+      "reference_price": "360.24",
+      "reason": "現金減資",
+      "details": "股票代號/股票名稱: 3152 / 璟德 停止買賣日期: 115/06/23 恢復買賣日期: 115/06/30 每壹仟股換發新股票: 565.31945000 股 每股退還股款: 4.34680553 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2026/01/01&endDate=2026/12/31"
+    }
+  },
+  {
+    "ticker": "8067",
+    "prev_quote_date": "2017-11-28",
+    "quote_date": "2017-12-06",
+    "adjusted_return": 0.5555555555555556,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-12-06",
+      "ticker": "8067",
+      "name": "志旭",
+      "pre_close": "5.40",
+      "reference_price": "8.06",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8067 / 志旭 停止買賣日期: 106/11/29 恢復買賣日期: 106/12/06 每壹仟股換發新股票: 670.30960000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31"
+    }
+  },
+  {
+    "ticker": "3434",
+    "prev_quote_date": "2015-11-04",
+    "quote_date": "2015-11-17",
+    "adjusted_return": 0.553829078801332,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-11-17",
+      "ticker": "3434",
+      "name": "哲固",
+      "pre_close": "9.01",
+      "reference_price": "13.02",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3434 / 哲固 停止買賣日期: 104/11/05 恢復買賣日期: 104/11/17 每壹仟股換發新股票: 692.07320000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "2349",
+    "prev_quote_date": "2016-09-14",
+    "quote_date": "2016-09-30",
+    "adjusted_return": 0.5536585365853661,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-09-30",
+      "ticker": "2349",
+      "name": "錸德",
+      "pre_close": "4.10",
+      "reference_price": "6.06",
+      "reason": "彌補虧損",
+      "details": "2349  ,20160914",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json"
+    }
+  },
+  {
+    "ticker": "4419",
+    "prev_quote_date": "2015-03-13",
+    "quote_date": "2015-03-27",
+    "adjusted_return": 0.5534591194968554,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-03-27",
+      "ticker": "4419",
+      "name": "松懋",
+      "pre_close": "4.77",
+      "reference_price": "7.95",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4419 / 松懋 停止買賣日期: 104/03/16 恢復買賣日期: 104/03/27 每壹仟股換發新股票: 600.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "1475",
+    "prev_quote_date": "2011-11-16",
+    "quote_date": "2011-12-06",
+    "adjusted_return": 0.5532646048109964,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-12-06",
+      "ticker": "1475",
+      "name": "本盟",
+      "pre_close": "5.82",
+      "reference_price": "9.69",
+      "reason": "彌補虧損",
+      "details": "1475  ,20111213",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "6461",
+    "prev_quote_date": "2026-09-01",
+    "quote_date": "2026-09-09",
+    "adjusted_return": 0.5465465465465467,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-09-09",
+      "ticker": "6461",
+      "name": "益得",
+      "pre_close": "16.65",
+      "reference_price": "26.92",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6461 / 益得 停止買賣日期: 115/09/02 恢復買賣日期: 115/09/09 每壹仟股換發新股票: 618.57800000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2026/01/01&endDate=2026/12/31"
+    }
+  },
+  {
+    "ticker": "8107",
+    "prev_quote_date": "2014-10-14",
+    "quote_date": "2014-10-27",
+    "adjusted_return": 0.544776119402985,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-10-27",
+      "ticker": "8107",
+      "name": "大億科",
+      "pre_close": "13.40",
+      "reference_price": "22.21",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8107 / 大億科 停止買賣日期: 103/10/15 恢復買賣日期: 103/10/27 每壹仟股換發新股票: 603.40945000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "2425",
+    "prev_quote_date": "2011-12-15",
+    "quote_date": "2011-12-30",
+    "adjusted_return": 0.5428571428571427,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-12-30",
+      "ticker": "2425",
+      "name": "承啟",
+      "pre_close": "10.50",
+      "reference_price": "15.17",
+      "reason": "彌補虧損",
+      "details": "2425  ,20120106",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "8906",
+    "prev_quote_date": "2019-01-02",
+    "quote_date": "2019-01-14",
+    "adjusted_return": 0.532710280373832,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-01-14",
+      "ticker": "8906",
+      "name": "花王",
+      "pre_close": "10.70",
+      "reference_price": "16.13",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8906 / 花王 停止買賣日期: 108/01/03 恢復買賣日期: 108/01/14 每壹仟股換發新股票: 663.20000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31"
+    }
+  },
+  {
+    "ticker": "6134",
+    "prev_quote_date": "2021-01-06",
+    "quote_date": "2021-01-18",
+    "adjusted_return": 0.532520325203252,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-01-18",
+      "ticker": "6134",
+      "name": "萬旭",
+      "pre_close": "12.30",
+      "reference_price": "17.16",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6134 / 萬旭 停止買賣日期: 110/01/07 恢復買賣日期: 110/01/18 每壹仟股換發新股票: 716.87161000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31"
+    }
+  },
+  {
+    "ticker": "4304",
+    "prev_quote_date": "2015-04-15",
+    "quote_date": "2015-04-28",
+    "adjusted_return": 0.527027027027027,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2015-04-28",
+      "ticker": "4304",
+      "name": "勝昱",
+      "pre_close": "11.10",
+      "reference_price": "16.02",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 4304 / 勝昱 停止買賣日期: 104/04/16 恢復買賣日期: 104/04/28 每壹仟股換發新股票: 692.67250000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31"
+    }
+  },
+  {
+    "ticker": "3629",
+    "prev_quote_date": "2018-03-26",
+    "quote_date": "2018-04-03",
+    "adjusted_return": 0.5248868778280544,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-04-03",
+      "ticker": "3629",
+      "name": "群富通",
+      "pre_close": "22.10",
+      "reference_price": "33.69",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3629 / 群富通 停止買賣日期: 107/03/27 恢復買賣日期: 107/04/03 每壹仟股換發新股票: 656.06048000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31"
+    }
+  },
+  {
+    "ticker": "2465",
+    "prev_quote_date": "2011-10-07",
+    "quote_date": "2011-10-25",
+    "adjusted_return": 0.523809523809524,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2011-10-25",
+      "ticker": "2465",
+      "name": "麗臺",
+      "pre_close": "3.78",
+      "reference_price": "5.39",
+      "reason": "彌補虧損",
+      "details": "2465  ,20111103",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json"
+    }
+  },
+  {
+    "ticker": "2406",
+    "prev_quote_date": "2019-11-22",
+    "quote_date": "2019-12-02",
+    "adjusted_return": 0.5231788079470201,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-12-02",
+      "ticker": "2406",
+      "name": "國碩",
+      "pre_close": "7.55",
+      "reference_price": "12.43",
+      "reason": "彌補虧損",
+      "details": "2406  ,20191122",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "6244",
+    "prev_quote_date": "2020-09-16",
+    "quote_date": "2020-09-28",
+    "adjusted_return": 0.5224489795918366,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2020-09-28",
+      "ticker": "6244",
+      "name": "茂迪",
+      "pre_close": "24.50",
+      "reference_price": "37.29",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 6244 / 茂迪 停止買賣日期: 109/09/17 恢復買賣日期: 109/09/28 每壹仟股換發新股票: 656.93579000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31"
+    }
+  },
+  {
+    "ticker": "1471",
+    "prev_quote_date": "2018-01-10",
+    "quote_date": "2018-01-22",
+    "adjusted_return": 0.5218150087260034,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2018-01-22",
+      "ticker": "1471",
+      "name": "首利",
+      "pre_close": "5.73",
+      "reference_price": "7.93",
+      "reason": "彌補虧損",
+      "details": "1471  ,20180110",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json"
+    }
+  },
+  {
+    "ticker": "3041",
+    "prev_quote_date": "2024-10-30",
+    "quote_date": "2024-11-11",
+    "adjusted_return": 0.518987341772152,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2024-11-11",
+      "ticker": "3041",
+      "name": "揚智",
+      "pre_close": "19.75",
+      "reference_price": "32.91",
+      "reason": "彌補虧損",
+      "details": "3041  ,20241030",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20240101&endDate=20241231&response=json"
+    }
+  },
+  {
+    "ticker": "6121",
+    "prev_quote_date": "2017-09-13",
+    "quote_date": "2017-09-28",
+    "adjusted_return": 0.5186915887850467,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2017-09-28",
+      "ticker": "6121",
+      "name": "新普",
+      "pre_close": "107.00",
+      "reference_price": "171.67",
+      "reason": "現金減資",
+      "details": "股票代號/股票名稱: 6121 / 新普 停止買賣日期: 106/09/14 恢復買賣日期: 106/09/28 每壹仟股換發新股票: 600.00000000 股 每股退還股款: 4.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31"
+    }
+  },
+  {
+    "ticker": "3593",
+    "prev_quote_date": "2025-12-10",
+    "quote_date": "2025-12-22",
+    "adjusted_return": 0.5185185185185186,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2025-12-22",
+      "ticker": "3593",
+      "name": "力銘",
+      "pre_close": "8.10",
+      "reference_price": "13.50",
+      "reason": "彌補虧損",
+      "details": "3593  ,20251210",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20250101&endDate=20251231&response=json"
+    }
+  },
+  {
+    "ticker": "6443",
+    "prev_quote_date": "2019-06-20",
+    "quote_date": "2019-07-01",
+    "adjusted_return": 0.5163398692810457,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2019-07-01",
+      "ticker": "6443",
+      "name": "元晶",
+      "pre_close": "6.12",
+      "reference_price": "9.29",
+      "reason": "彌補虧損",
+      "details": "6443  ,20190620",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json"
+    }
+  },
+  {
+    "ticker": "2505",
+    "prev_quote_date": "2020-12-23",
+    "quote_date": "2021-01-04",
+    "adjusted_return": 0.5099206349206347,
+    "official_event": {
+      "provider": "TWSE",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2021-01-04",
+      "ticker": "2505",
+      "name": "國揚",
+      "pre_close": "25.20",
+      "reference_price": "37.86",
+      "reason": "退還股款",
+      "details": "2505  ,20201223",
+      "evidence_url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json"
+    }
+  },
+  {
+    "ticker": "3555",
+    "prev_quote_date": "2014-08-29",
+    "quote_date": "2014-09-15",
+    "adjusted_return": 0.5060240963855422,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2014-09-15",
+      "ticker": "3555",
+      "name": "擎泰",
+      "pre_close": "7.47",
+      "reference_price": "12.08",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3555 / 擎泰 停止買賣日期: 103/09/01 恢復買賣日期: 103/09/15 每壹仟股換發新股票: 618.45900000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31"
+    }
+  },
+  {
+    "ticker": "3522",
+    "prev_quote_date": "2022-08-17",
+    "quote_date": "2022-08-26",
+    "adjusted_return": 0.5058949624866023,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2022-08-26",
+      "ticker": "3522",
+      "name": "御頂",
+      "pre_close": "9.33",
+      "reference_price": "15.60",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 3522 / 御頂 停止買賣日期: 111/08/18 恢復買賣日期: 111/08/26 每壹仟股換發新股票: 598.11809000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31"
+    }
+  },
+  {
+    "ticker": "1333",
+    "prev_quote_date": "2016-10-03",
+    "quote_date": "2016-10-17",
+    "adjusted_return": 0.505050505050505,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2016-10-17",
+      "ticker": "1333",
+      "name": "恩得利",
+      "pre_close": "2.97",
+      "reference_price": "4.95",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 1333 / 恩得利 停止買賣日期: 105/10/04 恢復買賣日期: 105/10/17 每壹仟股換發新股票: 600.00000000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31"
+    }
+  },
+  {
+    "ticker": "8059",
+    "prev_quote_date": "2026-09-09",
+    "quote_date": "2026-09-21",
+    "adjusted_return": 0.5037313432835819,
+    "official_event": {
+      "provider": "TPEx",
+      "event_category": "CAPITAL_REDUCTION",
+      "effective_date": "2026-09-21",
+      "ticker": "8059",
+      "name": "凱碩",
+      "pre_close": "13.40",
+      "reference_price": "22.33",
+      "reason": "彌補虧損",
+      "details": "股票代號/股票名稱: 8059 / 凱碩 停止買賣日期: 115/09/10 恢復買賣日期: 115/09/21 每壹仟股換發新股票: 600.09275000 股 每股退還股款: 0.00000000 元/股 現金增資總股數: NA 現金增資認購價: NA 現金增資配股率: NA",
+      "evidence_url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2026/01/01&endDate=2026/12/31"
+    }
+  }
+]

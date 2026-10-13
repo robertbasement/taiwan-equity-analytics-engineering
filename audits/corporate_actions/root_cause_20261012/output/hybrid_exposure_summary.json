@@ -1,0 +1,56 @@
+{
+  "all": {
+    "direct": {
+      "relationships": 155,
+      "unique_months": 91,
+      "unique_observations": 155,
+      "unique_tickers": 129,
+      "yoy_evaluation_formation_observations": 91,
+      "yoy_evaluation_return_observations": 90
+    },
+    "features": {
+      "relationships": 680,
+      "unique_months": 143,
+      "unique_observations": 680,
+      "unique_tickers": 176,
+      "yoy_evaluation_formation_observations": 388,
+      "yoy_evaluation_return_observations": 0
+    }
+  },
+  "official_reduction_matches": {
+    "direct": {
+      "relationships": 132,
+      "unique_months": 82,
+      "unique_observations": 132,
+      "unique_tickers": 111,
+      "yoy_evaluation_formation_observations": 79,
+      "yoy_evaluation_return_observations": 78
+    },
+    "features": {
+      "relationships": 585,
+      "unique_months": 138,
+      "unique_observations": 585,
+      "unique_tickers": 154,
+      "yoy_evaluation_formation_observations": 335,
+      "yoy_evaluation_return_observations": 0
+    }
+  },
+  "residual_after_official_reduction_repair": {
+    "direct": {
+      "relationships": 23,
+      "unique_months": 19,
+      "unique_observations": 23,
+      "unique_tickers": 20,
+      "yoy_evaluation_formation_observations": 12,
+      "yoy_evaluation_return_observations": 12
+    },
+    "features": {
+      "relationships": 95,
+      "unique_months": 66,
+      "unique_observations": 95,
+      "unique_tickers": 31,
+      "yoy_evaluation_formation_observations": 53,
+      "yoy_evaluation_return_observations": 0
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "affected_factor_months": 0,
+  "after": {
+    "icir": 0.5199069980732591,
+    "mean_monthly_spearman_ic": 0.03796325620225182,
+    "newey_west": {
+      "mean": 0.016280871134996096,
+      "n_months": 96,
+      "nw_pvalue": 3.027589494321905e-11,
+      "nw_se": 0.0024500113636321584,
+      "nw_tstat": 6.645222702501916,
+      "positive_spread_pct": 0.7708333333333334
+    },
+    "quintile_mean_returns": {
+      "H-L": 0.016280871134996096,
+      "Q1": 0.006662510327960817,
+      "Q2": 0.007946457739502791,
+      "Q3": 0.012435600337993296,
+      "Q4": 0.016233743967482287,
+      "Q5": 0.02294338146295691
+    }
+  },
+  "before": {
+    "icir": 0.5199069980732591,
+    "mean_monthly_spearman_ic": 0.03796325620225182,
+    "newey_west": {
+      "mean": 0.016280871134996096,
+      "n_months": 96,
+      "nw_pvalue": 3.027589494321905e-11,
+      "nw_se": 0.0024500113636321584,
+      "nw_tstat": 6.645222702501916,
+      "positive_spread_pct": 0.7708333333333334
+    },
+    "quintile_mean_returns": {
+      "H-L": 0.016280871134996096,
+      "Q1": 0.006662510327960817,
+      "Q2": 0.007946457739502791,
+      "Q3": 0.012435600337993296,
+      "Q4": 0.016233743967482287,
+      "Q5": 0.02294338146295691
+    }
+  },
+  "changed_quintile_assignments": 0,
+  "changed_rankings": 0,
+  "changed_revenue_yoy_values": 0,
+  "formation_observations_after": 147225,
+  "formation_observations_before": 147225,
+  "method": {
+    "benchmark_excluded": "0050",
+    "factor": "yoy_growth",
+    "nw_lags": 3,
+    "period": "2018-01-01 through 2025-12-31",
+    "quintiles": 5,
+    "tie_break": "ticker ascending",
+    "trim": [
+      0.01,
+      0.99
+    ],
+    "weighting": "equal weight"
+  },
+  "quality_layer_sha256": "67bc26a4997c767501c533c203ba59140bdbcec8e5ae4f968091062975ff5a1f",
+  "quality_layer_source": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/research_quality_v1/output/quality_layer_summary.json",
+  "reason_metrics_are_identical": "The corrected SQL changes expectation and auxiliary continuity features only. mart_factor_research_monthly.yoy_growth, formation keys, and Research Quality Layer V1 labels are unchanged.",
+  "return_eligible_after": 144384,
+  "return_eligible_before": 144384
+}

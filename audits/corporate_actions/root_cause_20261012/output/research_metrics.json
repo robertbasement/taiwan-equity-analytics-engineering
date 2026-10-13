@@ -1,0 +1,32 @@
+[
+  {
+    "anomalies_in_research_span": 267,
+    "anomalies_with_research_ticker": 300,
+    "anomaly_research_tickers": 216,
+    "any_ma_feature_observations": 680,
+    "direct_forward_return_eligible_observations": 150,
+    "direct_months": 91,
+    "direct_observation_pct": 0.000644954582714385,
+    "direct_observations": 155,
+    "direct_relationships": 155,
+    "direct_tickers": 129,
+    "feature_months": 143,
+    "feature_observation_pct": 0.0028294781693276243,
+    "feature_relationships": 680,
+    "feature_tickers": 176,
+    "ma20_feature_observations": 235,
+    "ma60_feature_observations": 680,
+    "research_max_endpoint_date": "2026-09-15",
+    "research_min_date": "2013-06-17",
+    "total_research_months": 160,
+    "total_research_observations": 240327,
+    "total_research_tickers": 1809,
+    "yoy_eval_direct_formation_observations": 91,
+    "yoy_eval_direct_return_observations": 90,
+    "yoy_eval_direct_return_pct": 0.000622945146219069,
+    "yoy_eval_feature_observations": 388,
+    "yoy_eval_feature_pct": 0.0026354219731703175,
+    "yoy_evaluation_formation_observations": 147225,
+    "yoy_evaluation_return_observations": 144475
+  }
+]

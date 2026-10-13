@@ -8,7 +8,7 @@ import math
 import re
 import sqlite3
 import unittest
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 
@@ -18,6 +18,12 @@ SHIFTER = (ROOT / "models/intermediate/int_income_statement_shifter.sql").read_t
 PRICES = (ROOT / "models/intermediate/int_daily_prices_adjusted.sql").read_text()
 DIVIDENDS = (ROOT / "models/staging/stg_dividend_factor.sql").read_text()
 BALANCE_SHIFTER = (ROOT / "models/intermediate/int_balance_sheet_shifter.sql").read_text()
+MONTHLY_REVENUE_SHIFTER = (
+    ROOT / "models/intermediate/int_monthly_revenue_shifter.sql"
+).read_text()
+MONTHLY_RESEARCH = (
+    ROOT / "models/marts/research/mart_factor_research_monthly.sql"
+).read_text()
 
 
 def factor(events, observation, *, forward):
@@ -68,6 +74,35 @@ def sql_adjusted_prices(prices, events):
     ).fetchall()
     connection.close()
     return [adjusted for _, adjusted in sorted((day, value) for day, value in rows if value is not None)]
+
+
+def require_unique(rows, key_fields):
+    """Tiny audit guard: duplicate source observations must fail, not be guessed."""
+    keys = [tuple(row[field] for field in key_fields) for row in rows]
+    if len(keys) != len(set(keys)):
+        raise ValueError("duplicate observation key")
+
+
+def exact_horizon_return(prices, entry_date, exit_date):
+    """Return only when both scheduled endpoint prices exist and are positive."""
+    entry = prices.get(entry_date)
+    exit_ = prices.get(exit_date)
+    if entry is None or exit_ is None or entry <= 0 or exit_ <= 0:
+        return None
+    return exit_ / entry - 1
+
+
+def require_consecutive_quarters(periods):
+    """Reject row-count windows that span a missing accounting quarter."""
+    indexes = [year * 4 + quarter for year, quarter in periods]
+    if any(current - previous != 1 for previous, current in zip(indexes, indexes[1:])):
+        raise ValueError("non-consecutive accounting quarters")
+
+
+def first_legal_signal_date(policy_date, market_dates, actual_publication_date=None):
+    """Actual publication, when known, overrides an earlier policy assumption."""
+    information_date = max(policy_date, actual_publication_date or policy_date)
+    return min(day for day in market_dates if day >= information_date)
 
 
 class ResearchCorrectnessFixtures(unittest.TestCase):
@@ -256,6 +291,71 @@ class ResearchCorrectnessFixtures(unittest.TestCase):
         manual_event = (date(2026, 8, 1), 0.25)
         self.assertEqual(source_event[0], manual_event[0])
         self.assertIn("a.effective_date = d.ex_date", PRICES)
+
+    def test_duplicate_source_observations_fail_instead_of_silent_selection(self):
+        rows = [
+            {"ticker": "T", "period": "2026-01", "value": 100},
+            {"ticker": "T", "period": "2026-01", "value": 101},
+        ]
+        with self.assertRaisesRegex(ValueError, "duplicate observation key"):
+            require_unique(rows, ("ticker", "period"))
+
+    def test_delayed_publication_controls_first_legal_signal_date(self):
+        market_dates = [
+            date(2026, 8, 10) + timedelta(days=offset)
+            for offset in range(8)
+            if (date(2026, 8, 10) + timedelta(days=offset)).weekday() < 5
+        ]
+        policy_date = date(2026, 8, 11)
+        actual_publication = date(2026, 8, 13)
+        self.assertEqual(
+            first_legal_signal_date(policy_date, market_dates),
+            date(2026, 8, 11),
+        )
+        self.assertEqual(
+            first_legal_signal_date(policy_date, market_dates, actual_publication),
+            date(2026, 8, 13),
+        )
+        self.assertIn("INTERVAL 10 DAY", MONTHLY_REVENUE_SHIFTER)
+        self.assertNotIn("publication", MONTHLY_REVENUE_SHIFTER.lower())
+
+    def test_exact_next_rebalance_does_not_skip_missing_exit_price(self):
+        prices = {
+            date(2026, 1, 15): 100.0,
+            # The scheduled 2026-02-16 endpoint is deliberately absent.
+            date(2026, 3, 16): 120.0,
+        }
+        self.assertIsNone(
+            exact_horizon_return(prices, date(2026, 1, 15), date(2026, 2, 16))
+        )
+        self.assertIn("d.date = c.next_rebalance_date", MONTHLY_RESEARCH)
+        self.assertNotRegex(MONTHLY_RESEARCH, r"LEAD\(d_close\).*PARTITION BY ticker")
+
+    def test_zero_or_abnormal_endpoint_price_cannot_create_a_return(self):
+        for bad_price in (0.0, -1.0, None):
+            with self.subTest(bad_price=bad_price):
+                prices = {date(2026, 1, 15): 100.0, date(2026, 2, 16): bad_price}
+                self.assertIsNone(
+                    exact_horizon_return(
+                        prices, date(2026, 1, 15), date(2026, 2, 16)
+                    )
+                )
+
+    def test_missing_quarter_and_year_boundary_are_explicit(self):
+        require_consecutive_quarters([(2025, 4), (2026, 1), (2026, 2)])
+        with self.assertRaisesRegex(ValueError, "non-consecutive accounting quarters"):
+            require_consecutive_quarters([(2025, 4), (2026, 2)])
+        with self.assertRaisesRegex(ValueError, "non-consecutive accounting quarters"):
+            require_consecutive_quarters([(2026, 1), (2026, 3)])
+
+    def test_delisted_security_has_no_fabricated_future_exit(self):
+        prices = {
+            date(2026, 1, 15): 25.0,
+            date(2026, 1, 16): 24.0,
+        }
+        self.assertIsNone(
+            exact_horizon_return(prices, date(2026, 1, 15), date(2026, 2, 16))
+        )
 
 
 if __name__ == "__main__":

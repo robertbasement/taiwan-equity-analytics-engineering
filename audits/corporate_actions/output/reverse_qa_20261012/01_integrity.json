@@ -1,0 +1,13 @@
+[
+  {
+    "duplicate_key_excess": 0,
+    "max_date": "2026-10-08",
+    "min_date": "2010-01-04",
+    "negative_close_rows": 0,
+    "null_close_rows": 0,
+    "raw_rows_2010_plus": 6779093,
+    "valid_keys": 6693478,
+    "valid_rows": 6693478,
+    "zero_close_rows": 85615
+  }
+]

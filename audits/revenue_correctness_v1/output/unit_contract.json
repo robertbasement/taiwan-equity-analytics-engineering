@@ -1,0 +1,22 @@
+[
+  {
+    "affected_revenue_months": 224,
+    "affected_tickers": 1897,
+    "agrees_with_decimal_fraction": 267,
+    "agrees_with_percentage_points": 366432,
+    "closer_to_decimal_fraction": 0,
+    "closer_to_percentage_points": 366726,
+    "extreme_over_100pct_rows": 20903,
+    "first_affected_month": "2008-01-01",
+    "incorrect_conditional_conversion_rows": 11687,
+    "last_affected_month": "2026-08-01",
+    "mean_abs_error_as_decimal_fraction": 66563.9885327087,
+    "mean_abs_error_as_percentage_points": 42.67634231396705,
+    "negative_sub_one_rows": 5525,
+    "nonnull_yoy_observations": 366993,
+    "null_rows": 2117,
+    "positive_sub_one_rows": 6050,
+    "total_relevant_observations": 369110,
+    "zero_rows": 267
+  }
+]

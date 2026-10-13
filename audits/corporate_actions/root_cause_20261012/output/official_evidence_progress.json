@@ -1,0 +1,198 @@
+{
+  "stage": "official_capital_reduction_match",
+  "status": "COMPLETED",
+  "execution_timestamp": "2026-10-12T08:17:39.334337+00:00",
+  "output_files": [
+    "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/official_reduction_events_2011_2026.json",
+    "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/official_reduction_matches.json",
+    "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/root_cause_20261012/output/root_cause_sample_30_classified.json"
+  ],
+  "row_counts": {
+    "official_events": 700,
+    "material_matches": 259,
+    "sample_rows": 30
+  },
+  "http_requests": [
+    {
+      "provider": "TWSE",
+      "year": 2011,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20110101&endDate=20111231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2012,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20120101&endDate=20121231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2013,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20130101&endDate=20131231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2014,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20140101&endDate=20141231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2015,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20150101&endDate=20151231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2016,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20160101&endDate=20161231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2017,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20170101&endDate=20171231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2018,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20180101&endDate=20181231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2019,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20190101&endDate=20191231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2020,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20200101&endDate=20201231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2021,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20210101&endDate=20211231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2022,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20220101&endDate=20221231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2023,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20230101&endDate=20231231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2024,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20240101&endDate=20241231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2025,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20250101&endDate=20251231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TWSE",
+      "year": 2026,
+      "url": "https://www.twse.com.tw/rwd/zh/reducation/TWTAUU?startDate=20260101&endDate=20261231&response=json",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2013,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2013/01/01&endDate=2013/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2014,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2014/01/01&endDate=2014/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2015,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2015/01/01&endDate=2015/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2016,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2016/01/01&endDate=2016/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2017,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2017/01/01&endDate=2017/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2018,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2018/01/01&endDate=2018/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2019,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2019/01/01&endDate=2019/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2020,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2020/01/01&endDate=2020/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2021,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2021/01/01&endDate=2021/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2022,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2022/01/01&endDate=2022/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2023,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2023/01/01&endDate=2023/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2024,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2024/01/01&endDate=2024/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2025,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2025/01/01&endDate=2025/12/31",
+      "status": 200
+    },
+    {
+      "provider": "TPEx",
+      "year": 2026,
+      "url": "https://www.tpex.org.tw/www/zh-tw/bulletin/revivt?startDate=2026/01/01&endDate=2026/12/31",
+      "status": 200
+    }
+  ],
+  "bigquery_job_ids": []
+}

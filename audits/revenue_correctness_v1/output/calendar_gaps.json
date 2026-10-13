@@ -1,0 +1,15 @@
+[
+  {
+    "duplicate_ticker_month_keys_before_staging_policy": 0,
+    "gap_count": 165,
+    "gap_tickers": 116,
+    "gaps_missing_12plus_months": 15,
+    "gaps_missing_1_month": 51,
+    "gaps_missing_2_to_5_months": 45,
+    "gaps_missing_6_to_11_months": 54,
+    "max_missing_months": 60,
+    "median_missing_months": 2,
+    "min_missing_months": 1,
+    "unique_monthly_observations": 369110
+  }
+]

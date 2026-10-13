@@ -1,0 +1,109 @@
+{
+  "audit": "corporate_action_reverse_price_discontinuity",
+  "created_at": "2026-10-12T03:16:20.967784Z",
+  "output_directory": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012",
+  "project": "stock-backtest-491815",
+  "read_only": true,
+  "stages": {
+    "candidates": {
+      "actual_bytes_processed": 299127864,
+      "cache_hit": false,
+      "completed_at": "2026-10-12T03:37:45.133614Z",
+      "estimated_at": "2026-10-12T03:47:51.277228Z",
+      "estimated_bytes_processed": 299127864,
+      "output_file": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012/05_candidates_gt30.json",
+      "query_job_ids": [
+        "265bf774-060f-49eb-b1b3-d43caeebd413"
+      ],
+      "row_count": 571,
+      "stage_name": "candidates",
+      "started_at": "2026-10-12T03:37:40.543260Z",
+      "status": "COMPLETED"
+    },
+    "distribution": {
+      "actual_bytes_processed": 298252676,
+      "cache_hit": false,
+      "completed_at": "2026-10-12T03:37:37.480135Z",
+      "estimated_at": "2026-10-12T03:47:49.411511Z",
+      "estimated_bytes_processed": 298252676,
+      "output_file": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012/02_distribution.json",
+      "query_job_ids": [
+        "2dda1e83-4564-4f54-9197-c25c4b6b7d1e"
+      ],
+      "row_count": 1,
+      "stage_name": "distribution",
+      "started_at": "2026-10-12T03:37:35.638374Z",
+      "status": "COMPLETED"
+    },
+    "gap_counts": {
+      "actual_bytes_processed": 298252676,
+      "cache_hit": false,
+      "completed_at": "2026-10-12T03:37:40.542788Z",
+      "estimated_at": "2026-10-12T03:47:50.615976Z",
+      "estimated_bytes_processed": 298252676,
+      "output_file": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012/04_gap_counts.csv",
+      "query_job_ids": [
+        "c91ac1cc-0585-479a-8b2b-588ed3b95699"
+      ],
+      "row_count": 5,
+      "stage_name": "gap_counts",
+      "started_at": "2026-10-12T03:37:38.992581Z",
+      "status": "COMPLETED"
+    },
+    "integrity": {
+      "actual_bytes_processed": 149140046,
+      "cache_hit": false,
+      "completed_at": "2026-10-12T03:37:35.638107Z",
+      "estimated_at": "2026-10-12T03:47:48.742467Z",
+      "estimated_bytes_processed": 149140046,
+      "output_file": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012/01_integrity.json",
+      "query_job_ids": [
+        "c7d0bbc1-34ff-42c5-bf35-681f49e3d464"
+      ],
+      "row_count": 1,
+      "stage_name": "integrity",
+      "started_at": "2026-10-12T03:37:34.742193Z",
+      "status": "COMPLETED"
+    },
+    "local_report": {
+      "completed_at": "2026-10-12T03:47:51.833941Z",
+      "output_file": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012/AUDIT_REPORT.md",
+      "query_job_ids": [],
+      "row_count": 539,
+      "stage_name": "local_report",
+      "status": "COMPLETED"
+    },
+    "regression_cases": {
+      "actual_bytes_processed": 299127864,
+      "cache_hit": false,
+      "completed_at": "2026-10-12T03:37:50.444858Z",
+      "estimated_at": "2026-10-12T03:47:51.812629Z",
+      "estimated_bytes_processed": 299127864,
+      "output_file": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012/06_regression_cases.json",
+      "query_job_ids": [
+        "6f5e642e-51d3-47e4-8e29-8afb2a060492"
+      ],
+      "row_count": 45,
+      "stage_name": "regression_cases",
+      "started_at": "2026-10-12T03:37:45.133968Z",
+      "status": "COMPLETED"
+    },
+    "yearly_counts": {
+      "actual_bytes_processed": 298252676,
+      "cache_hit": false,
+      "completed_at": "2026-10-12T03:37:38.992205Z",
+      "estimated_at": "2026-10-12T03:47:49.995296Z",
+      "estimated_bytes_processed": 298252676,
+      "output_file": "/Users/roberthsu/Documents/RB_escape_plan/bq_dbt_stock_backtest/bq_dbt_analytics/audits/corporate_actions/output/reverse_qa_20261012/03_counts_by_year.csv",
+      "query_job_ids": [
+        "85369acf-8b97-4f61-9532-13df83b17c0c"
+      ],
+      "row_count": 17,
+      "stage_name": "yearly_counts",
+      "started_at": "2026-10-12T03:37:37.480546Z",
+      "status": "COMPLETED"
+    }
+  },
+  "total_estimated_bytes_processed": 1642153802,
+  "updated_at": "2026-10-12T03:47:51.833947Z"
+}

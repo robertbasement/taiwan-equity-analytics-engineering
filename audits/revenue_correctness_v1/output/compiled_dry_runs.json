@@ -1,0 +1,22 @@
+{
+  "int_monthly_revenue_features": {
+    "estimated_bytes": 32269270,
+    "status": "DRY_RUN_OK"
+  },
+  "mart_expectation_features": {
+    "estimated_bytes": 1446305343,
+    "status": "DRY_RUN_OK"
+  },
+  "test_expectation_revenue_features_contract": {
+    "estimated_bytes": 273738855,
+    "status": "DRY_RUN_OK"
+  },
+  "test_revenue_trend_requires_calendar_continuity": {
+    "estimated_bytes": 11426176,
+    "status": "DRY_RUN_OK"
+  },
+  "test_stg_monthly_revenue_unique": {
+    "estimated_bytes": 8490232,
+    "status": "DRY_RUN_OK"
+  }
+}

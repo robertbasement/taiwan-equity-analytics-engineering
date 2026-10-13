@@ -1,0 +1,208 @@
+{
+  "acceptance": {
+    "all_original_columns_preserved_exactly": true,
+    "duplicate_quality_keys": 0,
+    "formation_membership_differences": 0,
+    "input_material_rows": 360,
+    "input_material_tickers": 262,
+    "input_rows": 361,
+    "quality_rows": 240327,
+    "quintile_changes": 0,
+    "regression_cases": {
+      "2429_2024-07-02": {
+        "components": {
+          "FORWARD_RETURN": 1,
+          "MA20": 1,
+          "MA60": 3
+        },
+        "present_in_anomaly_input": true,
+        "research_relationships": 5
+      },
+      "5364_2013-12-10": {
+        "components": {
+          "FORWARD_RETURN": 1,
+          "MA20": 1,
+          "MA60": 3
+        },
+        "present_in_anomaly_input": true,
+        "research_relationships": 5
+      },
+      "6294_2010-02-22": {
+        "components": {},
+        "present_in_anomaly_input": true,
+        "research_relationships": 0
+      }
+    },
+    "revenue_yoy_factor_value_changes": 0,
+    "source_rows": 240327
+  },
+  "bigquery": {
+    "dry_run_estimated_bytes": {
+      "monthly_panel": 36887886,
+      "relationships": 100207820
+    },
+    "stages": {
+      "local_quality_layer": {
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "completed_at": "2026-10-13T00:53:54.015923+00:00",
+        "job_id": null,
+        "output_file": "output/mart_factor_research_monthly_quality_v1.parquet",
+        "row_count": 240327,
+        "status": "COMPLETED"
+      },
+      "monthly_panel": {
+        "bytes_billed": 37748736,
+        "bytes_processed": 36887886,
+        "completed_at": "2026-10-13T00:45:55.101786+00:00",
+        "job_id": "5acb17f0-0145-4053-b956-fc72fc170645",
+        "output_file": "output/raw_monthly_panel.parquet",
+        "row_count": 240327,
+        "status": "COMPLETED"
+      },
+      "relationships": {
+        "bytes_billed": 100663296,
+        "bytes_processed": 100207820,
+        "completed_at": "2026-10-13T00:45:24.472525+00:00",
+        "job_id": "807a2724-86d3-4277-8c0d-82f5ab6fb7fa",
+        "output_file": "output/raw_relationships.parquet",
+        "row_count": 1048,
+        "status": "COMPLETED"
+      }
+    },
+    "started_at": "2026-10-13T00:45:22.705969+00:00",
+    "statement_type": "SELECT_ONLY",
+    "total_estimated_bytes": 137095706
+  },
+  "quality_counts": {
+    "canonical_revenue_yoy_2018_2025": {
+      "control_2429_invalid_forward_observations": 1,
+      "control_2429_invalid_ma_union_observations": 3,
+      "formation_observations": 147225,
+      "invalid_existing_forward_return_labels": 91,
+      "invalid_forward_observations": 92,
+      "invalid_ma20_observations": 121,
+      "invalid_ma60_observations": 385,
+      "invalid_ma_union_observations": 385,
+      "material_invalid_forward_observations": 91,
+      "material_invalid_ma_union_observations": 382
+    },
+    "control_2429": {
+      "FORWARD_RETURN": 1,
+      "MA20": 1,
+      "MA60": 3
+    },
+    "control_2429_unique_affected_observations": 4,
+    "invalid_existing_forward_return_labels": 151,
+    "invalid_forward_return": 156,
+    "invalid_ma20": 219,
+    "invalid_ma60": 673,
+    "material_only": {
+      "FORWARD_RETURN": 155,
+      "MA20": 218,
+      "MA60": 670
+    },
+    "material_unique_affected_observations": 825,
+    "prior_impact_reconciliation": {
+      "difference_reason": "V1 uses exact inclusive ROWS frames: the transition stops crossing MA20/MA60 at offsets 19/59; the prior audit conservatively included those clean endpoint rows.",
+      "exact_material_forward": 155,
+      "exact_material_ma20": 218,
+      "exact_material_ma60_or_union": 670,
+      "prior_material_forward": 155,
+      "prior_material_ma20": 235,
+      "prior_material_ma60_or_union": 680
+    },
+    "total_research_observations": 240327,
+    "unique_affected_months": 155,
+    "unique_affected_observations": 829,
+    "unique_affected_tickers": 177,
+    "unknown_forward_return": 6750,
+    "unknown_ma20": 0,
+    "unknown_ma60": 0
+  },
+  "research_comparison": {
+    "conclusion_stability": {
+      "mean_ic_sign_same": true,
+      "spread_5pct_significance_same": true,
+      "spread_sign_same": true
+    },
+    "effective_sample": {
+      "affected_months": 57,
+      "baseline_return_observations": 144475,
+      "excluded_labels": 91,
+      "quality_return_observations": 144384
+    },
+    "formation": {
+      "factor_value_changes": 0,
+      "identical": true,
+      "membership_differences": 0,
+      "quintile_changes": 0,
+      "rows": 147225
+    },
+    "ic": {
+      "baseline": {
+        "icir": 0.5164850799668321,
+        "mean_ic": 0.03769691436269946,
+        "n_months": 96,
+        "positive_ic_pct": 0.6979166666666666,
+        "std_ic": 0.07298742175692723
+      },
+      "quality": {
+        "icir": 0.5199069980732591,
+        "mean_ic": 0.03796325620225182,
+        "n_months": 96,
+        "positive_ic_pct": 0.7083333333333334,
+        "std_ic": 0.07301932142275663
+      }
+    },
+    "method": {
+      "benchmark_excluded": "0050",
+      "factor": "yoy_growth",
+      "nw_lags": 3,
+      "period": "2018-01-01 through 2025-12-31",
+      "quintiles": 5,
+      "tie_break": "ticker ascending",
+      "trim": [
+        0.01,
+        0.99
+      ],
+      "weighting": "equal weight"
+    },
+    "quintile_mean_returns": {
+      "baseline": {
+        "H-L": 0.016220341407470633,
+        "Q1": 0.00765436141195948,
+        "Q2": 0.00884112822012443,
+        "Q3": 0.012791568036043264,
+        "Q4": 0.016732965976034162,
+        "Q5": 0.023874702819430115
+      },
+      "quality": {
+        "H-L": 0.016280871134996096,
+        "Q1": 0.006662510327960817,
+        "Q2": 0.007946457739502791,
+        "Q3": 0.012435600337993296,
+        "Q4": 0.016233743967482287,
+        "Q5": 0.02294338146295691
+      }
+    },
+    "spread_newey_west": {
+      "baseline": {
+        "mean": 0.016220341407470633,
+        "n_months": 96,
+        "nw_pvalue": 1.5850588005707756e-10,
+        "nw_se": 0.0025356347009114757,
+        "nw_tstat": 6.396955129869442,
+        "positive_spread_pct": 0.75
+      },
+      "quality": {
+        "mean": 0.016280871134996096,
+        "n_months": 96,
+        "nw_pvalue": 3.027589494321905e-11,
+        "nw_se": 0.0024500113636321584,
+        "nw_tstat": 6.645222702501916,
+        "positive_spread_pct": 0.7708333333333334
+      }
+    }
+  }
+}

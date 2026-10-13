@@ -1,0 +1,26 @@
+[
+  {
+    "adjusted_candidates": 538,
+    "adjusted_no_event": 537,
+    "explained_by_existing_adjustment": 32,
+    "raw_candidates": 570,
+    "raw_no_event": 538,
+    "threshold": 0.3
+  },
+  {
+    "adjusted_candidates": 419,
+    "adjusted_no_event": 418,
+    "explained_by_existing_adjustment": 11,
+    "raw_candidates": 429,
+    "raw_no_event": 418,
+    "threshold": 0.4
+  },
+  {
+    "adjusted_candidates": 360,
+    "adjusted_no_event": 360,
+    "explained_by_existing_adjustment": 7,
+    "raw_candidates": 367,
+    "raw_no_event": 360,
+    "threshold": 0.5
+  }
+]

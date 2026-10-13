@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-10-12T08:17:39.333807+00:00",
+  "official_events_downloaded": 700,
+  "official_events_by_provider": {
+    "TWSE": 405,
+    "TPEx": 295
+  },
+  "material_anomalies": 360,
+  "material_exact_reduction_matches": 259,
+  "material_match_pct": 0.7194444444444444,
+  "over_100_anomalies": 168,
+  "over_100_exact_reduction_matches": 122,
+  "over_100_match_pct": 0.7261904761904762,
+  "sample_cases": 30,
+  "sample_confirmed_missing_reduction": 7,
+  "sample_unresolved_after_reduction_match": 23,
+  "coverage_limits": {
+    "TWSE": "Official page states data available from 2011-01-01.",
+    "TPEx": "Official page states data available from 2013-01.",
+    "interpretation": "Non-matches, especially before coverage starts, remain UNRESOLVED."
+  }
+}

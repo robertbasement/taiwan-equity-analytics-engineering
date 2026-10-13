@@ -1,0 +1,31 @@
+{
+  "affected_revenue_months": 224,
+  "affected_tickers": 1897,
+  "downstream_impact": {
+    "affected_research_expectation_rows": 41681,
+    "canonical_yoy_source_mismatches": 0,
+    "changed_3m_feature_rows": 32441,
+    "changed_6m_feature_rows": 59449,
+    "changed_expected_growth_rows": 58826
+  },
+  "first_affected_month": "2008-01-01",
+  "fix": "mart_expectation_features now divides every non-null yoy_growth_pct by 100.0; no magnitude inference or clipping.",
+  "incorrect_conditional_conversion_rows": 11687,
+  "last_affected_month": "2026-08-01",
+  "nonnull_yoy_observations": 366993,
+  "source_contract": "Official MOPS growth fields are percentage points; ingestion preserves source numbers without scaling.",
+  "source_distribution": {
+    "abs_gt_100": 20903,
+    "negative_abs_lt_1": 5525,
+    "null": 2117,
+    "positive_abs_lt_1": 6050,
+    "zero": 267
+  },
+  "source_header": "\u53bb\u5e74\u540c\u6708\u589e\u6e1b(%)",
+  "total_relevant_observations": 369110,
+  "unit_evidence": {
+    "closer_to_decimal_fraction": 0,
+    "closer_to_percentage_points": 366726,
+    "exact_or_rounding_agreement_percentage_points": 366432
+  }
+}

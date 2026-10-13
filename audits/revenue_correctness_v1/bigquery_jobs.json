@@ -1,0 +1,67 @@
+{
+  "all_statements_select_only": true,
+  "jobs": [
+    {
+      "bytes_billed": 10485760,
+      "bytes_processed": 8490232,
+      "dry_run_bytes": 8490232,
+      "job_id": "e9d46699-8f3a-48aa-b04a-501b7087de21",
+      "output": "output/calendar_gaps.json",
+      "row_count": 1,
+      "stage": "calendar_gaps",
+      "status": "COMPLETED"
+    },
+    {
+      "bytes_billed": 20971520,
+      "bytes_processed": 16947145,
+      "dry_run_bytes": 16947145,
+      "job_id": "b0236af8-da6d-43a1-8a1e-07d3c0baf845",
+      "output": "output/feature_impact.json",
+      "row_count": 13,
+      "stage": "feature_impact",
+      "status": "COMPLETED"
+    },
+    {
+      "bytes_billed": 10485760,
+      "bytes_processed": 8490232,
+      "dry_run_bytes": 8490232,
+      "job_id": "1054e1cd-b59d-4943-8a46-46b734f971c7",
+      "output": "output/gap_details.json",
+      "row_count": 165,
+      "stage": "gap_details",
+      "status": "COMPLETED"
+    },
+    {
+      "bytes_billed": 14680064,
+      "bytes_processed": 14379056,
+      "dry_run_bytes": 14379056,
+      "job_id": "5b9a030d-a3a7-4534-a196-e5ce558f8696",
+      "output": "output/unit_contract.json",
+      "row_count": 1,
+      "stage": "unit_contract",
+      "status": "COMPLETED"
+    },
+    {
+      "bytes_billed": 14680064,
+      "bytes_processed": 14379056,
+      "dry_run_bytes": 14379056,
+      "job_id": "37ff0f9e-bfc3-4f7c-ba75-f626885c2f58",
+      "output": "output/unit_samples.json",
+      "row_count": 32,
+      "stage": "unit_samples",
+      "status": "COMPLETED"
+    },
+    {
+      "bytes_billed": 20971520,
+      "bytes_processed": 16953697,
+      "dry_run_bytes": 16953697,
+      "job_id": "9adb434e-84bc-42fc-9205-f56dd546ac5f",
+      "row_count": 15,
+      "stage": "supplemental_impact",
+      "started_at": "2026-10-13T02:57:06.501061+00:00",
+      "statement_type": "SELECT_ONLY",
+      "status": "COMPLETED"
+    }
+  ],
+  "total_bytes_processed": 79639418
+}

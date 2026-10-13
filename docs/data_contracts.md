@@ -53,7 +53,14 @@ The project treats positive `close` values as valid trades. A previous valid clo
 
 `year_month` is expected in `YYYY-MM` form. The shifter parses it as the first day of the month and applies the availability policy described in [Point-in-time semantics](point_in_time_semantics.md).
 
-The staging model selects the greatest `revenue` when duplicate ticker-month rows exist. This is a policy-based fallback, not filing-version selection. No ingestion timestamp or immutable version identifier is available to this project. Revenue currency/unit and whether growth fields arrive as percentages or decimals are not formally contracted; downstream expectation logic defensively normalizes growth magnitudes greater than one by dividing by 100.
+The staging model selects the greatest `revenue` when duplicate ticker-month rows exist. This is a policy-based fallback, not filing-version selection. No ingestion timestamp or immutable version identifier is available to this project.
+
+The official MOPS headings `上月比較增減(%)`, `去年同月增減(%)`, and
+`前期比較增減(%)` define the growth fields as **percentage points**. The
+processor preserves those source numbers without scaling. In particular,
+`yoy_growth_pct = 0.5` means 0.5%, not 50%. Models requiring a decimal growth
+rate must divide every non-null value by `100.0`; unit inference from magnitude
+is prohibited. Extreme values are preserved rather than clipped.
 
 ### `income_statement`
 
