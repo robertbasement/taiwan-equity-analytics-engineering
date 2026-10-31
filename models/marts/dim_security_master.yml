@@ -30,7 +30,7 @@ models:
         tests: [not_null]
 
   - name: int_v1_fundamental_eligibility
-    description: Single fail-closed eligibility boundary for V1 fundamental research.
+    description: Classification-aware eligibility boundary for V1 fundamental research; data-complete unmatched tickers remain explicitly unclassified.
     columns:
       - name: ticker
         tests: [not_null, unique]

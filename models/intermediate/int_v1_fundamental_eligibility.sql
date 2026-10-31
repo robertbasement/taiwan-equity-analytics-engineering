@@ -18,9 +18,9 @@ balance_tickers AS (
 
 financial_tickers AS (
 
-  -- The canonical financial tables do not carry market. The authoritative
-  -- security master is required to have one globally unique current market
-  -- row per ticker; duplicate cross-market tickers fail a dimension test.
+  -- Income and balance coverage is the minimum research-data requirement.
+  -- Security Master classifies this population when a reference row exists,
+  -- but missing reference metadata alone must not remove a data-complete ticker.
   SELECT i.ticker
   FROM income_tickers i
   INNER JOIN balance_tickers b USING (ticker)
@@ -40,20 +40,22 @@ classified AS (
       ELSE 'MATCHED'
     END AS security_master_match_status,
 
-    COALESCE(
-      s.ticker IS NOT NULL
-      AND s.source_contract_valid
-      AND s.market IN ('TWSE', 'TPEX')
-      AND s.financial_schema_class = 'ci'
-      AND s.issuer_origin = 'DOMESTIC',
-      FALSE
-    ) AS is_v1_fundamental_eligible,
+    CASE
+      WHEN s.ticker IS NULL THEN TRUE
+      ELSE COALESCE(
+        s.source_contract_valid
+        AND s.market IN ('TWSE', 'TPEX')
+        AND s.financial_schema_class = 'ci'
+        AND s.issuer_origin = 'DOMESTIC',
+        FALSE
+      )
+    END AS is_v1_fundamental_eligible,
 
     CASE
-      WHEN s.ticker IS NULL THEN 'SECURITY_MASTER_UNMATCHED'
-      WHEN NOT s.source_contract_valid THEN 'SOURCE_CONTRACT_INVALID'
-      WHEN s.market NOT IN ('TWSE', 'TPEX') THEN 'MARKET_MISMATCH'
-      WHEN s.issuer_origin = 'UNKNOWN' THEN 'UNKNOWN_ISSUER_ORIGIN'
+      WHEN s.ticker IS NULL THEN 'ELIGIBLE_UNCLASSIFIED'
+      WHEN NOT COALESCE(s.source_contract_valid, FALSE) THEN 'SOURCE_CONTRACT_INVALID'
+      WHEN s.market IS NULL OR s.market NOT IN ('TWSE', 'TPEX') THEN 'MARKET_MISMATCH'
+      WHEN s.issuer_origin IS NULL OR s.issuer_origin = 'UNKNOWN' THEN 'UNKNOWN_ISSUER_ORIGIN'
       WHEN s.issuer_origin = 'FOREIGN_REGISTERED' THEN 'FOREIGN_REGISTERED'
       WHEN s.financial_schema_class IS NULL THEN 'FINANCIAL_SCHEMA_UNMATCHED'
       WHEN s.financial_schema_class != 'ci' THEN 'NON_GENERAL_INDUSTRY_SCHEMA'

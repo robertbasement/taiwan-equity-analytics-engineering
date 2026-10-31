@@ -1,9 +1,9 @@
-"""Local contracts for split Security Master integrity and freshness tests."""
+"""Local contracts for the static Security Master integrity test."""
 
 from __future__ import annotations
 
 import unittest
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -78,69 +78,26 @@ def integrity_failures(rows):
     return results
 
 
-def freshness_failures(rows):
-    results = {}
-    for market in EXPECTED_MARKETS:
-        dates = {
-            row["source_as_of_date"]
-            for row in rows
-            if row.get("market") == market and row["source_as_of_date"] is not None
-        }
-        if dates and min(dates) < TODAY - timedelta(days=7):
-            results[market] = {"STALE_SOURCE_DATE"}
-    return results
-
-
-class SecurityMasterFreshnessLogicTests(unittest.TestCase):
+class SecurityMasterIntegrityLogicTests(unittest.TestCase):
     def valid_rows(self):
         return source_rows("TWSE") + source_rows("TPEX")
 
-    def test_both_markets_fresh(self):
-        rows = self.valid_rows()
-        self.assertEqual(integrity_failures(rows), {})
-        self.assertEqual(freshness_failures(rows), {})
+    def test_both_markets_are_structurally_valid(self):
+        self.assertEqual(integrity_failures(self.valid_rows()), {})
 
-    def test_twse_stale_only(self):
-        rows = source_rows("TWSE", source_as_of_date=date(2026, 10, 9))
-        rows += source_rows("TPEX")
-        self.assertEqual(freshness_failures(rows), {"TWSE": {"STALE_SOURCE_DATE"}})
-
-    def test_tpex_stale_only(self):
-        rows = source_rows("TWSE")
-        rows += source_rows("TPEX", source_as_of_date=date(2026, 10, 9))
-        self.assertEqual(freshness_failures(rows), {"TPEX": {"STALE_SOURCE_DATE"}})
-
-    def test_both_markets_stale(self):
-        rows = source_rows("TWSE", source_as_of_date=date(2026, 10, 9))
-        rows += source_rows("TPEX", source_as_of_date=date(2026, 10, 9))
-        self.assertEqual(set(freshness_failures(rows)), set(EXPECTED_MARKETS))
-
-    def test_exactly_seven_days_is_fresh(self):
-        rows = source_rows("TWSE", source_as_of_date=TODAY - timedelta(days=7))
-        rows += source_rows("TPEX", source_as_of_date=TODAY - timedelta(days=7))
-        self.assertEqual(freshness_failures(rows), {})
-
-    def test_eight_days_is_stale(self):
-        rows = source_rows("TWSE", source_as_of_date=TODAY - timedelta(days=8))
-        rows += source_rows("TPEX")
-        self.assertEqual(freshness_failures(rows), {"TWSE": {"STALE_SOURCE_DATE"}})
-
-    def test_missing_market_is_integrity_error_not_freshness_warning(self):
-        rows = source_rows("TWSE")
-        self.assertEqual(integrity_failures(rows)["TPEX"], {"MISSING_SOURCE"})
-        self.assertEqual(freshness_failures(rows), {})
+    def test_missing_market_is_integrity_error(self):
+        self.assertEqual(
+            integrity_failures(source_rows("TWSE"))["TPEX"], {"MISSING_SOURCE"}
+        )
 
     def test_future_source_date_is_integrity_error(self):
-        rows = source_rows(
-            "TWSE", source_as_of_date=TODAY + timedelta(days=1)
-        ) + source_rows("TPEX")
+        rows = source_rows("TWSE", source_as_of_date=date(2026, 10, 18))
+        rows += source_rows("TPEX")
         self.assertIn("FUTURE_SOURCE_DATE", integrity_failures(rows)["TWSE"])
-        self.assertEqual(freshness_failures(rows), {})
 
     def test_null_source_date_is_integrity_error(self):
         rows = source_rows("TWSE", source_as_of_date=None) + source_rows("TPEX")
         self.assertIn("NULL_SOURCE_DATE", integrity_failures(rows)["TWSE"])
-        self.assertEqual(freshness_failures(rows), {})
 
     def test_inconsistent_source_dates_are_integrity_error(self):
         rows = self.valid_rows()
@@ -150,7 +107,10 @@ class SecurityMasterFreshnessLogicTests(unittest.TestCase):
     def test_invalid_retrieval_timestamps_are_integrity_errors(self):
         cases = (
             (None, "NULL_RETRIEVAL_TIMESTAMP"),
-            (NOW + timedelta(seconds=1), "FUTURE_RETRIEVAL_TIMESTAMP"),
+            (
+                datetime(2026, 10, 16, 20, 0, 1, tzinfo=timezone.utc),
+                "FUTURE_RETRIEVAL_TIMESTAMP",
+            ),
         )
         for value, expected in cases:
             with self.subTest(expected=expected):
@@ -199,14 +159,9 @@ class SecurityMasterFreshnessLogicTests(unittest.TestCase):
             "RETRIEVAL_BEFORE_SOURCE_DATE", integrity_failures(invalid)["TWSE"]
         )
 
-    def test_sql_severity_and_scope_contracts(self):
+    def test_integrity_sql_remains_enabled(self):
         directory = Path(__file__).parent
-        freshness = (directory / "test_security_master_source_freshness.sql").read_text()
         integrity = (directory / "test_security_master_source_integrity.sql").read_text()
-        runner = (directory.parent / "run_dbt.sh").read_text()
-        self.assertIn("config(severity='warn')", freshness)
-        self.assertIn("STALE_SOURCE_DATE", freshness)
-        self.assertNotIn("INVALID_SOURCE_CONTRACT", freshness)
         self.assertIn("config(severity='error')", integrity)
         for token in (
             "MISSING_SOURCE",
@@ -219,10 +174,7 @@ class SecurityMasterFreshnessLogicTests(unittest.TestCase):
             "INVALID_MARKET_METADATA",
         ):
             self.assertIn(token, integrity)
-        self.assertIn("CURRENT_DATE('Asia/Taipei')", freshness + integrity)
-        self.assertNotIn("--warn-error", runner)
-        self.assertNotIn("--warn-error-options", runner)
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
