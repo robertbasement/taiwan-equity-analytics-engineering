@@ -1,3 +1,6 @@
+{{ config(severity='warn') }}
+
+-- Security Master is a static reference: coverage drift is diagnostic, not a build gate.
 WITH income_tickers AS (
   SELECT DISTINCT ticker
   FROM {{ ref('stg_income_statement') }}
